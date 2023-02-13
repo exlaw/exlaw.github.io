@@ -6,10 +6,10 @@ layout: default
 ## About
 Hi! My name is Aiwei Liu (刘瑷玮). I am a third-year Ph.D. student at the [School of Software](https://www.thss.tsinghua.edu.cn/) in [Tsinghua University](https://www.tsinghua.edu.cn/), where I am advised by Prof. [Lijie Wen](https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm).
 
-My research interests lie in the fields of natural language processing and deep learning. In particular, I am interested in mining structured information from heterogeneous information sources and focus on:
+My research interests lie in the fields of natural language processing and deep learning. In particular, I am interested in converting a natural language utterance into a structured representation in a robust manner and focus on:
 
-- Semantic parsing.
-- Robustness of natural language models.
+- Text-to-SQL (Converting a natural language question about a database into a SQL query).
+- Robustness of natural language models (Adversarial attack and defense).
 
 Contact: liuaw20@mails.tsinghua.edu.cn
 
@@ -19,8 +19,6 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
 
 ## Publications
-
-<!-- <sup>*</sup> denotes equal contribution. -->
 
 **2022**
 
@@ -38,7 +36,7 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
   **EMNLP 2022**, *Long paper*
 
-  [[Paper]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) [[Code]](https://github.com/THU-BPM/ISESL-SQL)
+  [[Paper]](https://aclanthology.org/2022.emnlp-main.522/) [[Code]](https://github.com/THU-BPM/CWBA)
 
 - **CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking**
 
@@ -47,9 +45,3 @@ Contact: liuaw20@mails.tsinghua.edu.cn
   **NAACL 2022**, *Long paper (Oral)*
 
   [[Paper]](http://arxiv.org/abs/2206.11863) [[Code & Data]](https://github.com/THU-BPM/CHEF)
-  
-## Academic Services
-
-- **PC Member or Reviewer**
-  
-  ACL/EMNLP/NAACL/AAAI/SIGKDD
