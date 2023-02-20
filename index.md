@@ -20,6 +20,14 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
 ## Publications
 
+**2023**
+
+- **GAUSSIAN PRIOR REINFORCEMENT LEARNING FOR NESTED NAMED ENTITY RECOGNITION**
+
+  Yawen Yang, Xuming Hu, Fukun Ma, Shu’ang Li, Aiwei Liu, Lijie Wen and Philip S. Yu
+  
+  **ICASSP 2023**, *Full paper*
+
 **2022**
 
 - **Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph**
