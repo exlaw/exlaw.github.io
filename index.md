@@ -24,7 +24,7 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
 - **GAUSSIAN PRIOR REINFORCEMENT LEARNING FOR NESTED NAMED ENTITY RECOGNITION**
 
-  Yawen Yang, Xuming Hu, Fukun Ma, Shu’ang Li, Aiwei Liu, Lijie Wen and Philip S. Yu
+  Yawen Yang, Xuming Hu, Fukun Ma, Shu’ang Li, **Aiwei Liu**, Lijie Wen and Philip S. Yu
   
   **ICASSP 2023**, *Full paper*
 
