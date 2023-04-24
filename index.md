@@ -22,6 +22,12 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
 **2023**
 
+- **A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability**
+
+  **Aiwei Liu**, Xuming Hu, Lijie Wen, Philip S. Yu
+  
+  [[Paper]](https://arxiv.org/abs/2303.13547) [[Code]](https://github.com/THU-BPM/chatgpt-sql)
+
 - **GAUSSIAN PRIOR REINFORCEMENT LEARNING FOR NESTED NAMED ENTITY RECOGNITION**
 
   Yawen Yang, Xuming Hu, Fukun Ma, Shu’ang Li, **Aiwei Liu**, Lijie Wen and Philip S. Yu
