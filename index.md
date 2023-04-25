@@ -22,6 +22,14 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
 **2023**
 
+- **A Multi-level Supervised Contrastive Learning Framework for Low-Resource Natural Language Inference**
+
+  Shu’ang Li, Xuming Hu, Li Lin, **Aiwei Liu**, Lijie Wen, Philip S Yu
+
+  **TASLP 2023**
+  
+  [[Paper]](https://arxiv.org/pdf/2205.15550.pdf) [[Code]](https://github.com/THU-BPM/MultiSCL)
+
 - **A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability**
 
   **Aiwei Liu**, Xuming Hu, Lijie Wen, Philip S. Yu
