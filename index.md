@@ -22,6 +22,36 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
 **2023**
 
+- **EnTDA: Entity-to-Text based Data Augmentation with Semantic Coherence and Entity Preserving for various NER Tasks**
+
+  Xuming Hu, Yong Jiang, **Aiwei Liu**, Zhongqiang Huang, Pengjun Xie, Fei Huang, Lijie Wen and Philip S. Yu
+
+  **ACL 2023 Findings**
+
+- **Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing**
+
+  **Aiwei Liu**, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang and Lijie Wen
+
+  **ACL 2023 Findings**
+
+- **Enhancing Cross-lingual Natural Language Inference by Soft Prompting with Multilingual Verbalizer**
+
+  Shuang Li, Xuming Hu, **Aiwei Liu**, Yawen Yang, Fukun Ma, Philip S. Yu and Lijie Wen
+
+  **ACL 2023 Findings**
+
+- **Semantics Matters: AMR-based Path Aggregation Relational Network for Aspect-based Sentiment Analysis**
+
+  Fukun Ma, Xuming Hu, **Aiwei Liu**, Yawen Yang, Shuang Li, Philip S. Yu and Lijie Wen
+
+  **ACL 2023**
+
+- **It Takes Two to Tango: Semantic Consistency and Syntax Structure Preserving in Relational Text Augmentation**
+
+  Xuming Hu, **Aiwei Liu**, Zeqi Tan, Xin Zhang, Chenwei Zhang, Irwin King and Philip S. Yu
+
+  **ACL 2023 Findings**
+
 - **A Multi-level Supervised Contrastive Learning Framework for Low-Resource Natural Language Inference**
 
   Shu’ang Li, Xuming Hu, Li Lin, **Aiwei Liu**, Lijie Wen, Philip S Yu
