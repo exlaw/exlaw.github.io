@@ -46,12 +46,6 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
   **ACL 2023**
 
-- **It Takes Two to Tango: Semantic Consistency and Syntax Structure Preserving in Relational Text Augmentation**
-
-  Xuming Hu, **Aiwei Liu**, Zeqi Tan, Xin Zhang, Chenwei Zhang, Irwin King and Philip S. Yu
-
-  **ACL 2023 Findings**
-
 - **A Multi-level Supervised Contrastive Learning Framework for Low-Resource Natural Language Inference**
 
   Shu’ang Li, Xuming Hu, Li Lin, **Aiwei Liu**, Lijie Wen, Philip S Yu
