@@ -11,7 +11,7 @@ My research interests lie in the fields of natural language processing and deep 
 - **Text-to-SQL** (Converting a natural language question about a database into a SQL query).
 - **Robustness of natural language models** (Adversarial attack and defense).
 
-Recently, I've been very interested in the field related to **large language models** and have been actively exploring the relevant areas. The following are some of my thoughts and reports on large models:
+Recently, I've been very interested in the field related to **large language models** and have been actively exploring the relevant areas. The following are some of my thoughts and reports on large language models:
 
 - [Recent trends of LLM](https://cloud.tsinghua.edu.cn/f/502b195e6696470982ff/)
 - [GPT4&PaLM-E talk](https://cloud.tsinghua.edu.cn/f/8d086ec407e74c738566/)
