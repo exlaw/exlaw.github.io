@@ -28,17 +28,23 @@ Contact: liuaw20@mails.tsinghua.edu.cn
 
   **ACL 2023 Findings**
 
+  [[Paper]](https://arxiv.org/pdf/2210.10343.pdf)
+
 - **Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing**
 
   **Aiwei Liu**, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang and Lijie Wen
 
   **ACL 2023 Findings**
 
+  [[Paper]](https://arxiv.org/pdf/2306.04480.pdf)
+
 - **Enhancing Cross-lingual Natural Language Inference by Soft Prompting with Multilingual Verbalizer**
 
   Shuang Li, Xuming Hu, **Aiwei Liu**, Yawen Yang, Fukun Ma, Philip S. Yu and Lijie Wen
 
   **ACL 2023 Findings**
+
+  [[Paper]](https://arxiv.org/pdf/2305.12761.pdf)
 
 - **Semantics Matters: AMR-based Path Aggregation Relational Network for Aspect-based Sentiment Analysis**
 
