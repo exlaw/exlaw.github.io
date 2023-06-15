@@ -88,7 +88,7 @@ Contact:
   
   **SIGKDD 2022**, *Full paper*
 
-  [[Paper]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) [[Code]](https://github.com/THU-BPM/ISESL-SQL)
+  [[Paper]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) [[Code]](https://github.com/THU-BPM/ISESL-SQL) [[Slides]](https://cloud.tsinghua.edu.cn/f/ba34f01696c242e7b443/)
   
 - **Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution**
   
@@ -96,7 +96,7 @@ Contact:
 
   **EMNLP 2022**, *Long paper*
 
-  [[Paper]](https://aclanthology.org/2022.emnlp-main.522/) [[Code]](https://github.com/THU-BPM/CWBA)
+  [[Paper]](https://aclanthology.org/2022.emnlp-main.522/) [[Code]](https://github.com/THU-BPM/CWBA) [[Poster]](https://cloud.tsinghua.edu.cn/f/4bc0f8683ddd4a5584d5/)
 
 - **CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking**
 
