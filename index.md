@@ -4,19 +4,27 @@ layout: default
 
 
 ## About
-Hi! My name is Aiwei Liu (刘瑷玮). I am a third-year Ph.D. student at the [School of Software](https://www.thss.tsinghua.edu.cn/) in [Tsinghua University](https://www.tsinghua.edu.cn/), where I am advised by Prof. [Lijie Wen](https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm).
+Hi! My name is **Aiwei Liu (刘瑷玮)**. I am a third-year Ph.D. student at the [School of Software](https://www.thss.tsinghua.edu.cn/) in [Tsinghua University](https://www.tsinghua.edu.cn/), where I am advised by Prof. [Lijie Wen](https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm).
 
 My research interests lie in the fields of natural language processing and deep learning. In particular, I am interested in converting a natural language utterance into a structured representation in a robust manner and focus on:
 
-- Text-to-SQL (Converting a natural language question about a database into a SQL query).
-- Robustness of natural language models (Adversarial attack and defense).
+- **Text-to-SQL** (Converting a natural language question about a database into a SQL query).
+- **Robustness of natural language models** (Adversarial attack and defense).
 
-Contact: liuaw20@mails.tsinghua.edu.cn
+Recently, I've been very interested in the field related to large language models and have been actively investing energy in exploring the relevant areas. The following are some of my thoughts and reports on large models:
+
+- [[Recent trends of LLM]](https://cloud.tsinghua.edu.cn/f/502b195e6696470982ff/)
+- [[GPT4&PaLM-E talk]](https://cloud.tsinghua.edu.cn/f/8d086ec407e74c738566/)
+- [[Investigation of using ChatGPT for Text-to-SQL]](https://arxiv.org/abs/2303.13547)
+
+Contact: 
+
+- Email: liuaw20@mails.tsinghua.edu.cn
+- Wechat: u839134412
 
 [[Google Scholar]](https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en) [[ResearchGate]](https://www.researchgate.net/profile/Aiwei-Liu-4) [[Semantic Scholar]](https://www.semanticscholar.org/author/Aiwei-Liu/10017193)
 
 **Feel free to contact me if your research lies within these or related areas!**
-
 
 ## Publications
 
