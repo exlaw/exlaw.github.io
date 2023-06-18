@@ -13,8 +13,8 @@ My research interests lie in the fields of natural language processing and deep 
 
 Recently, I've been very interested in the field related to **large language models** and have been actively exploring the relevant areas. The following are some of my thoughts and reports on large language models:
 
-- [Recent trends of LLM](https://cloud.tsinghua.edu.cn/f/502b195e6696470982ff/)
-- [GPT4&PaLM-E talk](https://cloud.tsinghua.edu.cn/f/8d086ec407e74c738566/)
+- [Recent trends of LLM](https://exlaw.github.io/docs/GPT4&PaLM-E-talk.pdf)
+- [GPT4&PaLM-E talk](https://exlaw.github.io/docs/Recent-trends-of-LLM.pdf)
 - [Investigation of using ChatGPT for Text-to-SQL](https://arxiv.org/abs/2303.13547)
 
 Contact: 
