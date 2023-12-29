@@ -10,14 +10,15 @@ My research interests lie in the fields of natural language processing and deep 
 
 - **Text-to-SQL** (Converting a natural language question about a database into a SQL query).
 - **Robustness of natural language models** (Adversarial attack and defense).
+- **Watermark of LLM**.
 
-Recently, I've been very interested in the field related to **large language models** and have been actively exploring the relevant areas. The following are some of my thoughts and reports on large language models:
+<!-- Recently, I've been very interested in the field related to **large language models** and have been actively exploring the relevant areas. The following are some of my thoughts and reports on large language models:
 
 - [Recent trends of LLM](https://exlaw.github.io/docs/GPT4&PaLM-E-talk.pdf)
 - [GPT4&PaLM-E talk](https://exlaw.github.io/docs/Recent-trends-of-LLM.pdf)
 - [Investigation of using ChatGPT for Text-to-SQL](https://arxiv.org/abs/2303.13547)
 - [Private Watermark for LLM](https://arxiv.org/abs/2307.16230)
-- [Robust Watermark for LLM](https://arxiv.org/abs/2310.06356)
+- [Robust Watermark for LLM](https://arxiv.org/abs/2310.06356) -->
 
 Contact: 
 
@@ -32,11 +33,19 @@ Contact:
 
 **2023**
 
+- **A Survey of Text Watermarking in the Era of Large Language Models**
+
+  **Aiwei Liu\***, Leyi Pan\*, Yijian Lu, Jingjing Li, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu
+
+  [[Paper]](https://arxiv.org/pdf/2312.07913.pdf)  
+
 - **RAPL: A Relation-Aware Prototype Learning Approach for Few-Shot Document-Level Relation Extraction**
 
   Shiao Meng, Xuming Hu, **Aiwei Liu**, Shuang Li, Fukun Ma, Yawen Yang, Lijie Wen
 
   **EMNLP 2023**
+
+  [[Paper]](https://aclanthology.org/2023.emnlp-main.316.pdf)  
 
 - **A Semantic Invariant Robust Watermark for Large Language Models**
 
@@ -44,7 +53,7 @@ Contact:
 
   [[Paper]](https://arxiv.org/pdf/2307.16230.pdf) [[Code]](https://github.com/THU-BPM/Robust_Watermark) 
 
-- **A Private Watermark for Large Language Models**
+- **An Unforgeable Publicly Verifiable Watermark for Large Language Models**
 
   **Aiwei Liu**, Leyi Pan, Xuming Hu, Shu'ang Li, Lijie Wen, Irwin King, Philip S. Yu
 
