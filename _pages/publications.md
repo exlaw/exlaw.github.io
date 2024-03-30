@@ -7,6 +7,14 @@ author_profile: true
 
 ## 2024
 
+**An Entropy-based Text Watermarking Detection Method**
+  - Yijian Lu, **Aiwei Liu**, Dianzhi Yu, Jingjing Li, Irwin King
+  - [[Paper]](https://arxiv.org/pdf/2403.13485.pdf)
+
+**Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models**
+  - Zhiwei He, Binglin Zhou, Hongkun Hao, **Aiwei Liu**, Xing Wang, Zhaopeng Tu, Zhuosheng Zhang, Rui Wang
+  - [[Paper]](https://arxiv.org/pdf/2402.14007.pdf)
+
 **Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation**
   - **Aiwei Liu**, Haoping Bai, Zhiyun Lu, Xiang Kong, Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen
   - [[Paper]](https://arxiv.org/pdf/2402.11907.pdf)
@@ -14,7 +22,7 @@ author_profile: true
 **A Semantic Invariant Robust Watermark for Large Language Models**
 - **Aiwei Liu**, Leyi Pan, Xuming Hu, Shiao Meng, Lijie Wen
 - **ICLR 2024**
-- [[Paper]](https://arxiv.org/pdf/2307.16230.pdf) [[Code]](https://github.com/THU-BPM/Robust_Watermark) 
+- [[Paper]](https://arxiv.org/pdf/2310.06356.pdf) [[Code]](https://github.com/THU-BPM/Robust_Watermark) 
 
 **An Unforgeable Publicly Verifiable Watermark for Large Language Models**
   - **Aiwei Liu**, Leyi Pan, Xuming Hu, Shu'ang Li, Lijie Wen, Irwin King, Philip S. Yu
