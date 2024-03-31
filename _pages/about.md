@@ -19,26 +19,47 @@ Additionally, I'm engaged as a research intern at [Apple's AIML Group](https://m
 
 **Watermark for Large Language Models**
 
-* An Unforgeable Publicly Verifiable Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2307.16230.pdf)
-* A Semantic Invariant Robust Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2310.06356.pdf)
-* A survey of Text Watermarking in the Era of Large Language Models [[Pre-print]](https://arxiv.org/pdf/2312.07913.pdf)
-* Cross-lingual Consistency for Text Watermark [[Pre-print]](https://arxiv.org/pdf/2402.14007.pdf)
-* An Entropy-based Text Watermarking Detection Method [[Pre-print]](https://arxiv.org/pdf/2403.13485.pdf)
+*  An Unforgeable Publicly Verifiable Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2307.16230.pdf) 🏅
+*  A Semantic Invariant Robust Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2310.06356.pdf) 🏅
+*  A survey of Text Watermarking in the Era of Large Language Models [[Pre-print]](https://arxiv.org/pdf/2312.07913.pdf) 🏅
+* An Entropy-based Text Watermarking Detection Method [[Pre-print]](https://arxiv.org/pdf/2403.13485.pdf) 💡 
+* Cross-lingual Consistency for Text Watermark [[Pre-print]](https://arxiv.org/pdf/2402.14007.pdf) 💡
+
 
 
 **Safety Alignment for Large Language Models**
 
-* Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation [[Pre-print]](https://arxiv.org/pdf/2402.11907.pdf)
+* Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation [[Pre-print]](https://arxiv.org/pdf/2402.11907.pdf) 🏅 
 
 **Adversarial Examples for Large Language Models**
 
-* Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution [[EMNLP 2022]](https://aclanthology.org/2022.emnlp-main.522)
+* Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution [[EMNLP 2022]](https://aclanthology.org/2022.emnlp-main.522) 🏅 
 
 **Semantic Parsing with Large Language Models**
 
-* Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph [[SIGKDD 2022]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294)
-* Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing [[ACL 2023 Findings]](https://aclanthology.org/2023.findings-acl.43.pdf)
-* A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability [[Pre-print]](https://arxiv.org/abs/2303.13547)
+* Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph [[SIGKDD 2022]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) 🏅 
+* Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing [[ACL 2023 Findings]](https://aclanthology.org/2023.findings-acl.43.pdf) 🏅 
+* A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability [[Pre-print]](https://arxiv.org/abs/2303.13547) 🏅 
+
+**Fact Checking with Large Language Models**
+
+* CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking [[NAACL 2022]](https://arxiv.org/abs/2206.11863) 💡 
+
+<!-- **Information Extraction**
+
+* GDA: Generative Data Augmentation Techniques for Relation Extraction Tasks [[ACL 2023 Findings]](https://arxiv.org/abs/2305.16663) 🏅 
+* RAPL: A Relation-Aware Prototype Learning Approach for Few-Shot Document-Level Relation Extraction [[EMNLP 2023]](https://aclanthology.org/2023.emnlp-main.316.pdf) 💡 
+* Reading Broadly to Open Your Mind Improving Open Relation Extraction With Search Documents Under Self-Supervisions [[TKDE]](https://ieeexplore.ieee.org/abstract/document/10255305) 💡
+* Entity-to-Text based Data Augmentation with Semantic Coherence and Entity Preserving for various NER Tasks [[ACL 2023 Findings]](https://aclanthology.org/2023.findings-acl.578.pdf) 💡
+* Guassian Prior Reinforcement Learning for Nested Named Entity Recognition [[ICASSP 2023]](https://ieeexplore.ieee.org/abstract/document/10097163/) 💡 -->
+
+
+---
+
+🏅: Leading contribution
+💡: Insightful contribution
+
+---
   
 
 # 🔥 News
@@ -46,10 +67,10 @@ Additionally, I'm engaged as a research intern at [Apple's AIML Group](https://m
 
 # 📞 Contact
 
-- **Email**:
+- 📧 **Email**:
   -  liuaw20@mails.tsinghua.edu.cn
   -  liuaiwei20@gmail.com
-- **Wechat**:
+- 💬 **Wechat**:
   - u839134412
 
 
