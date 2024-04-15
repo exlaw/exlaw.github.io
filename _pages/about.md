@@ -63,6 +63,9 @@ Additionally, I'm engaged as a research intern at [Apple's AIML Group](https://m
   
 
 # 🔥 News
+- *2024.04*: Invited as a reviewer for [ACMMM 2024](https://2024.acmmm.org/).
+- *2024.04*: Invited as a reviewer for [ACL ARR April](https://openreview.net/group?id=aclweb.org/ACL/ARR/2024/April).
+- *2024.02*: Invited as a reviewer for [ACL ARR February](https://openreview.net/group?id=aclweb.org/ACL/ARR/2024/February).
 - *2024.01*: 🎉🎉 Two papers about watermark for Large Language Models are accepted by [ICLR 2024](https://iclr.cc/).
 
 # 📞 Contact
