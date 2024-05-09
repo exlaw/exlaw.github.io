@@ -11,9 +11,9 @@ redirect_from:
 
 Hi! My name is **Aiwei Liu (刘瑷玮)**. I am a fourth-year Ph.D. student at the [School of Software](https://www.thss.tsinghua.edu.cn/) in [Tsinghua University](https://www.tsinghua.edu.cn/), where I am advised by Prof. [Lijie Wen](https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm). Before that, I received my B.Eng. degree from the [Software Institue](https://software.nju.edu.cn/) in [Nanjing University](https://www.nju.edu.cn/) in 2020.
 
-Currently, I'm serving as a Visiting Scholar at [CUHK MISC Lab](https://misc-lab.cse.cuhk.edu.hk/people/), working under the supervision of Prof. [Irwin King](https://www.cse.cuhk.edu.hk/irwin.king/home) (IEEE Fellow).
+Currently, I'm engaged as a research intern at [Apple's AIML Group](https://machinelearning.apple.com/), where I'm working under the supervision of Dr. [Meng Cao](https://openreview.net/profile?id=~Meng_Cao2).
 
-Additionally, I'm engaged as a research intern at [Apple's AIML Group](https://machinelearning.apple.com/), where I'm working under the supervision of Dr. [Meng Cao](https://openreview.net/profile?id=~Meng_Cao2).
+Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://misc-lab.cse.cuhk.edu.hk/people/), working under the supervision of Prof. [Irwin King](https://www.cse.cuhk.edu.hk/irwin.king/home) (IEEE Fellow).
 
 # 🔬 Research
 
