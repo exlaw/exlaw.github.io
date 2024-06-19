@@ -19,13 +19,12 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 
 **Watermark for Large Language Models**
 
-*  An Unforgeable Publicly Verifiable Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2307.16230.pdf) 🏅
-*  A Semantic Invariant Robust Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2310.06356.pdf) 🏅
-*  A Survey of Text Watermarking in the Era of Large Language Models [[Pre-print]](https://arxiv.org/pdf/2312.07913.pdf) 🏅
-*  MarkLLM: An Open-Source Toolkit for LLM Watermarking [[Pre-print]](https://arxiv.org/pdf/2405.10051) 💡 
-* An Entropy-based Text Watermarking Detection Method [[ACL 2024 Main]](https://arxiv.org/pdf/2403.13485.pdf) 💡 
-* Cross-lingual Consistency for Text Watermark [[ACL 2024 Main]](https://arxiv.org/pdf/2402.14007.pdf) 💡
-
+*  An Unforgeable Publicly Verifiable Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2307.16230.pdf) [[Code]](https://github.com/THU-BPM/unforgeable_watermark) 🏅
+*  A Semantic Invariant Robust Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2310.06356.pdf) [[Code]](https://github.com/THU-BPM/Robust_Watermark)🏅
+*  A Survey of Text Watermarking in the Era of Large Language Models [[Pre-print]](https://arxiv.org/pdf/2312.07913.pdf)[[机器之心]](https://mp.weixin.qq.com/s/U3ZzGsi3Yihueqr6MGRHfg) 🏅
+*  MarkLLM: An Open-Source Toolkit for LLM Watermarking [[Pre-print]](https://arxiv.org/pdf/2405.10051) [[机器之心]](https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg) [[Code]](https://github.com/THU-BPM/MarkLLM)💡 
+* An Entropy-based Text Watermarking Detection Method [[ACL 2024 Main]](https://arxiv.org/pdf/2403.13485.pdf) [[Code]](https://github.com/luyijian3/EWD)💡 
+* Cross-lingual Consistency for Text Watermark [[ACL 2024 Main]](https://arxiv.org/pdf/2402.14007.pdf) [[Code]](https://github.com/zwhe99/X- SIR)💡
 
 
 **Safety Alignment for Large Language Models**
@@ -34,17 +33,17 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 
 **Adversarial Examples for Large Language Models**
 
-* Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution [[EMNLP 2022 Main]](https://aclanthology.org/2022.emnlp-main.522) 🏅 
+* Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution [[EMNLP 2022 Main]](https://aclanthology.org/2022.emnlp-main.522) [[Code]](https://github.com/THU-BPM/CWBA)🏅 
 
 **Semantic Parsing with Large Language Models**
 
-* Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph [[SIGKDD 2022]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) 🏅 
-* Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing [[ACL 2023 Findings]](https://aclanthology.org/2023.findings-acl.43.pdf) 🏅 
-* A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability [[Pre-print]](https://arxiv.org/abs/2303.13547) 🏅 
+* Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph [[SIGKDD 2022]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) [[Code]](https://github.com/THU-BPM/ISESL-SQL)🏅 
+* Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing [[ACL 2023 Findings]](https://aclanthology.org/2023.findings-acl.43.pdf) [[Code]](https://github.com/THU-BPM/CD-Text2SQL-CG)🏅 
+* A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability [[Pre-print]](https://arxiv.org/abs/2303.13547) [[Code]](https://github.com/THU-BPM/chatgpt-sql)🏅 
 
 **Fact Checking with Large Language Models**
 
-* CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking [[NAACL 2022]](https://arxiv.org/abs/2206.11863) 💡 
+* CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking [[NAACL 2022]](https://arxiv.org/abs/2206.11863) [[Code]](https://github.com/THU-BPM/CHEF)💡 
 
 <!-- **Information Extraction**
 
@@ -72,6 +71,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 - *2024.04*: Invited as a reviewer for [ACL ARR April](https://openreview.net/group?id=aclweb.org/ACL/ARR/2024/April).
 - *2024.02*: Invited as a reviewer for [ACL ARR February](https://openreview.net/group?id=aclweb.org/ACL/ARR/2024/February).
 - *2024.01*: 🎉🎉 Two papers about watermark for Large Language Models are accepted by [ICLR 2024](https://iclr.cc/).
+
 
 # 📞 Contact
 
