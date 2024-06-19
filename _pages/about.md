@@ -19,31 +19,31 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 
 **Watermark for Large Language Models**
 
-*  An Unforgeable Publicly Verifiable Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2307.16230.pdf) [[Code]](https://github.com/THU-BPM/unforgeable_watermark) 🏅
-*  A Semantic Invariant Robust Watermark for Large Language Models [[ICLR 2024]](https://arxiv.org/pdf/2310.06356.pdf) [[Code]](https://github.com/THU-BPM/Robust_Watermark)🏅
-*  A Survey of Text Watermarking in the Era of Large Language Models [[Pre-print]](https://arxiv.org/pdf/2312.07913.pdf)[[机器之心]](https://mp.weixin.qq.com/s/U3ZzGsi3Yihueqr6MGRHfg) 🏅
-*  MarkLLM: An Open-Source Toolkit for LLM Watermarking [[Pre-print]](https://arxiv.org/pdf/2405.10051) [[机器之心]](https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg) [[Code]](https://github.com/THU-BPM/MarkLLM)💡 
-* An Entropy-based Text Watermarking Detection Method [[ACL 2024 Main]](https://arxiv.org/pdf/2403.13485.pdf) [[Code]](https://github.com/luyijian3/EWD)💡 
-* Cross-lingual Consistency for Text Watermark [[ACL 2024 Main]](https://arxiv.org/pdf/2402.14007.pdf) [[Code]](https://github.com/zwhe99/X- SIR)💡
+*  An Unforgeable Publicly Verifiable Watermark for Large Language Models **<span style="color: #ff6666;">(ICLR 2024)</span>** [[Paper]](https://arxiv.org/pdf/2307.16230.pdf) [[Code]](https://github.com/THU-BPM/unforgeable_watermark) 1️⃣
+*  A Semantic Invariant Robust Watermark for Large Language Models **<span style="color: #ff6666;">(ICLR 2024)</span>** [[Paper]](https://arxiv.org/pdf/2310.06356.pdf) [[Code]](https://github.com/THU-BPM/Robust_Watermark)1️⃣
+*  A Survey of Text Watermarking in the Era of Large Language Models **<span style="color: #ff6666;">(Pre-print)</span>** [[Paper]](https://arxiv.org/pdf/2312.07913.pdf)[[机器之心]](https://mp.weixin.qq.com/s/U3ZzGsi3Yihueqr6MGRHfg) 1️⃣
+*  MarkLLM: An Open-Source Toolkit for LLM Watermarking **<span style="color: #ff6666;">(Pre-print)</span>** [[Paper]](https://arxiv.org/pdf/2405.10051) [[机器之心]](https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg) [[Code]](https://github.com/THU-BPM/MarkLLM)💡 
+* An Entropy-based Text Watermarking Detection Method **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2403.13485.pdf) [[Code]](https://github.com/luyijian3/EWD)💡 
+* Cross-lingual Consistency for Text Watermark **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.14007.pdf) [[Code]](https://github.com/zwhe99/X- SIR)💡
 
 
 **Safety Alignment for Large Language Models**
 
-* Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation [[ACL 2024 Main]](https://arxiv.org/pdf/2402.11907.pdf) 🏅 
+* Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.11907.pdf) 1️⃣
 
 **Adversarial Examples for Large Language Models**
 
-* Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution [[EMNLP 2022 Main]](https://aclanthology.org/2022.emnlp-main.522) [[Code]](https://github.com/THU-BPM/CWBA)🏅 
+* Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution **<span style="color: #ff6666;">(EMNLP 2022 Main)</span>** [[Paper]](https://aclanthology.org/2022.emnlp-main.522) [[Code]](https://github.com/THU-BPM/CWBA)1️⃣
 
 **Semantic Parsing with Large Language Models**
 
-* Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph [[SIGKDD 2022]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) [[Code]](https://github.com/THU-BPM/ISESL-SQL)🏅 
-* Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing [[ACL 2023 Findings]](https://aclanthology.org/2023.findings-acl.43.pdf) [[Code]](https://github.com/THU-BPM/CD-Text2SQL-CG)🏅 
-* A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability [[Pre-print]](https://arxiv.org/abs/2303.13547) [[Code]](https://github.com/THU-BPM/chatgpt-sql)🏅 
+* Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph **<span style="color: #ff6666;">(SIGKDD 2022)</span>**  [[Paper]](https://dl.acm.org/doi/pdf/10.1145/3534678.3539294) [[Code]](https://github.com/THU-BPM/ISESL-SQL)1️⃣ 
+* Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing **<span style="color: #ff6666;">(ACL 2023 Findings)</span>** [[Paper]](https://aclanthology.org/2023.findings-acl.43.pdf) [[Code]](https://github.com/THU-BPM/CD-Text2SQL-CG)1️⃣
+* A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability **<span style="color: #ff6666;">(Pre-print)</span>**  [[Paper]](https://arxiv.org/abs/2303.13547) [[Code]](https://github.com/THU-BPM/chatgpt-sql) 1️⃣
 
 **Fact Checking with Large Language Models**
 
-* CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking [[NAACL 2022]](https://arxiv.org/abs/2206.11863) [[Code]](https://github.com/THU-BPM/CHEF)💡 
+* CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking  **<span style="color: #ff6666;">(NAACL 2022)</span>**[[Paper]](https://arxiv.org/abs/2206.11863)  [[Code]](https://github.com/THU-BPM/CHEF)💡 
 
 <!-- **Information Extraction**
 
@@ -56,7 +56,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 
 ---
 
-🏅: Leading contribution
+1️⃣: Leading contribution (First Author)
 💡: Insightful contribution
 
 ---
