@@ -46,6 +46,12 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 **Fact Checking with Large Language Models**
 
 * CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking  **<span style="color: #ff6666;">(NAACL 2022)</span>**[[Paper]](https://arxiv.org/abs/2206.11863)  [[Code]](https://github.com/THU-BPM/CHEF)💡 
+  
+
+**Retrieval-Augmented Large Language Models**
+
+* Entropy-Based Decoding for Retrieval-Augmented Large Language Models **<span style="color: #ff6666;">(Pre-print)</span>**[[Paper]](https://arxiv.org/pdf/2406.17519) 💡 
+* Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities **<span style="color: #ff6666;">(Pre-print)</span>**[[Paper]](https://arxiv.org/pdf/2406.11357) 💡 
 
 <!-- **Information Extraction**
 
