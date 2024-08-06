@@ -31,7 +31,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 
 **Safety Alignment for Large Language Models**
 
-* Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.11907.pdf) 1️⃣
+* Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.11907.pdf) [[Apple Website]](https://machinelearning.apple.com/research/direct-large-language)1️⃣
 
 **Adversarial Examples for Large Language Models**
 
