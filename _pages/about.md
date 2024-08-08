@@ -13,6 +13,8 @@ Hi! My name is **Aiwei Liu (刘瑷玮)**. I am a fourth-year Ph.D. student at th
 
 Currently, I'm engaged as a research intern at [Apple's AIML Group](https://machinelearning.apple.com/), where I'm working under the supervision of Dr. [Meng Cao](https://openreview.net/profile?id=~Meng_Cao2).
 
+I'm going to serve as a Visiting Scholar at the [UIC BDSC Lab](https://bdsc-uic.github.io/people.html), working under the supervision of Prof. [Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/) (ACM Fellow).
+
 Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://misc-lab.cse.cuhk.edu.hk/people/), working under the supervision of Prof. [Irwin King](https://www.cse.cuhk.edu.hk/irwin.king/home) (IEEE Fellow).
 
 # 🔬 Research
