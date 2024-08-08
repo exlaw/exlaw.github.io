@@ -73,7 +73,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
   
 
 # 🔥 News
-- *2024.08*: 🎉🎉 Excited to announce the updated version of our paper: "A Survey of Text Watermarking in the Era of Large Language Models" (https://arxiv.org/pdf/2312.07913)!
+- *2024.08*: 🎉🎉 Excited to announce the updated version of our paper: "A Survey of Text Watermarking in the Era of Large Language Models" [Paper](https://arxiv.org/pdf/2312.07913)!
 - *2024.05*: 🎉🎉 One paper about Large Language Model Alignment is accepted by [ACL 2024](https://2024.aclweb.org/).
 - *2024.05*: 🎉🎉 Two papers about watermark for Large Language Models are accepted by [ACL 2024](https://2024.aclweb.org/).
 - *2024.05*: 🎉🎉 One paper about Document Relation Extraction is accepted by [Findings of ACL 2024](https://2024.aclweb.org/).
