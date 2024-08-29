@@ -9,7 +9,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! My name is **Aiwei Liu (刘瑷玮)**. I am a fourth-year Ph.D. student at the [School of Software](https://www.thss.tsinghua.edu.cn/) in [Tsinghua University](https://www.tsinghua.edu.cn/), where I am advised by Prof. [Lijie Wen](https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm). Before that, I received my B.Eng. degree from the [Software Institue](https://software.nju.edu.cn/) in [Nanjing University](https://www.nju.edu.cn/) in 2020.
+Hi! My name is **Aiwei Liu (刘瑷玮)**. I am a final-year Ph.D. student at the [School of Software](https://www.thss.tsinghua.edu.cn/) in [Tsinghua University](https://www.tsinghua.edu.cn/), where I am advised by Prof. [Lijie Wen](https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm). Before that, I received my B.Eng. degree from the [Software Institue](https://software.nju.edu.cn/) in [Nanjing University](https://www.nju.edu.cn/) in 2020.
 
 Currently, I'm engaged as a research intern at [Apple's AIML Group](https://machinelearning.apple.com/), where I'm working under the supervision of Dr. [Meng Cao](https://openreview.net/profile?id=~Meng_Cao2).
 
@@ -28,7 +28,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 *  A Survey of Text Watermarking in the Era of Large Language Models **<span style="color: #ff6666;">(ACM Computing Surveys)</span>** [[Paper]](https://arxiv.org/pdf/2312.07913.pdf)[[机器之心]](https://mp.weixin.qq.com/s/U3ZzGsi3Yihueqr6MGRHfg) [[Twitter]](https://x.com/Aiwei_Liu_99/status/1821673541026099519) [[Home]](https://survey-text-watermark.github.io/)  1️⃣
 *  MarkLLM: An Open-Source Toolkit for LLM Watermarking **<span style="color: #ff6666;">(Pre-print)</span>** [[Paper]](https://arxiv.org/pdf/2405.10051) [[机器之心]](https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg) [[Code]](https://github.com/THU-BPM/MarkLLM)💡 
 * An Entropy-based Text Watermarking Detection Method **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2403.13485.pdf) [[Code]](https://github.com/luyijian3/EWD)💡 
-* Cross-lingual Consistency for Text Watermark **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.14007.pdf) [[Code]](https://github.com/zwhe99/X- SIR)💡
+* Cross-lingual Consistency for Text Watermark **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.14007.pdf) [[Code]](https://github.com/zwhe99/X-SIR)💡
 
 
 **Safety Alignment for Large Language Models**
@@ -73,6 +73,8 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
   
 
 # 🔥 News
+- *2024.08*: 🎉🎉 Excited to announce the our paper: "A Survey of Text Watermarking in the Era of Large Language Models" [Paper](https://arxiv.org/pdf/2312.07913) is accepted by [ACM Computing Surveys](https://dl.acm.org/journal/csur)!
+- *2024.08*: Invited as a reviewer for [ICLR 2025](https://iclr.cc/).
 - *2024.08*: 🎉🎉 Excited to announce the updated version of our paper: "A Survey of Text Watermarking in the Era of Large Language Models" [Paper](https://arxiv.org/pdf/2312.07913)!
 - *2024.05*: 🎉🎉 One paper about Large Language Model Alignment is accepted by [ACL 2024](https://2024.aclweb.org/).
 - *2024.05*: 🎉🎉 Two papers about watermark for Large Language Models are accepted by [ACL 2024](https://2024.aclweb.org/).
