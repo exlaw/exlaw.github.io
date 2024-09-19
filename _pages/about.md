@@ -53,7 +53,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 
 **Retrieval-Augmented Large Language Models**
 
-* Entropy-Based Decoding for Retrieval-Augmented Large Language Models **<span style="color: #ff6666;">(Pre-print)</span>**[[Paper]](https://arxiv.org/pdf/2406.17519) 💡 
+* Entropy-Based Decoding for Retrieval-Augmented Large Language Models **<span style="color: #ff6666;">(EMNLP 2024 Findings)</span>**[[Paper]](https://arxiv.org/pdf/2406.17519) 💡 
 * Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities **<span style="color: #ff6666;">(Pre-print)</span>**[[Paper]](https://arxiv.org/pdf/2406.11357) 💡 
 
 <!-- **Information Extraction**
