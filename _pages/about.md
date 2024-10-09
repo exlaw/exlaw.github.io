@@ -36,6 +36,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 **Safety Alignment for Large Language Models**
 
 * Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.11907.pdf) [[Apple Website]](https://machinelearning.apple.com/research/direct-large-language)1️⃣
+* TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights **<span style="color: #ff6666;">(Pre-print)</span>** [[Paper]](https://arxiv.org/pdf/2410.04350v1) 1️⃣
 
 **Adversarial Examples for Large Language Models**
 
@@ -54,7 +55,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 
 **Retrieval-Augmented Large Language Models**
 
-* Entropy-Based Decoding for Retrieval-Augmented Large Language Models **<span style="color: #ff6666;">(Pre-print)</span>**[[Paper]](https://arxiv.org/pdf/2406.17519) 💡 
+* Entropy-Based Decoding for Retrieval-Augmented Large Language Models **<span style="color: #ff6666;">(MINT@NeurIPS2024)</span>**[[Paper]](https://arxiv.org/pdf/2406.17519) 💡 
 * Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities **<span style="color: #ff6666;">(EMNLP 2024 Findings)</span>**[[Paper]](https://arxiv.org/pdf/2406.11357) 💡 
 
 <!-- **Information Extraction**
@@ -75,6 +76,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
   
 
 # 🔥 News
+- *2024.10*: 🎉🎉 Excited to announce the our paper: [MarkLLM: An Open-Source Toolkit for LLM Watermarking](https://arxiv.org/pdf/2405.10051) is accepted by [EMNLP 2024 Demo Track](https://2024.emnlp.org/).
 - *2024.09*: 🎉 One paper about Retrieval-Augmented Large Language Models is accepted by [EMNLP 2024](https://2024.emnlp.org/).
 - *2024.08*: 🎉🎉 Excited to announce the our paper: "A Survey of Text Watermarking in the Era of Large Language Models" [Paper](https://arxiv.org/pdf/2312.07913) is accepted by [ACM Computing Surveys](https://dl.acm.org/journal/csur)!
 - *2024.08*: Invited as a reviewer for [ICLR 2025](https://iclr.cc/).
