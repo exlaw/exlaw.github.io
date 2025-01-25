@@ -26,17 +26,17 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 *  An Unforgeable Publicly Verifiable Watermark for Large Language Models **<span style="color: #ff6666;">(ICLR 2024)</span>** [[Paper]](https://arxiv.org/pdf/2307.16230.pdf) [[Code]](https://github.com/THU-BPM/unforgeable_watermark) 1️⃣
 *  A Semantic Invariant Robust Watermark for Large Language Models **<span style="color: #ff6666;">(ICLR 2024)</span>** [[Paper]](https://arxiv.org/pdf/2310.06356.pdf) [[Code]](https://github.com/THU-BPM/Robust_Watermark)1️⃣
 *  A Survey of Text Watermarking in the Era of Large Language Models **<span style="color: #ff6666;">(ACM Computing Surveys)</span>** [[Paper]](https://arxiv.org/pdf/2312.07913.pdf)[[机器之心]](https://mp.weixin.qq.com/s/U3ZzGsi3Yihueqr6MGRHfg) [[Twitter]](https://x.com/Aiwei_Liu_99/status/1821673541026099519) [[Home]](https://survey-text-watermark.github.io/)  1️⃣
-*  Can Watermarked LLMs be Identified by Users via Crafted Prompts? **<span style="color: #ff6666;">(Pre-print)</span>** [[Paper]](https://arxiv.org/abs/2410.03168) 1️⃣
+*  Can Watermarked LLMs be Identified by Users via Crafted Prompts? **<span style="color: #ff6666;">(ICLR 2025)</span>** [[Paper]](https://arxiv.org/abs/2410.03168) 1️⃣
 *  MarkLLM: An Open-Source Toolkit for LLM Watermarking **<span style="color: #ff6666;">(EMNLP 2024 Demo)</span>** [[Paper]](https://arxiv.org/pdf/2405.10051) [[机器之心]](https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg) [[Code]](https://github.com/THU-BPM/MarkLLM)💡 
 * An Entropy-based Text Watermarking Detection Method **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2403.13485.pdf) [[Code]](https://github.com/luyijian3/EWD)💡 
 * Cross-lingual Consistency for Text Watermark **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.14007.pdf) [[Code]](https://github.com/zwhe99/X-SIR)💡
-* WaterSeeker: Efficient Detection of Watermarked Segments in Large Documents **<span style="color: #ff6666;">(Pre-print)</span>** [[Paper]](https://arxiv.org/pdf/2409.05112) 💡
+* WaterSeeker: Efficient Detection of Watermarked Segments in Large Documents **<span style="color: #ff6666;">(NAACL 2025 Findings)</span>** [[Paper]](https://arxiv.org/pdf/2409.05112) 💡
 
 
 **Safety Alignment for Large Language Models**
 
 * Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.11907.pdf) [[Apple Website]](https://machinelearning.apple.com/research/direct-large-language)1️⃣
-* TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights **<span style="color: #ff6666;">(Pre-print)</span>** [[Paper]](https://arxiv.org/pdf/2410.04350v1) 1️⃣
+* TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights **<span style="color: #ff6666;">(ICLR 2025)</span>** [[Paper]](https://arxiv.org/pdf/2410.04350v1) 1️⃣
 
 **Adversarial Examples for Large Language Models**
 
@@ -76,6 +76,8 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
   
 
 # 🔥 News
+- *2025.01*: 🎉🎉 Two papers are accepted by [NAACL 2025](https://2025.naacl.org/).
+- *2025.01*: 🎉🎉 Three papers are accepted by [ICLR 2025](https://iclr.cc/).
 - *2024.10*: 🎉🎉 Excited to announce the our paper: [MarkLLM: An Open-Source Toolkit for LLM Watermarking](https://arxiv.org/pdf/2405.10051) is accepted by [EMNLP 2024 Demo Track](https://2024.emnlp.org/).
 - *2024.09*: 🎉 One paper about Retrieval-Augmented Large Language Models is accepted by [EMNLP 2024](https://2024.emnlp.org/).
 - *2024.08*: 🎉🎉 Excited to announce the our paper: "A Survey of Text Watermarking in the Era of Large Language Models" [Paper](https://arxiv.org/pdf/2312.07913) is accepted by [ACM Computing Surveys](https://dl.acm.org/journal/csur)!
