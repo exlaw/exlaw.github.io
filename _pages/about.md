@@ -30,7 +30,7 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 *  MarkLLM: An Open-Source Toolkit for LLM Watermarking **<span style="color: #ff6666;">(EMNLP 2024 Demo)</span>** [[Paper]](https://arxiv.org/pdf/2405.10051) [[机器之心]](https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg) [[Code]](https://github.com/THU-BPM/MarkLLM)💡 
 * An Entropy-based Text Watermarking Detection Method **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2403.13485.pdf) [[Code]](https://github.com/luyijian3/EWD)💡 
 * Cross-lingual Consistency for Text Watermark **<span style="color: #ff6666;">(ACL 2024 Main)</span>** [[Paper]](https://arxiv.org/pdf/2402.14007.pdf) [[Code]](https://github.com/zwhe99/X-SIR)💡
-* WaterSeeker: Efficient Detection of Watermarked Segments in Large Documents **<span style="color: #ff6666;">(NAACL 2025 Findings)</span>** [[Paper]](https://arxiv.org/pdf/2409.05112) 💡
+* WaterSeeker: Pioneering Efficient Detection of Watermarked Segments in Large Documents **<span style="color: #ff6666;">(NAACL 2025 Findings)</span>** [[Paper]](https://arxiv.org/pdf/2409.05112) 💡
 
 
 **Safety Alignment for Large Language Models**
