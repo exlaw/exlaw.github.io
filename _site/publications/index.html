@@ -19,7 +19,7 @@
 
 
 
-<title>Publications - Aiwei Liu</title>
+<title>  Aiwei Liu</title>
 
 
 
@@ -29,7 +29,7 @@
 
 <meta property="og:locale" content="en-US">
 <meta property="og:site_name" content="Aiwei Liu">
-<meta property="og:title" content="Publications">
+<meta property="og:title" content="Aiwei Liu">
 
 
   <link rel="canonical" href="http://localhost:4000/publications/">
@@ -140,10 +140,7 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Aiwei Liu</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/publications/">Publications</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/services/">Services</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/publications/">All Research</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
@@ -256,7 +253,7 @@
 
   <div class="archive">
     
-      <h1 class="page__title">Publications</h1>
+      <h1 class="page__title"></h1>
     
     <style>
 .publication {
@@ -265,17 +262,17 @@
     margin-bottom: 20px;
 }
 .pub-title {
-    font-weight: 700;           /* 调整为稍轻的粗体 */
-    font-size: 18px;           /* 增大标题字号 */
-    margin: 0 0 8px 0;         /* 增加底部间距 */
+    font-weight: 700;           
+    font-size: 18px;           
+    margin: 0 0 8px 0;         
     color: #000;
 }
 .pub-authors {
     font-family: "Microsoft YaHei",
     margin: 3px 0;
     font-size: 15px;
-    font-weight: normal;       /* 确保作者名称为常规字重 */
-    color: rgba(0,0,0,0.9);    /* 更自然的灰色 */
+    font-weight: normal;       
+    color: rgba(0,0,0,0.9);    
 }
 .pub-venue-links {
     margin: 2px 0;
@@ -292,34 +289,51 @@
     color: #0645AD;
     text-decoration: none;
 }
-.pub-links a::before {         /* 添加左方括号 */
-    content: '[';
+.pub-links a::before {         
+
 }
-.pub-links a::after {          /* 添加右方括号 */
-    content: ']';
+.pub-links a::after {          
+
 }
-.pub-links a + a {             /* 如果有多个链接，添加间距 */
+.pub-links a + a {             
     margin-left: 5px;
 }
 h2 {
-    font-family:  "Microsoft YaHei", 
+    font-family: "Microsoft YaHei", 
     margin-top: 20px;
     margin-bottom: 15px;
 }
+hr {
+    margin: 10px 0;
+    height: 1px;
+    background-color: #ddd;
+    border: none;
+}
+.section-title {
+    font-family: "Microsoft YaHei", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2850a7;  // 深邃的蓝色
+    letter-spacing: 0.5px;
+}
 </style>
+
+<div class="section-title">Conference Papers</div>
+<hr />
 
 <div class="publication">
 <div class="pub-title">Can Watermarked LLMs be Identified by Users via Crafted Prompts?</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Sheng Guan, Yiming Liu, Leyi Pan, Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Sheng Guan, Yiming Liu, Leyi Pan, Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ICLR 2025</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2410.03168">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2410.03168">Paper</a>][<a href="https://github.com/THU-BPM/Watermarked_LLM_Identification">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Xiaoming Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Xiaoming Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ICLR 2025</span>
     <span class="pub-links">[<a href="https://arxiv.org/abs/2410.04350">Paper</a>]</span>
@@ -327,17 +341,26 @@ h2 {
 </div>
 
 <div class="publication">
+<div class="pub-title">Mitigating Modality Prior-induced Hallucinations in Multimodal Large Language Models via Deciphering Attention Causality</div>
+<div class="pub-authors">Guanyu Zhou, Yibo Yan, Xin Zou, Kun Wang, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xuming Hu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the proceedings of ICLR 2025</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2410.04780">Paper</a>] [<a href="https://github.com/The-Martyr/CausalMM">Code</a>]</span>
+</div>
+</div>
+
+<div class="publication">
 <div class="pub-title">WaterSeeker: Efficient Detection of Watermarked Segments in Large Documents</div>
-<div class="pub-authors">Leyi Pan, <span style="font-weight: bold;">Aiwei Liu</span>, Yijian Lu, Zitian Gao, Yichen Di, Lijie Wen, Irwin King, Philip S. Yu</div>
+<div class="pub-authors">Leyi Pan, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yijian Lu, Zitian Gao, Yichen Di, Lijie Wen, Irwin King, Philip S. Yu</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the findings of NAACL 2025</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2409.05112">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2409.05112">Paper</a>] [<a href="https://github.com/THU-BPM/WaterSeeker">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">Entropy-Based Decoding for Retrieval-Augmented Large Language Models</div>
-<div class="pub-authors">Zexuan Qiu, Zijing Ou, Bin Wu, Jingjing Li, <span style="font-weight: bold;">Aiwei Liu</span>, Irwin King</div>
+<div class="pub-authors">Zexuan Qiu, Zijing Ou, Bin Wu, Jingjing Li, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Irwin King</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of NAACL 2025</span>
     <span class="pub-links">[<a href="https://arxiv.org/abs/2406.17519">Paper</a>]</span>
@@ -345,35 +368,8 @@ h2 {
 </div>
 
 <div class="publication">
-<div class="pub-title">TabGEN-RAG: Iterative Retrieval for Tabular Data Generation with Large Language Models</div>
-<div class="pub-authors">Liancheng Fang, <span style="font-weight: bold;">Aiwei Liu</span>, Hengrui Zhang, Henry Peng Zou, Weizhi Zhang, Philip S. Yu</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">In the workshop of TRL@NeurIPS 2024</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2403.02574">Paper</a>]</span>
-</div>
-</div>
-
-<div class="publication">
-<div class="pub-title">A Survey of Text Watermarking in the Era of Large Language Models</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu*</span>, Leyi Pan*, Yijian Lu, Jingjing Li, Xuming Hu, Xi Zhang, Lijie Wen, Irwin King, Hui Xiong, Philip S. Yu</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">ACM Computing Surveys</span>
-    <span class="pub-links">[<a href="https://dl.acm.org/doi/abs/10.1145/3691626">Paper</a>]</span>
-</div>
-</div>
-
-<div class="publication">
-<div class="pub-title">Preventing and Detecting Misinformation Generated by Large Language Models</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Qiang Sheng, Xuming Hu</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">SIGIR 2024 Tutorials</span>
-    <span class="pub-links">[<a href="https://dl.acm.org/doi/abs/10.1145/3626772.3661377">Paper</a>]</span>
-</div>
-</div>
-
-<div class="publication">
 <div class="pub-title">ChatCite: LLM Agent with Human Workflow Guidance for Comparative Literature Summary</div>
-<div class="pub-authors">Yutong Li, Lu Chen, <span style="font-weight: bold;">Aiwei Liu</span>, Kai Yu, Lijie Wen</div>
+<div class="pub-authors">Yutong Li, Lu Chen, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Kai Yu, Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of COLING 2024</span>
     <span class="pub-links">[<a href="https://arxiv.org/abs/2403.02574">Paper</a>]</span>
@@ -382,70 +378,70 @@ h2 {
 
 <div class="publication">
 <div class="pub-title">Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities</div>
-<div class="pub-authors">Zhonghao Li, Xuming Hu, <span style="font-weight: bold;">Aiwei Liu</span>, Kening Zheng, Sirui Huang, Hui Xiong</div>
+<div class="pub-authors">Zhonghao Li, Xuming Hu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Kening Zheng, Sirui Huang, Hui Xiong</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the findings of EMNLP 2024</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.11357">Paper</a>]</span>
-</div>
-</div>
-
-<div class="publication">
-<div class="pub-title">A Survey of AIOps for Failure Management in the Era of Large Language Models</div>
-<div class="pub-authors">Lingzhe Zhang, Tong Jia, Mengxi Jia, Yifan Wu, <span style="font-weight: bold;">Aiwei Liu</span>, Yong Yang, Zhonghai Wu, Xuming Hu, Philip S. Yu, Ying Li</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">Preprint</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.11213">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.11357">Paper</a>] [<a href="https://github.com/allen-li1231/refiner-rag">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
-<div class="pub-authors">Leyi Pan, <span style="font-weight: bold;">Aiwei Liu</span>, Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King</div>
+<div class="pub-authors">Leyi Pan, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of EMNLP 2024 Demo</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2405.10051">Paper</a>] [<a href="https://github.com/THU-BPM/MarkLLM">Code</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2405.10051">Paper</a>] [<a href="https://github.com/THU-BPM/MarkLLM">Code</a>] [<a href="https://colab.research.google.com/drive/169MS4dY6fKNPZ7-92ETz1bAm_xyNAs0B?usp=sharing">Google Colab</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">Preventing and Detecting Misinformation Generated by Large Language Models</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Qiang Sheng, Xuming Hu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">SIGIR 2024 Tutorial</span>
+    <span class="pub-links">[<a href="https://dl.acm.org/doi/10.1145/3626772.3661377">Paper</a>] [<a href="https://sigir24-llm-misinformation.github.io/">Website</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">On the Robustness of Document-Level Relation Extraction Models to Entity Name Variations</div>
-<div class="pub-authors">Shiao Meng, Xuming Hu, <span style="font-weight: bold;">Aiwei Liu</span>, Fukun Ma, Yawen Yang, Shuang Li, Lijie Wen</div>
+<div class="pub-authors">Shiao Meng, Xuming Hu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Fukun Ma, Yawen Yang, Shuang Li, Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the findings of ACL 2024</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.07444">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.07444">Paper</a>] [<a href="https://github.com/THU-BPM/Env-DocRE">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">An Entropy-based Text Watermarking Detection Method</div>
-<div class="pub-authors">Yijian Lu, <span style="font-weight: bold;">Aiwei Liu</span>, Dianzhi Yu, Jingjing Li, Irwin King</div>
+<div class="pub-authors">Yijian Lu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Dianzhi Yu, Jingjing Li, Irwin King</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ACL 2024</span>
-    <span class="pub-links">[<a href="https://arxiv.org/pdf/2403.13485.pdf">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/pdf/2403.13485.pdf">Paper</a>] [<a href="https://github.com/luyijian3/EWD">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models</div>
-<div class="pub-authors">Zhiwei He, Binglin Zhou, Hongkun Hao, <span style="font-weight: bold;">Aiwei Liu</span>, Xing Wang, Zhaopeng Tu, Zhuosheng Zhang, Rui Wang</div>
+<div class="pub-authors">Zhiwei He, Binglin Zhou, Hongkun Hao, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xing Wang, Zhaopeng Tu, Zhuosheng Zhang, Rui Wang</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ACL 2024</span>
-    <span class="pub-links">[<a href="https://arxiv.org/pdf/2402.14007.pdf">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/pdf/2402.14007.pdf">Paper</a>] [<a href="https://github.com/zwhe99/X-SIR">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Haoping Bai, Zhiyun Lu, Xiang Kong, Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Haoping Bai, Zhiyun Lu, Xiang Kong, Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ACL 2024</span>
-    <span class="pub-links">[<a href="https://arxiv.org/pdf/2402.11907.pdf">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://arxiv.org/pdf/2402.11907.pdf">Paper</a>] [<a href="https://github.com/exlaw/DLMA">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">A Semantic Invariant Robust Watermark for Large Language Models</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Leyi Pan, Xuming Hu, Shiao Meng, Lijie Wen</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Leyi Pan, Xuming Hu, Shiao Meng, Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ICLR 2024</span>
     <span class="pub-links">[<a href="https://arxiv.org/pdf/2310.06356.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/Robust_Watermark">Code</a>]</span>
@@ -454,7 +450,7 @@ h2 {
 
 <div class="publication">
 <div class="pub-title">An Unforgeable Publicly Verifiable Watermark for Large Language Models</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Leyi Pan, Xuming Hu, Shu'ang Li, Lijie Wen, Irwin King, Philip S. Yu</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Leyi Pan, Xuming Hu, Shu'ang Li, Lijie Wen, Irwin King, Philip S. Yu</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ICLR 2024</span>
     <span class="pub-links">[<a href="https://arxiv.org/pdf/2307.16230.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/private_watermark">Code</a>]</span>
@@ -463,25 +459,25 @@ h2 {
 
 <div class="publication">
 <div class="pub-title">RAPL: A Relation-Aware Prototype Learning Approach for Few-Shot Document-Level Relation Extraction</div>
-<div class="pub-authors">Shiao Meng, Xuming Hu, <span style="font-weight: bold;">Aiwei Liu</span>, Shuang Li, Fukun Ma, Yawen Yang, Lijie Wen</div>
+<div class="pub-authors">Shiao Meng, Xuming Hu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Shuang Li, Fukun Ma, Yawen Yang, Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of EMNLP 2023</span>
-    <span class="pub-links">[<a href="https://aclanthology.org/2023.emnlp-main.316.pdf">Paper</a>]</span>
+    <span class="pub-links">[<a href="https://aclanthology.org/2023.emnlp-main.316.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/RAPL">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
-<div class="pub-title">Reading Broadly to Open Your Mind: Improving Open Relation Extraction With Search Documents Under Self-Supervisions</div>
-<div class="pub-authors">Xuming Hu, Zhaochen Hong, Chenwei Zhang, <span style="font-weight: bold;">Aiwei Liu</span>, Shiao Meng, Lijie Wen, Irwin King, Philip S. Yu</div>
+<div class="pub-title">Prompt me up: Unleashing the power of alignments for multimodal entity and relation extraction</div>
+<div class="pub-authors">Xuming Hu, Junzhe Chen, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Shiao Meng, Lijie Wen, Philip S Yu</div>
 <div class="pub-venue-links">
-    <span class="pub-venue">TKDE</span>
-    <span class="pub-links">[<a href="https://ieeexplore.ieee.org/abstract/document/10255305">Paper</a>]</span>
+    <span class="pub-venue">In the proceedings of MM 2023</span>
+    <span class="pub-links">[<a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3611899">Paper</a>] [<a href="https://github.com/THU-BPM/PROMU">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">EnTDA: Entity-to-Text based Data Augmentation with Semantic Coherence and Entity Preserving for various NER Tasks</div>
-<div class="pub-authors">Xuming Hu, Yong Jiang, <span style="font-weight: bold;">Aiwei Liu</span>, Zhongqiang Huang, Pengjun Xie, Fei Huang, Lijie Wen and Philip S. Yu</div>
+<div class="pub-authors">Xuming Hu, Yong Jiang, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Zhongqiang Huang, Pengjun Xie, Fei Huang, Lijie Wen and Philip S. Yu</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the findings of ACL 2023</span>
     <span class="pub-links">[<a href="https://aclanthology.org/2023.findings-acl.578.pdf">Paper</a>]</span>
@@ -489,8 +485,17 @@ h2 {
 </div>
 
 <div class="publication">
+<div class="pub-title">GDA: Generative Data Augmentation Techniques for Relation Extraction Tasks</div>
+<div class="pub-authors">Xuming Hu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Zeqi Tan, Xin Zhang, Chenwei Zhang, Irwin King, Philip S. Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the findings of ACL 2023</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2305.16663">Paper</a>]</span>
+</div>
+</div>
+
+<div class="publication">
 <div class="pub-title">Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang and Lijie Wen</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang and Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the findings of ACL 2023</span>
     <span class="pub-links">[<a href="https://aclanthology.org/2023.findings-acl.43.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/CD-Text2SQL-CG">Code</a>]</span>
@@ -499,7 +504,7 @@ h2 {
 
 <div class="publication">
 <div class="pub-title">Enhancing Cross-lingual Natural Language Inference by Soft Prompting with Multilingual Verbalizer</div>
-<div class="pub-authors">Shuang Li, Xuming Hu, <span style="font-weight: bold;">Aiwei Liu</span>, Yawen Yang, Fukun Ma, Philip S. Yu and Lijie Wen</div>
+<div class="pub-authors">Shuang Li, Xuming Hu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yawen Yang, Fukun Ma, Philip S. Yu and Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the findings of ACL 2023</span>
     <span class="pub-links">[<a href="https://aclanthology.org/2023.findings-acl.88.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/SoftMV">Code</a>]</span>
@@ -508,7 +513,7 @@ h2 {
 
 <div class="publication">
 <div class="pub-title">Semantics Matters: AMR-based Path Aggregation Relational Network for Aspect-based Sentiment Analysis</div>
-<div class="pub-authors">Fukun Ma, Xuming Hu, <span style="font-weight: bold;">Aiwei Liu</span>, Yawen Yang, Shuang Li, Philip S. Yu and Lijie Wen</div>
+<div class="pub-authors">Fukun Ma, Xuming Hu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yawen Yang, Shuang Li, Philip S. Yu and Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ACL 2023</span>
     <span class="pub-links">[<a href="https://aclanthology.org/2023.acl-long.19.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/APARN">Code</a>]</span>
@@ -516,35 +521,17 @@ h2 {
 </div>
 
 <div class="publication">
-<div class="pub-title">A Multi-level Supervised Contrastive Learning Framework for Low-Resource Natural Language Inference</div>
-<div class="pub-authors">Shu'ang Li, Xuming Hu, Li Lin, <span style="font-weight: bold;">Aiwei Liu</span>, Lijie Wen, Philip S Yu</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">TASLP 2023</span>
-    <span class="pub-links">[<a href="https://arxiv.org/pdf/2205.15550.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/MultiSCL">Code</a>]</span>
-</div>
-</div>
-
-<div class="publication">
-<div class="pub-title">A Comprehensive Evaluation of ChatGPT's Zero-Shot Text-to-SQL Capability</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Xuming Hu, Lijie Wen, Philip S. Yu</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">Preprint</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2303.13547">Paper</a>] [<a href="https://github.com/THU-BPM/chatgpt-sql">Code</a>]</span>
-</div>
-</div>
-
-<div class="publication">
 <div class="pub-title">Gaussian Prior Reinforcement Learning for Nested Named Entity Recognition</div>
-<div class="pub-authors">Yawen Yang, Xuming Hu, Fukun Ma, Shu'ang Li, <span style="font-weight: bold;">Aiwei Liu</span>, Lijie Wen and Philip S. Yu</div>
+<div class="pub-authors">Yawen Yang, Xuming Hu, Fukun Ma, Shu'ang Li, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Lijie Wen and Philip S. Yu</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of ICASSP 2023</span>
-    <span class="pub-links"></span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2305.07266">Paper</a>] [<a href="https://github.com/THU-BPM/GPRLNER">Code</a>]</span>
 </div>
 </div>
 
 <div class="publication">
 <div class="pub-title">Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Xuming Hu, Li Lin, Lijie Wen</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xuming Hu, Li Lin, Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of SIGKDD 2022</span>
     <span class="pub-links">[<a href="https://dl.acm.org/doi/pdf/10.1145/3534678.3539294">Paper</a>] [<a href="https://github.com/THU-BPM/ISESL-SQL">Code</a>] [<a href="https://cloud.tsinghua.edu.cn/f/ba34f01696c242e7b443/">Slides</a>]</span>
@@ -553,7 +540,7 @@ h2 {
 
 <div class="publication">
 <div class="pub-title">Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution</div>
-<div class="pub-authors"><span style="font-weight: bold;">Aiwei Liu</span>, Honghai Yu, Xuming Hu, Shu'ang Li, Li Lin, Fukun Ma, Yawen Yang, Lijie Wen</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Honghai Yu, Xuming Hu, Shu'ang Li, Li Lin, Fukun Ma, Yawen Yang, Lijie Wen</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of EMNLP 2022</span>
     <span class="pub-links">[<a href="https://aclanthology.org/2022.emnlp-main.522/">Paper</a>] [<a href="https://github.com/THU-BPM/CWBA">Code</a>] [<a href="https://cloud.tsinghua.edu.cn/f/4bc0f8683ddd4a5584d5/">Poster</a>]</span>
@@ -562,12 +549,124 @@ h2 {
 
 <div class="publication">
 <div class="pub-title">CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking</div>
-<div class="pub-authors">Xuming Hu, Zhijiang Guo, Guanyu Wu, <span style="font-weight: bold;">Aiwei Liu</span>, Lijie Wen, Philip S. Yu</div>
+<div class="pub-authors">Xuming Hu, Zhijiang Guo, Guanyu Wu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Lijie Wen, Philip S. Yu</div>
 <div class="pub-venue-links">
     <span class="pub-venue">In the proceedings of NAACL 2022</span>
-    <span class="pub-links"></span>
+    <span class="pub-links">[<a href="https://aclanthology.org/2022.naacl-main.246.pdf">Paper</a>] [<a href="https://github.com/thu-bpm/chef">Code</a>]</span>
 </div>
 </div>
+
+<hr />
+
+<div class="section-title">Journal Papers</div>
+<hr />
+
+<div class="publication">
+<div class="pub-title">A Survey of Text Watermarking in the Era of Large Language Models</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu*</span>, Leyi Pan*, Yijian Lu, Jingjing Li, Xuming Hu, Xi Zhang, Lijie Wen, Irwin King, Hui Xiong, Philip S. Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">ACM Computing Surveys</span>
+    <span class="pub-links">[<a href="https://dl.acm.org/doi/abs/10.1145/3691626">Paper</a>] [<a href="https://survey-text-watermark.github.io/">Website</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">Reading Broadly to Open Your Mind: Improving Open Relation Extraction With Search Documents Under Self-Supervisions</div>
+<div class="pub-authors">Xuming Hu, Zhaochen Hong, Chenwei Zhang, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Shiao Meng, Lijie Wen, Irwin King, Philip S. Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">TKDE</span>
+    <span class="pub-links">[<a href="https://ieeexplore.ieee.org/abstract/document/10255305">Paper</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">A Multi-level Supervised Contrastive Learning Framework for Low-Resource Natural Language Inference</div>
+<div class="pub-authors">Shu'ang Li, Xuming Hu, Li Lin, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Lijie Wen, Philip S Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">TASLP 2023</span>
+    <span class="pub-links">[<a href="https://arxiv.org/pdf/2205.15550.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/MultiSCL">Code</a>]</span>
+</div>
+</div>
+
+<hr />
+
+<div class="section-title">Preprints</div>
+<hr />
+
+<div class="publication">
+<div class="pub-title">TabGEN-RAG: Iterative Retrieval for Tabular Data Generation with Large Language Models</div>
+<div class="pub-authors">Liancheng Fang, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Hengrui Zhang, Henry Peng Zou, Weizhi Zhang, Philip S. Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the workshop of TRL@NeurIPS 2024</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2403.02574">Paper</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">A Survey of AIOps for Failure Management in the Era of Large Language Models</div>
+<div class="pub-authors">Lingzhe Zhang, Tong Jia, Mengxi Jia, Yifan Wu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yong Yang, Zhonghai Wu, Xuming Hu, Philip S. Yu, Ying Li</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">Preprint</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.11213">Paper</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">A Comprehensive Evaluation of ChatGPT's Zero-Shot Text-to-SQL Capability</div>
+<div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xuming Hu, Lijie Wen, Philip S. Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">Preprint</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2303.13547">Paper</a>] [<a href="https://github.com/THU-BPM/chatgpt-sql">Code</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">Interpretable Contrastive Monte Carlo Tree Search Reasoning</div>
+<div class="pub-authors">Zitian Gao, Boye Niu, Xuzheng He, Haotian Xu, Hongzhang Liu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xuming Hu, Lijie Wen</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">Preprint</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2410.01707">Paper</a>] [<a href="https://github.com/zitian-gao/SC-MCTS">Code</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">Recent Advances of Multimodal Continual Learning: A Comprehensive Survey</div>
+<div class="pub-authors">Dianzhi Yu, Xinni Zhang, Yankai Chen, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yifei Zhang, Philip S Yu, Irwin King</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">Preprint</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2410.05352">Paper</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">Less is More: Extreme Gradient Boost Rank-1 Adaption for Efficient Finetuning of LLMs</div>
+<div class="pub-authors">Yifei Zhang, Hao Zhu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Han Yu, Piotr Koniusz, Irwin King</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">Preprint</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2410.19694">Paper</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">Exploring Response Uncertainty in MLLMs: An Empirical Evaluation Under Misleading Scenarios</div>
+<div class="pub-authors">Yunkai Dang, Mengxi Gao, Yibo Yan, Xin Zou, Yanggan Gu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xuming Hu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">Preprint</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2411.02708">Paper</a>] [<a href="https://github.com/Yunkai696/MUB">Code</a>]</span>
+</div>
+</div>
+
+<div class="publication">
+<div class="pub-title">Cold-Start Recommendation towards the Era of Large Language Models (LLMs): A Comprehensive Survey and Roadmap</div>
+<div class="pub-authors">Weizhi Zhang, Yuanchen Bei, Liangwei Yang, Henry Peng Zou, Peilin Zhou, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yinghui Li, Hao Chen, Jianling Wang, Yu Wang, Feiran Huang, Sheng Zhou, Jiajun Bu, Allen Lin, James Caverlee, Fakhri Karray, Irwin King, Philip S Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">Preprint</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2501.01945">Paper</a>]</span>
+</div>
+</div>
+
+<div style="height: 150px;"></div>
+
 
   </div>
 </div>
