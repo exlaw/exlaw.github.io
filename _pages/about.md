@@ -230,6 +230,31 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
 - 💬 **Wechat**:
   - u839134412
 
+
+# 🎓 Education
+
+<div style="display: flex; margin-bottom: 2em; align-items: center;">
+    <div style="margin-right: 2em;">
+        <img src="images/tsinghua.svg" alt="Tsinghua University Logo" style="width: 80px; height: auto;">
+    </div>
+    <div>
+        <div style="font-weight: bold;">Tsinghua University, China</div>
+        <div style="font-style: italic;">Ph.D. in Software Engineering</div>
+        <div>Sept. 2020 - June 2025 (Expected)</div>
+    </div>
+</div>
+
+<div style="display: flex; margin-bottom: 2em; align-items: center;">
+    <div style="margin-right: 2em;">
+        <img src="images/nanjing.png" alt="Nanjing University Logo" style="width: 80px; height: auto;">
+    </div>
+    <div>
+        <div style="font-weight: bold;">Nanjing University, China</div>
+        <div style="font-style: italic;">B.E. in Software Engineering</div>
+        <div>Sept. 2016 - June 2020</div>
+    </div>
+</div>
+
 # 🎓 Services
 
 <div style="font-family: 'Microsoft YaHei';">
@@ -273,6 +298,13 @@ Additionally, I was serving as a Visiting Scholar at [CUHK MISC Lab](https://mis
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+hr {
+    margin: 10px 0;
+    height: 1px;
+    background-color: #ddd;
+    border: none;
 }
 
 .paper-image {
