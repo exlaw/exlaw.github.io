@@ -292,7 +292,7 @@
 <div class="paper-title">Can Watermarked LLMs be Identified by Users via Crafted Prompts?</div>
 <p class="paper-authors"><strong style="text-decoration-line: underline;">Aiwei Liu</strong>, Sheng Guan, Yiming Liu, Leyi Pan, Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu</p>
 <p class="paper-venue">Proceedings of ICLR 2025 <span class="spotlight-badge">Spotlight, top 5%</span></p>
-<p class="paper-links"><a href="https://arxiv.org/pdf/2410.03168">[Paper]</a> <a href="https://github.com/THU-BPM/Watermarked_LLM_Identification">[Code]</a> <a href="https://iclr.cc/virtual/2025/poster/27962">[Conference Page]</a></p>
+<p class="paper-links"><a href="https://arxiv.org/pdf/2410.03168">[Paper]</a> <a href="https://github.com/THU-BPM/Watermarked_LLM_Identification">[Code]</a> <a href="https://iclr.cc/virtual/2025/poster/27962">[Conference Page]</a> <a href="files/water-probe-poster.pdf">[Poster]</a><a href="files/water-probe.pdf">[Slides]</a> </p>
 </div>
 </div>
 
@@ -304,7 +304,7 @@
 <div class="paper-title">TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights</div>
 <p class="paper-authors"><strong style="text-decoration-line: underline;">Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Simon Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</p>
 <p class="paper-venue">Proceedings of ICLR 2025</p>
-<p class="paper-links"><a href="https://arxiv.org/abs/2410.04350">[Paper]</a> <a href="https://github.com/exlaw/TIS-DPO">[Code]</a> <a href="https://iclr.cc/virtual/2025/poster/28368">[Conference Page]</a></p>
+<p class="paper-links"><a href="https://arxiv.org/abs/2410.04350">[Paper]</a> <a href="https://github.com/exlaw/TIS-DPO">[Code]</a> <a href="https://iclr.cc/virtual/2025/poster/28368">[Conference Page]</a><a href="files/tis-dpo-poster.pdf">[Poster]</a><a href="files/tis-dpo-ppt.pdf">[Slides]</a> </p>
 </div>
 </div>
 
@@ -315,7 +315,7 @@
 <div class="paper-text">
 <div class="paper-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
 <p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu*</strong>, Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
-<p class="paper-venue">Proceedings of EMNLP 2024 Demo</p>
+<p class="paper-venue">Proceedings of EMNLP 2024 Demo <span class="spotlight-badge"><a href="https://github.com/THU-BPM/MarkLLM" target="_blank" style="color: white; text-decoration: none;"><span id="github-stars">⭐ GitHub Stars</span></a></span></p>
 <p class="paper-links"><a href="https://arxiv.org/pdf/2405.10051">[Paper]</a> <a href="https://github.com/THU-BPM/MarkLLM">[Code]</a> <a href="https://colab.research.google.com/drive/169MS4dY6fKNPZ7-92ETz1bAm_xyNAs0B?usp=sharing">[Google Colab]</a> <a href="https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg">[机器之心]</a></p>
 </div>
 </div>
@@ -899,6 +899,17 @@ body {
   }
 }
 </style>
+
+<script>
+  // Fetch GitHub stars count
+  fetch('https://api.github.com/repos/THU-BPM/MarkLLM')
+    .then(response => response.json())
+    .then(data => {
+      const starsCount = data.stargazers_count;
+      document.getElementById('github-stars').textContent = `⭐ ${starsCount} Stars`;
+    })
+    .catch(error => console.error('Error fetching GitHub stars:', error));
+</script>
 
 
 
