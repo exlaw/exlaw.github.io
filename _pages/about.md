@@ -15,7 +15,11 @@ redirect_from:
   <p>Previously, I was a research intern at <a href="https://machinelearning.apple.com/">Apple's AIML Group</a>, where I worked under the supervision of Dr. <a href="https://openreview.net/profile?id=~Meng_Cao2">Meng Cao</a>.</p>
 
   <p>Additionally, I was serving as a Visiting Scholar at <a href="https://misc-lab.cse.cuhk.edu.hk/people/">CUHK MISC Lab</a>, working under the supervision of Prof. <a href="https://www.cse.cuhk.edu.hk/irwin.king/home">Irwin King</a> (ACM Fellow, IEEE Fellow).</p>
+  
+  <p><strong>Welcome to collaborate!</strong> If you're interested in research collaboration on LLM watermarking, LLM alignment, or other NLP topics, please feel free to contact me.</p>
 </div>
+
+
 
 <h1 class="section-heading"><span>⭐ Research Highlights</span></h1>
 
@@ -50,7 +54,7 @@ redirect_from:
 <div class="paper-text">
 <div class="paper-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
 <p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu*</strong>, Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
-<p class="paper-venue">Proceedings of EMNLP 2024 Demo <span class="spotlight-badge"><a href="https://github.com/THU-BPM/MarkLLM" target="_blank" style="color: white; text-decoration: none;"><span id="github-stars">⭐ GitHub Stars</span></a></span></p>
+<p class="paper-venue">Proceedings of EMNLP 2024 Demo <span><a href="https://github.com/THU-BPM/MarkLLM" target="_blank" style="color: white; text-decoration: none;"><img src="https://img.shields.io/github/stars/THU-BPM/MarkLLM?style=social" alt="GitHub stars"></a></span></p>
 <p class="paper-links"><a href="https://arxiv.org/pdf/2405.10051">[Paper]</a> <a href="https://github.com/THU-BPM/MarkLLM">[Code]</a> <a href="https://colab.research.google.com/drive/169MS4dY6fKNPZ7-92ETz1bAm_xyNAs0B?usp=sharing">[Google Colab]</a> <a href="https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg">[机器之心]</a></p>
 </div>
 </div>
@@ -62,7 +66,7 @@ redirect_from:
 <div class="paper-text">
 <div class="paper-title">A Survey of Text Watermarking in the Era of Large Language Models</div>
 <p class="paper-authors"><strong style="text-decoration-line: underline;">Aiwei Liu</strong>, Leyi Pan, Yijian Lu, Jingjing Li, Xuming Hu, Xi Zhang, Lijie Wen, Irwin King, Hui Xiong, Philip S. Yu</p>
-<p class="paper-venue">ACM Computing Surveys (IF: 23.8)</p>
+<p class="paper-venue">ACM Computing Surveys <span class="spotlight-badge">IF: 23.8</span></p>
 <p class="paper-links"><a href="https://arxiv.org/pdf/2312.07913.pdf">[Paper]</a> <a href="https://survey-text-watermark.github.io/">[Home]</a> <a href="https://mp.weixin.qq.com/s/U3ZzGsi3Yihueqr6MGRHfg">[机器之心]</a> <a href="https://x.com/Aiwei_Liu_99/status/1821673541026099519">[Twitter]</a></p>
 </div>
 </div>
@@ -137,6 +141,29 @@ redirect_from:
 <p class="paper-venue">Proceedings of SIGKDD 2022</p>
 <p class="paper-links"><a href="https://arxiv.org/pdf/2207.08814">[Paper]</a> <a href="https://github.com/THU-BPM/ISESL-SQL">[Code]</a></p>
 </div>
+</div>
+
+<h1 class="section-heading"><span>📄 Curriculum Vitae</span></h1>
+
+<div class="cv-container">
+  <p class="cv-update-date">Last updated: 2025-02-03</p>
+  <div class="download-container">
+    <div class="download-item">
+      <div class="download-icon">📄</div>
+      <div class="download-content">
+        <h3>English CV</h3>
+        <p>You can download a PDF copy of my English CV <a href="/files/Aiwei-Liu-CV-EN.pdf" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    
+    <div class="download-item">
+      <div class="download-icon">📝</div>
+      <div class="download-content">
+        <h3>中文简历</h3>
+        <p>您可以在<a href="/files/Aiwei-Liu-CV-CN.pdf" target="_blank">这里</a>下载我的中文简历PDF版本。</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <h1 class="section-heading"><span>🔥 News</span></h1>
@@ -269,6 +296,7 @@ body {
   border-left: 4px solid #632991;
   border-radius: 0 8px 8px 0;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
 }
 
 .intro-container p {
@@ -458,6 +486,87 @@ body {
   font-weight: 600;
   color: #444;
   margin-right: 8px;
+}
+
+/* CV Download section */
+.cv-container {
+  margin: 1.5em 0 2em 0;
+}
+
+.cv-update-date {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+
+.download-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.download-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.download-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(99,41,145,0.12);
+}
+
+.download-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #632991;
+  background: #f9f9f9;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.download-content {
+  flex: 1;
+}
+
+.download-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.download-content p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.download-content a {
+  color: #632991;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-bottom: 1px dotted #632991;
+  padding-bottom: 1px;
+}
+
+.download-content a:hover {
+  color: #8244b8;
+  border-bottom: 1px solid #8244b8;
 }
 
 /* Contact section */
