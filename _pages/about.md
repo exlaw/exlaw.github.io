@@ -23,6 +23,19 @@ redirect_from:
 
 <h1 class="section-heading"><span>⭐ Research Highlights</span></h1>
 
+
+<div class="paper-container">
+<div class="paper-image">
+<img src="images/watermark-distillation.png" alt="LLM Watermarking Overview">
+</div>
+<div class="paper-text">
+<div class="paper-title">Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?</div>
+<p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu</strong>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
+<p class="paper-venue">Proceedings of ACL 2025 </p>
+<p class="paper-links"><a href="https://arxiv.org/pdf/2502.11598">[Paper]</a> <a href="https://github.com/THU-BPM/Watermark-Radioactivity-Attack">[Code]</a> </p>
+</div>
+</div>
+
 <div class="paper-container">
 <div class="paper-image">
 <img src="images/probe.png" alt="LLM Watermarking Overview">
@@ -169,6 +182,8 @@ redirect_from:
 <h1 class="section-heading"><span>🔥 News</span></h1>
 
 <div class="news-container">
+    <div class="news-item"><span class="news-date">2025.05:</span> 🎉🎉 One papers is accepted by <a href="https://2025.aclweb.org/">ACL 2025</a>.</div>
+        <div class="news-item"><span class="news-date">2025.05:</span> 🎉🎉 Two papers are accepted by <a href="https://2025.aclweb.org/">ACL 2025 Findings</a>.</div>
   <div class="news-item"><span class="news-date">2025.01:</span> 🎉🎉 Two papers are accepted by <a href="https://2025.naacl.org/">NAACL 2025</a>.</div>
   <div class="news-item"><span class="news-date">2025.01:</span> 🎉🎉 Three papers are accepted by <a href="https://iclr.cc/">ICLR 2025</a>.</div>
   <div class="news-item"><span class="news-date">2024.10:</span> 🎉🎉 Excited to announce the our paper: <a href="https://arxiv.org/pdf/2405.10051">MarkLLM: An Open-Source Toolkit for LLM Watermarking</a> is accepted by <a href="https://2024.emnlp.org/">EMNLP 2024 Demo Track</a>.</div>
