@@ -38,7 +38,7 @@ redirect_from:
 
 <div class="paper-container">
 <div class="paper-image">
-<img src="images/probe.png" alt="LLM Watermarking Overview">
+<img src="images/water-probe.png" alt="LLM Watermarking Overview">
 </div>
 <div class="paper-text">
 <div class="paper-title">Can Watermarked LLMs be Identified by Users via Crafted Prompts?</div>
@@ -47,6 +47,7 @@ redirect_from:
 <p class="paper-links"><a href="https://arxiv.org/pdf/2410.03168">[Paper]</a> <a href="https://github.com/THU-BPM/Watermarked_LLM_Identification">[Code]</a> <a href="https://iclr.cc/virtual/2025/poster/27962">[Conference Page]</a> <a href="files/water-probe-poster.pdf">[Poster]</a><a href="files/water-probe.pdf">[Slides]</a> </p>
 </div>
 </div>
+
 
 <div class="paper-container">
 <div class="paper-image">
