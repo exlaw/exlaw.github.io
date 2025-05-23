@@ -10,9 +10,9 @@ redirect_from:
 <div class="intro-container">
   <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am a final-year Ph.D. student at the <a href="https://www.thss.tsinghua.edu.cn/">School of Software</a> in <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>, where I am advised by Prof. <a href="https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm">Lijie Wen</a>. Before that, I received my B.Eng. degree from the <a href="https://software.nju.edu.cn/">Software Institue</a> in <a href="https://www.nju.edu.cn/">Nanjing University</a> in 2020.</p>
 
-  <p>Currently, I'm serving as a Visiting Scholar at the <a href="https://bdsc-uic.github.io/people.html">UIC BDSC Lab</a>, working under the supervision of Prof. <a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a> (ACM Fellow, IEEE Fellow).</p>
+  <p>Previously, I was fortunate to serve as a Visiting Scholar at the <a href="https://bdsc-uic.github.io/people.html">UIC BDSC Lab</a>, working under the supervision of Prof. <a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a> (ACM Fellow, IEEE Fellow).</p>
 
-  <p>Previously, I was a research intern at <a href="https://machinelearning.apple.com/">Apple's AIML Group</a>, where I worked under the supervision of Dr. <a href="https://openreview.net/profile?id=~Meng_Cao2">Meng Cao</a>.</p>
+  <p>I was also a research intern at <a href="https://machinelearning.apple.com/">Apple's AIML Group</a>, where I worked under the supervision of Dr. <a href="https://openreview.net/profile?id=~Meng_Cao2">Meng Cao</a>.</p>
 
   <p>Additionally, I was serving as a Visiting Scholar at <a href="https://misc-lab.cse.cuhk.edu.hk/people/">CUHK MISC Lab</a>, working under the supervision of Prof. <a href="https://www.cse.cuhk.edu.hk/irwin.king/home">Irwin King</a> (ACM Fellow, IEEE Fellow).</p>
   
@@ -30,7 +30,7 @@ redirect_from:
 </div>
 <div class="paper-text">
 <div class="paper-title">Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?</div>
-<p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu</strong>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
+<p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu</strong><sup>†</sup>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
 <p class="paper-venue">Proceedings of ACL 2025 </p>
 <p class="paper-links"><a href="https://arxiv.org/pdf/2502.11598">[Paper]</a> <a href="https://github.com/THU-BPM/Watermark-Radioactivity-Attack">[Code]</a> </p>
 </div>
