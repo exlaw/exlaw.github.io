@@ -30,7 +30,7 @@ redirect_from:
 </div>
 <div class="paper-text">
 <div class="paper-title">Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?</div>
-<p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu</strong><sup>†</sup>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
+<p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu<sup><i class="fa fa-envelope"></i></sup></strong>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
 <p class="paper-venue">Proceedings of ACL 2025 </p>
 <p class="paper-links"><a href="https://arxiv.org/pdf/2502.11598">[Paper]</a> <a href="https://github.com/THU-BPM/Watermark-Radioactivity-Attack">[Code]</a> </p>
 </div>
@@ -67,7 +67,7 @@ redirect_from:
 </div>
 <div class="paper-text">
 <div class="paper-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
-<p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu*</strong>, Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
+<p class="paper-authors">Leyi Pan, <strong style="text-decoration-line: underline;">Aiwei Liu*</strong>(Project Lead), Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</p>
 <p class="paper-venue">Proceedings of EMNLP 2024 Demo <span><a href="https://github.com/THU-BPM/MarkLLM" target="_blank" style="color: white; text-decoration: none;"><img src="https://img.shields.io/github/stars/THU-BPM/MarkLLM?style=social" alt="GitHub stars"></a></span></p>
 <p class="paper-links"><a href="https://arxiv.org/pdf/2405.10051">[Paper]</a> <a href="https://github.com/THU-BPM/MarkLLM">[Code]</a> <a href="https://colab.research.google.com/drive/169MS4dY6fKNPZ7-92ETz1bAm_xyNAs0B?usp=sharing">[Google Colab]</a> <a href="https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg">[机器之心]</a></p>
 </div>
@@ -183,6 +183,8 @@ redirect_from:
 <h1 class="section-heading"><span>🔥 News</span></h1>
 
 <div class="news-container">
+  <div class="news-item"><span class="news-date">2025.05:</span> Invited as a reviewer for <a href="https://2025.emnlp.org/">EMNLP 2025</a>.</div>
+  <div class="news-item"><span class="news-date">2025.05:</span> Invited as a reviewer for <a href="https://nips.cc/">NeurIPS 2025</a>.</div>
     <div class="news-item"><span class="news-date">2025.05:</span> 🎉🎉 One papers is accepted by <a href="https://2025.aclweb.org/">ACL 2025</a>.</div>
         <div class="news-item"><span class="news-date">2025.05:</span> 🎉🎉 Two papers are accepted by <a href="https://2025.aclweb.org/">ACL 2025 Findings</a>.</div>
   <div class="news-item"><span class="news-date">2025.01:</span> 🎉🎉 Two papers are accepted by <a href="https://2025.naacl.org/">NAACL 2025</a>.</div>
@@ -211,6 +213,7 @@ redirect_from:
       <h3>Email</h3>
       <p>liuaw20@mails.tsinghua.edu.cn</p>
       <p>liuaiwei20@gmail.com</p>
+      <p>liu_aw@126.com</p>
     </div>
   </div>
   <div class="contact-item">
