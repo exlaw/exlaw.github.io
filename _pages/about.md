@@ -185,7 +185,8 @@ redirect_from:
 <h1 class="section-heading"><span>🔥 News</span></h1>
 
 <div class="news-container">
-  <div class="news-item"><span class="news-date">2025.06:</span> 🎉🎉 Honored to be awarded the Outstanding Graduates of Beijing.</div>
+  <div class="news-item"><span class="news-date">2025.08:</span> 🎉🎉 Two papers are accepted by <a href="https://2025.emnlp.org/">EMNLP 2025</a>.</div>
+  <div class="news-item"><span class="news-date">2025.06:</span> 🎉🎉 Honored to be awarded the <a href="images/beijing-outstanding.JPG">Outstanding Graduates of Beijing.</a></div>
   <div class="news-item"><span class="news-date">2025.05:</span> Invited as a reviewer for <a href="https://2025.emnlp.org/">EMNLP 2025</a>.</div>
   <div class="news-item"><span class="news-date">2025.05:</span> Invited as a reviewer for <a href="https://nips.cc/">NeurIPS 2025</a>.</div>
     <div class="news-item"><span class="news-date">2025.05:</span> 🎉🎉 One papers is accepted by <a href="https://2025.aclweb.org/">ACL 2025</a>.</div>
@@ -214,7 +215,7 @@ redirect_from:
     <div class="contact-icon">📧</div>
     <div class="contact-info">
       <h3>Email</h3>
-      <p>liuaw20@mails.tsinghua.edu.cn</p>
+      <!-- <p>liuaw20@mails.tsinghua.edu.cn</p> -->
       <p>liuaiwei20@gmail.com</p>
       <p>liu_aw@126.com</p>
     </div>
