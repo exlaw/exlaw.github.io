@@ -73,6 +73,58 @@ hr {
 <hr>
 
 <div class="publication">
+<div class="pub-title">Exploring Response Uncertainty in MLLMs: An Empirical Evaluation Under Misleading Scenarios</div>
+<div class="pub-authors">Yunkai Dang, Mengxi Gao, Yibo Yan, Xin Zou, Yanggan Gu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xuming Hu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the proceedings of EMNLP 2025</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2411.02708">Paper</a>] [<a href="https://github.com/Yunkai696/MUB">Code</a>]</span>
+</div>
+</div>
+
+
+<div class="publication">
+<div class="pub-title">VLA-Mark: A cross modal watermark for large vision-language alignment model</div>
+<div class="pub-authors">Shuliang Liu, Qi Zheng, Jesse Jiaxi Xu, Yibo Yan, He Geng, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Peijie Jiang, Jia Liu, Yik-Cheung Tam, Xuming Hu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the proceedings of EMNLP 2025</span>
+    <span class="pub-links">[<a href="https://arxiv.org/pdf/2507.14067">Paper</a>][<a href="https://github.com/shiningwhite-cmd/VLA-mark">Code</a>]</span>
+</div>
+</div>
+
+
+<div class="publication">
+<div class="pub-title">TabGen-ICL: Residual-Aware In-Context Example Selection for Tabular Data Generation</div>
+<div class="pub-authors">Liancheng Fang, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu<sup><i class="fa fa-envelope"></i></sup></span>, Hengrui Zhang, Henry Peng Zou, Weizhi Zhang, Philip S. Yu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the Findings of ACL 2025</span>
+    <span class="pub-links">[<a href="https://arxiv.org/pdf/2502.16414">Paper</a>][<a href="https://github.com/fangliancheng/TabGEN-ICL">Code</a>]</span>
+</div>
+</div>
+
+
+<div class="publication" style="margin-bottom: 20px;">
+<div class="pub-title">A Survey on Proactive Defense Strategies Against Misinformation in LLMs</div>
+<div class="pub-authors">Shuliang Liu, Hongyi Liu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Duan Bingchen, Zheng Qi, Yibo Yan, He Geng, Peijie Jiang, Jia Liu, Xuming Hu</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the Findings of ACL 2025</span>
+    <span class="pub-links">[<a href="https://aclanthology.org/2025.findings-acl.933/">Paper</a>]</span>
+</div>
+</div>
+
+
+
+<div class="publication" style="margin-bottom: 50px;">
+<div class="pub-title">Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?</div>
+<div class="pub-authors">Leyi Pan, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu<sup><i class="fa fa-envelope"></i></sup></span>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S Yu/div>
+<div class="pub-venue-links">
+    <span class="pub-venue">In the proceedings of ACL 2025</span>
+    <span class="pub-links">[<a href="https://arxiv.org/pdf/2502.11598">Paper</a>][<a href="https://github.com/THU-BPM/Watermark-Radioactivity-Attack">Code</a>]</span>
+</div>
+</div>
+
+
+
+<div class="publication">
 <div class="pub-title">Can Watermarked LLMs be Identified by Users via Crafted Prompts?</div>
 <div class="pub-authors"><span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Sheng Guan, Yiming Liu, Leyi Pan, Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu</div>
 <div class="pub-venue-links">
@@ -335,29 +387,25 @@ hr {
     <span class="pub-venue">TASLP 2023</span>
     <span class="pub-links">[<a href="https://arxiv.org/pdf/2205.15550.pdf">Paper</a>] [<a href="https://github.com/THU-BPM/MultiSCL">Code</a>]</span>
 </div>
+
+<div class="publication">
+<div class="pub-title">A Survey of AIOps for Failure Management in the Era of Large Language Models</div>
+<div class="pub-authors">Lingzhe Zhang, Tong Jia, Mengxi Jia, Yifan Wu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yong Yang, Zhonghai Wu, Xuming Hu, Philip S. Yu, Ying Li</div>
+<div class="pub-venue-links">
+    <span class="pub-venue">ACM Computing Surveys</span>
+    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.11213">Paper</a>]</span>
+</div>
+</div>
+
+
 </div>
 
 <hr>
 <div class="section-title">Preprints</div>
 <hr>
 
-<div class="publication">
-<div class="pub-title">TabGEN-RAG: Iterative Retrieval for Tabular Data Generation with Large Language Models</div>
-<div class="pub-authors">Liancheng Fang, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Hengrui Zhang, Henry Peng Zou, Weizhi Zhang, Philip S. Yu</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">In the workshop of TRL@NeurIPS 2024</span>
-    <span class="pub-links">[<a href="https://openreview.net/pdf?id=gubwDTURac">Paper</a>]</span>
-</div>
-</div>
 
-<div class="publication">
-<div class="pub-title">A Survey of AIOps for Failure Management in the Era of Large Language Models</div>
-<div class="pub-authors">Lingzhe Zhang, Tong Jia, Mengxi Jia, Yifan Wu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Yong Yang, Zhonghai Wu, Xuming Hu, Philip S. Yu, Ying Li</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">Preprint</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2406.11213">Paper</a>]</span>
-</div>
-</div>
+
 
 <div class="publication">
 <div class="pub-title">A Comprehensive Evaluation of ChatGPT's Zero-Shot Text-to-SQL Capability</div>
@@ -395,14 +443,6 @@ hr {
 </div>
 </div>
 
-<div class="publication">
-<div class="pub-title">Exploring Response Uncertainty in MLLMs: An Empirical Evaluation Under Misleading Scenarios</div>
-<div class="pub-authors">Yunkai Dang, Mengxi Gao, Yibo Yan, Xin Zou, Yanggan Gu, <span style="font-weight: bold; text-decoration: underline;">Aiwei Liu</span>, Xuming Hu</div>
-<div class="pub-venue-links">
-    <span class="pub-venue">Preprint</span>
-    <span class="pub-links">[<a href="https://arxiv.org/abs/2411.02708">Paper</a>] [<a href="https://github.com/Yunkai696/MUB">Code</a>]</span>
-</div>
-</div>
 
 <div class="publication">
 <div class="pub-title">Cold-Start Recommendation towards the Era of Large Language Models (LLMs): A Comprehensive Survey and Roadmap</div>
