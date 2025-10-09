@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <div class="intro-container">
-  <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am currently a researcher at WeChat AI, Tencent, working on Large Language Fundation Model.</p>
+  <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am currently a researcher at WeChat AI, Tencent, working on Large Language Foundation Model.</p>
   
    <p>I received my Ph.D. degree from the <a href="https://www.thss.tsinghua.edu.cn/">School of Software</a> in <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a> in June 2025, where I was advised by Prof. <a href="https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm">Lijie Wen</a>. Before that, I received my B.Eng. degree from the <a href="https://software.nju.edu.cn/">Software Institue</a> in <a href="https://www.nju.edu.cn/">Nanjing University</a> in 2020.</p>
 
@@ -24,6 +24,18 @@ redirect_from:
 
 
 <h1 class="section-heading"><span>⭐ Research Highlights</span></h1>
+
+<div class="paper-container">
+<div class="paper-image">
+<img src="images/mark-diffusion.png" alt="LLM Watermarking Overview">
+</div>
+<div class="paper-text">
+<div class="paper-title">MarkDiffusion: An Open-Source Toolkit for Generative Watermarking of Latent Diffusion Models</div>
+<p class="paper-authors">Leyi Pan, Sheng Guan, Zheyu Fu, Luyang Si, Zian Wang, Xuming Hu, Irwin King, Philip S. Yu, <strong style="text-decoration-line: underline;">Aiwei Liu<sup><i class="fa fa-envelope"></i></sup></strong>, Lijie Wen</p>
+<p class="paper-venue">Preprint <span><a href="https://github.com/THU-BPM/MarkLLM" target="_blank" style="color: white; text-decoration: none;"><img src="https://img.shields.io/github/stars/THU-BPM/MarkDiffusion?style=social" alt="GitHub stars"></a></span></p>
+<p class="paper-links"><a href="https://arxiv.org/abs/2509.10569">[Paper]</a> <a href="https://github.com/THU-BPM/MarkDiffusion">[Code]</a> </p>
+</div>
+</div>
 
 
 <div class="paper-container">
