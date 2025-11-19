@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiwei Liu (刘瑷玮) | Researcher</title>
+    <meta name="description" content="Personal Homepage of Aiwei Liu, Researcher at WeChat AI.">
+    
+    <!-- Google Fonts: Inter for a clean, tech look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #632991;
+            --primary-accent: #9e65d6;
+            --primary-glow: rgba(99, 41, 145, 0.4);
+            --bg-color: #f8f9fa;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --text-main: #1f2937;
+            --text-secondary: #4b5563;
+            --border-color: rgba(229, 231, 235, 0.8);
+            --radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 16px;
+            /* Tech Grid Background */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 41, 145, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(158, 101, 214, 0.08) 0px, transparent 50%),
+                linear-gradient(rgba(99, 41, 145, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 41, 145, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+            background-attachment: fixed;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        a:not(.social-btn):not(.nav-link):not(.btn-download):not(.paper-links a):hover {
+            color: var(--primary-accent);
+            text-shadow: 0 0 8px rgba(99, 41, 145, 0.2);
+        }
+
+        /* Layout Grid */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 50px;
+        }
+
+        /* Animation Utilities */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sidebar / Profile Section */
+        .sidebar {
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 8px 20px rgba(99, 41, 145, 0.15);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* Spinning glow ring behind profile */
+        .profile-img-container::before {
+            content: '';
+            position: absolute;
+            top: -5px; left: -5px; right: -5px; bottom: -5px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), transparent, var(--primary-accent));
+            z-index: 1;
+            animation: spin 4s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .profile-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #1f2937 0%, #632991 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        /* Typing effect cursor */
+        .profile-name::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: var(--primary-color);
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .profile-name-cn {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .profile-bio {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .social-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px var(--primary-glow);
+            border-color: var(--primary-color);
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            text-align: left;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            transition: transform 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(5px);
+            color: var(--primary-color);
+        }
+
+        .contact-item i {
+            width: 25px;
+            color: var(--primary-color);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.5);
+            width: fit-content;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-secondary);
+            padding: 8px 20px;
+            border-radius: 30px;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+            background: rgba(99, 41, 145, 0.05);
+        }
+
+        .nav-link.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        /* Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            scroll-margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Subtle gradient shine on section hover */
+        .section::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-accent));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .section:hover::after {
+            opacity: 1;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(99, 41, 145, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(99, 41, 145, 0.1);
+            border-radius: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* News List */
+        .news-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+        
+        .news-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .news-list::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        .news-list::-webkit-scrollbar-thumb {
+            background: #d1d5db; 
+            border-radius: 3px;
+        }
+        .news-list::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-accent);
+        }
+
+        .news-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .news-item:hover {
+            background: white;
+            border-color: rgba(99, 41, 145, 0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transform: translateX(5px);
+        }
+
+        .news-date {
+            font-family: 'Inter', monospace;
+            font-weight: 700;
+            color: var(--primary-color);
+            min-width: 85px;
+            font-size: 0.9rem;
+            padding-top: 2px;
+        }
+
+        /* Paper Cards (Highlights) - The "Hero" Elements */
+        .paper-card {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: var(--radius);
+            background: #fff;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 15px 30px -5px rgba(99, 41, 145, 0.15);
+            border-color: rgba(99, 41, 145, 0.3);
+        }
+
+        .paper-img {
+            width: 220px;
+            height: 130px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .paper-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .paper-card:hover .paper-img img {
+            transform: scale(1.1);
+        }
+
+        .paper-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .paper-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: var(--text-main);
+            transition: color 0.3s;
+        }
+        
+        .paper-card:hover .paper-title {
+            color: var(--primary-color);
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .paper-authors u, .paper-authors strong {
+            color: var(--text-main);
+            text-decoration-color: var(--primary-accent);
+            text-decoration-thickness: 2px;
+        }
+
+        .paper-venue {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #9e65d6, #632991);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 700;
+            box-shadow: 0 2px 5px var(--primary-glow);
+        }
+
+        .paper-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            background: transparent;
+            color: var(--text-secondary);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .paper-links a:hover {
+            background: var(--text-main);
+            color: white;
+            border-color: var(--text-main);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Compact Publication List */
+        .pub-list-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--border-color);
+            transition: var(--transition);
+            background: rgba(255,255,255,0.5);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .pub-list-item:hover {
+            border-left-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transform: translateX(5px);
+        }
+
+        .pub-list-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+        
+        .pub-list-authors {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .pub-list-venue {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        /* Education & Services */
+        .edu-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: center;
+            padding: 15px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        
+        .edu-item:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .edu-logo {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            padding: 8px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* CV Download Buttons */
+        .cv-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-download {
+            flex: 1;
+            min-width: 200px;
+            padding: 18px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-download::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(99, 41, 145, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: 0.5s;
+        }
+
+        .btn-download:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn-download:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 20px rgba(99, 41, 145, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .btn-download i {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .sidebar {
+                position: relative;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .paper-card {
+                flex-direction: column;
+            }
+
+            .paper-img {
+                width: 100%;
+                height: 180px;
+            }
+            
+            .nav-bar {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-bar {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 10px;
+                justify-content: flex-start;
+                border-radius: 0;
+                top: 0;
+            }
+            
+            .profile-img-container {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar fade-in-up">
+        <!-- Profile Image -->
+        <div class="profile-img-container">
+            <img src="images/new-self-photo.jpg" alt="Aiwei Liu" class="profile-img">
+        </div>
+        
+        <h1 class="profile-name">Aiwei Liu</h1>
+        <h2 class="profile-name-cn">刘瑷玮</h2>
+        
+        <p class="profile-bio">
+            Researcher at WeChat AI<br>
+            Ph.D. from Tsinghua University
+        </p>
+
+        <div class="social-links">
+            <a href="mailto:liuaiwei20@gmail.com" class="social-btn" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="https://github.com/exlaw" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=YOUR_ID" class="social-btn" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="https://x.com/Aiwei_Liu_99" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span>liuaiwei20@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span>liu_aw@126.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-weixin"></i>
+                <span>u839134412</span>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <a href="https://clustrmaps.com/site/1bz29" title="Visit tracker">
+                <img src="//clustrmaps.com/map_v2.png?d=DX15I5ozLq5Q-wR0ekcNB17qazZ99Mm2sOgYD9FXvrM&cl=ffffff&w=240&t=tt" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        
+        <!-- Navigation -->
+        <nav class="nav-bar fade-in-up" style="animation-delay: 0.1s;">
+            <a href="#about" class="nav-link active">About</a>
+            <a href="#news" class="nav-link">News</a>
+            <a href="#highlights" class="nav-link">Highlights</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#cv" class="nav-link">CV</a>
+            <a href="#service" class="nav-link">Services</a>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about" class="section fade-in-up" style="animation-delay: 0.2s;">
+            <h2 class="section-title"><span>👋</span> About Me</h2>
+            <div class="intro-text">
+                <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am currently a researcher at WeChat AI, Tencent, working on Large Language Foundation Model.</p>
+  
+                <p>I received my Ph.D. degree from the <a href="https://www.thss.tsinghua.edu.cn/">School of Software</a> in <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a> in June 2025, where I was advised by Prof. <a href="https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm">Lijie Wen</a>. Before that, I received my B.Eng. degree from the <a href="https://software.nju.edu.cn/">Software Institue</a> in <a href="https://www.nju.edu.cn/">Nanjing University</a> in 2020.</p>
+
+                <p>Previously, I was fortunate to serve as a Visiting Scholar at the <a href="https://bdsc-uic.github.io/people.html">UIC BDSC Lab</a>, working under the supervision of Prof. <a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a> (ACM Fellow, IEEE Fellow).</p>
+
+                <p>I was also a research intern at <a href="https://machinelearning.apple.com/">Apple's AIML Group</a>, where I worked under the supervision of Dr. <a href="https://openreview.net/profile?id=~Meng_Cao2">Meng Cao</a>.</p>
+
+                <p>Additionally, I was serving as a Visiting Scholar at <a href="https://misc-lab.cse.cuhk.edu.hk/people/">CUHK MISC Lab</a>, working under the supervision of Prof. <a href="https://www.cse.cuhk.edu.hk/irwin.king/home">Irwin King</a> (ACM Fellow, IEEE Fellow).</p>
+                
+                <p style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-left: 4px solid #22c55e; border-radius: 8px; margin-top: 20px;"><strong>Welcome to collaborate!</strong> If you're interested in research collaboration on LLM watermarking, LLM alignment, LLM pretrianing or other LLM topics, please feel free to contact me.</p>
+            </div>
+
+            <h3 style="margin-top: 35px; margin-bottom: 20px; font-size: 1.3rem; font-weight: 700;">🎓 Education</h3>
+            <div class="edu-item">
+                <img src="images/tsinghua.svg" alt="Tsinghua" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">Tsinghua University, China</div>
+                    <div style="color: var(--primary-color); font-weight: 500;">Ph.D. in Software Engineering</div>
+                    <div style="font-size: 0.9rem; color: #666;">Sept. 2020 - June 2025</div>
+                </div>
+            </div>
+            <div class="edu-item">
+                <img src="images/nanjing.png" alt="Nanjing" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">Nanjing University, China</div>
+                    <div style="color: var(--primary-color); font-weight: 500;">B.E. in Software Engineering</div>
+                    <div style="font-size: 0.9rem; color: #666;">Sept. 2016 - June 2020</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section fade-in-up">
+            <h2 class="section-title"><span>🔥</span> News</h2>
+            <div class="news-list">
+                <div class="news-item"><div class="news-date">2025.08</div><div class="news-content">🎉🎉 Two papers are accepted by <a href="https://2025.emnlp.org/">EMNLP 2025</a>.</div></div>
+                <div class="news-item"><div class="news-date">2025.06</div><div class="news-content">🎉🎉 Honored to be awarded the <a href="images/beijing-outstanding.JPG">Outstanding Graduates of Beijing.</a></div></div>
+                <div class="news-item"><div class="news-date">2025.05</div><div class="news-content">Invited as a reviewer for EMNLP 2025 and NeurIPS 2025.</div></div>
+                <div class="news-item"><div class="news-date">2025.05</div><div class="news-content">🎉🎉 One paper accepted by ACL 2025, Two papers accepted by ACL 2025 Findings.</div></div>
+                <div class="news-item"><div class="news-date">2025.01</div><div class="news-content">🎉🎉 Two papers accepted by NAACL 2025, Three papers accepted by ICLR 2025.</div></div>
+                <div class="news-item"><div class="news-date">2024.10</div><div class="news-content">🎉🎉 <a href="https://arxiv.org/pdf/2405.10051">MarkLLM</a> is accepted by EMNLP 2024 Demo Track.</div></div>
+                <div class="news-item"><div class="news-date">2024.08</div><div class="news-content">🎉🎉 "A Survey of Text Watermarking in the Era of LLMs" accepted by <a href="https://dl.acm.org/journal/csur">ACM Computing Surveys</a>!</div></div>
+                <div class="news-item"><div class="news-date">2024.05</div><div class="news-content">🎉🎉 Three papers accepted by ACL 2024 (Alignment & Watermarking).</div></div>
+                <div class="news-item"><div class="news-date">2024.04</div><div class="news-content">🎉🎉 Tutorial "Preventing and Detecting Misinformation Generated by LLMs" accepted by SIGIR 2024.</div></div>
+            </div>
+        </section>
+
+        <!-- Research Highlights -->
+        <section id="highlights" class="section fade-in-up">
+            <h2 class="section-title"><span>⭐</span> Research Highlights</h2>
+            
+            <!-- Paper 1 -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/mark-diffusion.png" alt="MarkDiffusion">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">MarkDiffusion: An Open-Source Toolkit for Generative Watermarking of Latent Diffusion Models</div>
+                    <div class="paper-authors">Leyi Pan, Sheng Guan, Zheyu Fu, Luyang Si, Zian Wang, Xuming Hu, Irwin King, Philip S. Yu, <strong style="text-decoration: underline;">Aiwei Liu</strong>, Lijie Wen</div>
+                    <div class="paper-venue">Preprint <img src="https://img.shields.io/github/stars/THU-BPM/MarkDiffusion?style=social" alt="stars" style="height: 16px; margin-left: 5px;"></div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/abs/2509.10569"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/MarkDiffusion"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 2 -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/watermark-distillation.png" alt="Watermark Distillation">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?</div>
+                    <div class="paper-authors">Leyi Pan, <strong style="text-decoration: underline;">Aiwei Liu</strong>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</div>
+                    <div class="paper-venue">Proceedings of ACL 2025</div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2502.11598"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/Watermark-Radioactivity-Attack"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 3 -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/water-probe.png" alt="Watermark Probe">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">Can Watermarked LLMs be Identified by Users via Crafted Prompts?</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Sheng Guan, Yiming Liu, Leyi Pan, Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu</div>
+                    <div class="paper-venue">Proceedings of ICLR 2025 <span class="badge">Spotlight, top 5%</span></div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2410.03168"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/Watermarked_LLM_Identification"><i class="fab fa-github"></i> Code</a>
+                        <a href="files/water-probe-poster.pdf"><i class="far fa-image"></i> Poster</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 4 -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/tis-dpo.png" alt="TIS-DPO">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Simon Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</div>
+                    <div class="paper-venue">Proceedings of ICLR 2025</div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/abs/2410.04350"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/exlaw/TIS-DPO"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 5 -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/markllm.png" alt="MarkLLM">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
+                    <div class="paper-authors">Leyi Pan, <strong style="text-decoration: underline;">Aiwei Liu*</strong>(Project Lead), Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</div>
+                    <div class="paper-venue">Proceedings of EMNLP 2024 Demo <img src="https://img.shields.io/github/stars/THU-BPM/MarkLLM?style=social" alt="stars" style="height: 16px; margin-left: 5px;"></div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2405.10051"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/MarkLLM"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg">机器之心</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 6 Survey -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/survey.png" alt="Survey">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">A Survey of Text Watermarking in the Era of Large Language Models</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Leyi Pan, Yijian Lu, Jingjing Li, Xuming Hu, Xi Zhang, Lijie Wen, Irwin King, Hui Xiong, Philip S. Yu</div>
+                    <div class="paper-venue">ACM Computing Surveys <span class="badge">IF: 23.8</span></div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2312.07913.pdf"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://survey-text-watermark.github.io/"><i class="fas fa-globe"></i> Home</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 7 SIGIR Tutorial -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/tutorial-sigir.png" alt="SIGIR tutorial">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">Preventing and Detecting Misinformation Generated by Large Language Models</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Qiang Sheng, Xuming Hu</div>
+                    <div class="paper-venue">Proceedings of SIGIR 2024 Tutorial</div>
+                    <div class="paper-links">
+                        <a href="https://dl.acm.org/doi/10.1145/3626772.3661377"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://sigir24-llm-misinformation.github.io/"><i class="fas fa-globe"></i> Home</a>
+                        <a href="https://sigir24-llm-misinformation.github.io/slides/SIGIR%202024%20Tutorial-all-version5.pdf/"><i class="far fa-file-powerpoint"></i> Slides</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 8 DLMA -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/dlma.png" alt="DLMA">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Xiang Kong, Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen</div>
+                    <div class="paper-venue">Proceedings of ACL 2024</div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2402.11907.pdf"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/Direct_LLM_Alignment"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 9 SIR -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/SIR.png" alt="SIR Watermark">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">A Semantic Invariant Robust Watermark for Large Language Models</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shiao Meng, Lijie Wen</div>
+                    <div class="paper-venue">Proceedings of ICLR 2024</div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2310.06356.pdf"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/Robust_Watermark"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 10 UPV -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/UPV.png" alt="UPV Watermark">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">An Unforgeable Publicly Verifiable Watermark for Large Language Models</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shuang Li, Lijie Wen, Irwin King, Philip S. Yu</div>
+                    <div class="paper-venue">Proceedings of ICLR 2024</div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2307.16230.pdf"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/unforgeable_watermark"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 11 CG-SQL -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/cg-sql.png" alt="CG SQL">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang, Lijie Wen</div>
+                    <div class="paper-venue">Findings of ACL 2023</div>
+                    <div class="paper-links">
+                        <a href="https://aclanthology.org/2023.findings-acl.43.pdf"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/CD-Text2SQL-CG"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 12 CWBA -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/cwba.png" alt="CWBA">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Honghai Yu, Xuming Hu, Shu'ang Li, Li Lin, Fukun Ma, Yawen Yang, Lijie Wen</div>
+                    <div class="paper-venue">Proceedings of EMNLP 2022</div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/abs/2210.17004"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/CWBA"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 13 SQL -->
+            <div class="paper-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/sql.png" alt="SQL">
+                </div>
+                <div class="paper-info">
+                    <div class="paper-title">Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph</div>
+                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Xuming Hu, Li Lin, Lijie Wen</div>
+                    <div class="paper-venue">Proceedings of SIGKDD 2022</div>
+                    <div class="paper-links">
+                        <a href="https://arxiv.org/pdf/2207.08814"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/THU-BPM/ISESL-SQL"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#publications" style="font-weight: 700; font-size: 1.1rem; display: inline-block; padding: 10px 20px; border-radius: 30px; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">See Full Publication List Below ↓</a>
+            </div>
+        </section>
+
+        <!-- Full Publications -->
+        <section id="publications" class="section fade-in-up">
+            <h2 class="section-title"><span>📄</span> Full Publications</h2>
+            
+            <h3 style="margin: 20px 0 20px; color: var(--primary-color); font-size: 1.3rem;">Conference Papers</h3>
+            
+            <div class="pub-list-item">
+                <div class="pub-list-title">Exploring Response Uncertainty in MLLMs: An Empirical Evaluation Under Misleading Scenarios</div>
+                <div class="pub-list-authors">Yunkai Dang, Mengxi Gao, Yibo Yan, Xin Zou, Yanggan Gu, <strong>Aiwei Liu</strong>, Xuming Hu</div>
+                <div class="pub-list-venue">Proceedings of EMNLP 2025 <a href="https://arxiv.org/abs/2411.02708">[Paper]</a> <a href="https://github.com/Yunkai696/MUB">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">VLA-Mark: A cross modal watermark for large vision-language alignment model</div>
+                <div class="pub-list-authors">Shuliang Liu, Qi Zheng, Jesse Jiaxi Xu, Yibo Yan, He Geng, <strong>Aiwei Liu</strong>, Peijie Jiang, Jia Liu, Yik-Cheung Tam, Xuming Hu</div>
+                <div class="pub-list-venue">Proceedings of EMNLP 2025 <a href="https://arxiv.org/pdf/2507.14067">[Paper]</a> <a href="https://github.com/shiningwhite-cmd/VLA-mark">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">TabGen-ICL: Residual-Aware In-Context Example Selection for Tabular Data Generation</div>
+                <div class="pub-list-authors">Liancheng Fang, <strong>Aiwei Liu</strong>, Hengrui Zhang, Henry Peng Zou, Weizhi Zhang, Philip S. Yu</div>
+                <div class="pub-list-venue">Findings of ACL 2025 <a href="https://arxiv.org/pdf/2502.16414">[Paper]</a> <a href="https://github.com/fangliancheng/TabGEN-ICL">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">A Survey on Proactive Defense Strategies Against Misinformation in LLMs</div>
+                <div class="pub-list-authors">Shuliang Liu, Hongyi Liu, <strong>Aiwei Liu</strong>, Duan Bingchen, Zheng Qi, Yibo Yan, He Geng, Peijie Jiang, Jia Liu, Xuming Hu</div>
+                <div class="pub-list-venue">Findings of ACL 2025 <a href="https://aclanthology.org/2025.findings-acl.933/">[Paper]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Mitigating Modality Prior-induced Hallucinations in Multimodal Large Language Models via Deciphering Attention Causality</div>
+                <div class="pub-list-authors">Guanyu Zhou, Yibo Yan, Xin Zou, Kun Wang, <strong>Aiwei Liu</strong>, Xuming Hu</div>
+                <div class="pub-list-venue">Proceedings of ICLR 2025 <a href="https://arxiv.org/abs/2410.04780">[Paper]</a> <a href="https://github.com/The-Martyr/CausalMM">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">WaterSeeker: Efficient Detection of Watermarked Segments in Large Documents</div>
+                <div class="pub-list-authors">Leyi Pan, <strong>Aiwei Liu</strong>, Yijian Lu, Zitian Gao, Yichen Di, Lijie Wen, Irwin King, Philip S. Yu</div>
+                <div class="pub-list-venue">Findings of NAACL 2025 <a href="https://arxiv.org/abs/2409.05112">[Paper]</a> <a href="https://github.com/THU-BPM/WaterSeeker">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Entropy-Based Decoding for Retrieval-Augmented Large Language Models</div>
+                <div class="pub-list-authors">Zexuan Qiu, Zijing Ou, Bin Wu, Jingjing Li, <strong>Aiwei Liu</strong>, Irwin King</div>
+                <div class="pub-list-venue">Proceedings of NAACL 2025 <a href="https://arxiv.org/abs/2406.17519">[Paper]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">ChatCite: LLM Agent with Human Workflow Guidance for Comparative Literature Summary</div>
+                <div class="pub-list-authors">Yutong Li, Lu Chen, <strong>Aiwei Liu</strong>, Kai Yu, Lijie Wen</div>
+                <div class="pub-list-venue">Proceedings of COLING 2024 <a href="https://arxiv.org/abs/2403.02574">[Paper]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities</div>
+                <div class="pub-list-authors">Zhonghao Li, Xuming Hu, <strong>Aiwei Liu</strong>, Kening Zheng, Sirui Huang, Hui Xiong</div>
+                <div class="pub-list-venue">Findings of EMNLP 2024 <a href="https://arxiv.org/abs/2406.11357">[Paper]</a> <a href="https://github.com/allen-li1231/refiner-rag">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Preventing and Detecting Misinformation Generated by Large Language Models</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Qiang Sheng, Xuming Hu</div>
+                <div class="pub-list-venue">SIGIR 2024 Tutorial <a href="https://dl.acm.org/doi/10.1145/3626772.3661377">[Paper]</a> <a href="https://sigir24-llm-misinformation.github.io/">[Website]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">On the Robustness of Document-Level Relation Extraction Models to Entity Name Variations</div>
+                <div class="pub-list-authors">Shiao Meng, Xuming Hu, <strong>Aiwei Liu</strong>, Fukun Ma, Yawen Yang, Shuang Li, Lijie Wen</div>
+                <div class="pub-list-venue">Findings of ACL 2024 <a href="https://arxiv.org/abs/2406.07444">[Paper]</a> <a href="https://github.com/THU-BPM/Env-DocRE">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">An Entropy-based Text Watermarking Detection Method</div>
+                <div class="pub-list-authors">Yijian Lu, <strong>Aiwei Liu</strong>, Dianzhi Yu, Jingjing Li, Irwin King</div>
+                <div class="pub-list-venue">Proceedings of ACL 2024 <a href="https://arxiv.org/pdf/2403.13485.pdf">[Paper]</a> <a href="https://github.com/luyijian3/EWD">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models</div>
+                <div class="pub-list-authors">Zhiwei He, Binglin Zhou, Hongkun Hao, <strong>Aiwei Liu</strong>, Xing Wang, Zhaopeng Tu, Zhuosheng Zhang, Rui Wang</div>
+                <div class="pub-list-venue">Proceedings of ACL 2024 <a href="https://arxiv.org/pdf/2402.14007.pdf">[Paper]</a> <a href="https://github.com/zwhe99/X-SIR">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Xiang Kong, Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen</div>
+                <div class="pub-list-venue">Proceedings of ACL 2024 <a href="https://arxiv.org/pdf/2402.11907.pdf">[Paper]</a> <a href="https://github.com/exlaw/DLMA">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">A Semantic Invariant Robust Watermark for Large Language Models</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shiao Meng, Lijie Wen</div>
+                <div class="pub-list-venue">Proceedings of ICLR 2024 <a href="https://arxiv.org/pdf/2310.06356.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/Robust_Watermark">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">An Unforgeable Publicly Verifiable Watermark for Large Language Models</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shu'ang Li, Lijie Wen, Irwin King, Philip S. Yu</div>
+                <div class="pub-list-venue">Proceedings of ICLR 2024 <a href="https://arxiv.org/pdf/2307.16230.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/private_watermark">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">RAPL: A Relation-Aware Prototype Learning Approach for Few-Shot Document-Level Relation Extraction</div>
+                <div class="pub-list-authors">Shiao Meng, Xuming Hu, <strong>Aiwei Liu</strong>, Shuang Li, Fukun Ma, Yawen Yang, Lijie Wen</div>
+                <div class="pub-list-venue">Proceedings of EMNLP 2023 <a href="https://aclanthology.org/2023.emnlp-main.316.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/RAPL">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Prompt me up: Unleashing the power of alignments for multimodal entity and relation extraction</div>
+                <div class="pub-list-authors">Xuming Hu, Junzhe Chen, <strong>Aiwei Liu</strong>, Shiao Meng, Lijie Wen, Philip S Yu</div>
+                <div class="pub-list-venue">Proceedings of MM 2023 <a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3611899">[Paper]</a> <a href="https://github.com/THU-BPM/PROMU">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">EnTDA: Entity-to-Text based Data Augmentation with Semantic Coherence and Entity Preserving for various NER Tasks</div>
+                <div class="pub-list-authors">Xuming Hu, Yong Jiang, <strong>Aiwei Liu</strong>, Zhongqiang Huang, Pengjun Xie, Fei Huang, Lijie Wen and Philip S. Yu</div>
+                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://aclanthology.org/2023.findings-acl.578.pdf">[Paper]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">GDA: Generative Data Augmentation Techniques for Relation Extraction Tasks</div>
+                <div class="pub-list-authors">Xuming Hu, <strong>Aiwei Liu</strong>, Zeqi Tan, Xin Zhang, Chenwei Zhang, Irwin King, Philip S. Yu</div>
+                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://arxiv.org/abs/2305.16663">[Paper]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang and Lijie Wen</div>
+                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://aclanthology.org/2023.findings-acl.43.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/CD-Text2SQL-CG">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Enhancing Cross-lingual Natural Language Inference by Soft Prompting with Multilingual Verbalizer</div>
+                <div class="pub-list-authors">Shuang Li, Xuming Hu, <strong>Aiwei Liu</strong>, Yawen Yang, Fukun Ma, Philip S. Yu and Lijie Wen</div>
+                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://aclanthology.org/2023.findings-acl.88.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/SoftMV">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Semantics Matters: AMR-based Path Aggregation Relational Network for Aspect-based Sentiment Analysis</div>
+                <div class="pub-list-authors">Fukun Ma, Xuming Hu, <strong>Aiwei Liu</strong>, Yawen Yang, Shuang Li, Philip S. Yu and Lijie Wen</div>
+                <div class="pub-list-venue">Proceedings of ACL 2023 <a href="https://aclanthology.org/2023.acl-long.19.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/APARN">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Gaussian Prior Reinforcement Learning for Nested Named Entity Recognition</div>
+                <div class="pub-list-authors">Yawen Yang, Xuming Hu, Fukun Ma, Shu'ang Li, <strong>Aiwei Liu</strong>, Lijie Wen and Philip S. Yu</div>
+                <div class="pub-list-venue">Proceedings of ICASSP 2023 <a href="https://arxiv.org/abs/2305.07266">[Paper]</a> <a href="https://github.com/THU-BPM/GPRLNER">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Xuming Hu, Li Lin, Lijie Wen</div>
+                <div class="pub-list-venue">Proceedings of SIGKDD 2022 <a href="https://dl.acm.org/doi/pdf/10.1145/3534678.3539294">[Paper]</a> <a href="https://github.com/THU-BPM/ISESL-SQL">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Honghai Yu, Xuming Hu, Shu'ang Li, Li Lin, Fukun Ma, Yawen Yang, Lijie Wen</div>
+                <div class="pub-list-venue">Proceedings of EMNLP 2022 <a href="https://aclanthology.org/2022.emnlp-main.522/">[Paper]</a> <a href="https://github.com/THU-BPM/CWBA">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking</div>
+                <div class="pub-list-authors">Xuming Hu, Zhijiang Guo, Guanyu Wu, <strong>Aiwei Liu</strong>, Lijie Wen, Philip S. Yu</div>
+                <div class="pub-list-venue">Proceedings of NAACL 2022 <a href="https://aclanthology.org/2022.naacl-main.246.pdf">[Paper]</a> <a href="https://github.com/thu-bpm/chef">[Code]</a></div>
+            </div>
+
+            <h3 style="margin: 35px 0 20px; color: var(--primary-color); font-size: 1.3rem;">Journal Papers</h3>
+            
+            <div class="pub-list-item">
+                <div class="pub-list-title">Reading Broadly to Open Your Mind: Improving Open Relation Extraction With Search Documents Under Self-Supervisions</div>
+                <div class="pub-list-authors">Xuming Hu, Zhaochen Hong, Chenwei Zhang, <strong>Aiwei Liu</strong>, Shiao Meng, Lijie Wen, Irwin King, Philip S. Yu</div>
+                <div class="pub-list-venue">TKDE <a href="https://ieeexplore.ieee.org/abstract/document/10255305">[Paper]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">A Multi-level Supervised Contrastive Learning Framework for Low-Resource Natural Language Inference</div>
+                <div class="pub-list-authors">Shu'ang Li, Xuming Hu, Li Lin, <strong>Aiwei Liu</strong>, Lijie Wen, Philip S Yu</div>
+                <div class="pub-list-venue">TASLP 2023 <a href="https://arxiv.org/pdf/2205.15550.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/MultiSCL">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">A Survey of AIOps for Failure Management in the Era of Large Language Models</div>
+                <div class="pub-list-authors">Lingzhe Zhang, Tong Jia, Mengxi Jia, Yifan Wu, <strong>Aiwei Liu</strong>, Yong Yang, Zhonghai Wu, Xuming Hu, Philip S. Yu, Ying Li</div>
+                <div class="pub-list-venue">ACM Computing Surveys <a href="https://arxiv.org/abs/2406.11213">[Paper]</a></div>
+            </div>
+
+            <h3 style="margin: 35px 0 20px; color: var(--primary-color); font-size: 1.3rem;">Preprints</h3>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">A Comprehensive Evaluation of ChatGPT's Zero-Shot Text-to-SQL Capability</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Xuming Hu, Lijie Wen, Philip S. Yu</div>
+                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2303.13547">[Paper]</a> <a href="https://github.com/THU-BPM/chatgpt-sql">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Interpretable Contrastive Monte Carlo Tree Search Reasoning</div>
+                <div class="pub-list-authors">Zitian Gao, Boye Niu, Xuzheng He, Haotian Xu, Hongzhang Liu, <strong>Aiwei Liu</strong>, Xuming Hu, Lijie Wen</div>
+                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2410.01707">[Paper]</a> <a href="https://github.com/zitian-gao/SC-MCTS">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Recent Advances of Multimodal Continual Learning: A Comprehensive Survey</div>
+                <div class="pub-list-authors">Dianzhi Yu, Xinni Zhang, Yankai Chen, <strong>Aiwei Liu</strong>, Yifei Zhang, Philip S Yu, Irwin King</div>
+                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2410.05352">[Paper]</a> <a href="https://github.com/LucyDYu/Awesome-Multimodal-Continual-Learning">[Code]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Less is More: Extreme Gradient Boost Rank-1 Adaption for Efficient Finetuning of LLMs</div>
+                <div class="pub-list-authors">Yifei Zhang, Hao Zhu, <strong>Aiwei Liu</strong>, Han Yu, Piotr Koniusz, Irwin King</div>
+                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2410.19694">[Paper]</a></div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">Cold-Start Recommendation towards the Era of Large Language Models (LLMs): A Comprehensive Survey and Roadmap</div>
+                <div class="pub-list-authors">Weizhi Zhang, Yuanchen Bei, Liangwei Yang, Henry Peng Zou, Peilin Zhou, <strong>Aiwei Liu</strong>, Yinghui Li, Hao Chen, Jianling Wang, Yu Wang, Feiran Huang, Sheng Zhou, Jiajun Bu, Allen Lin, James Caverlee, Fakhri Karray, Irwin King, Philip S Yu</div>
+                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2501.01945">[Paper]</a> <a href="https://github.com/YuanchenBei/Awesome-Cold-Start-Recommendation">[Code]</a></div>
+            </div>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv" class="section fade-in-up">
+            <h2 class="section-title"><span>📄</span> Curriculum Vitae</h2>
+            <p style="margin-bottom: 20px;">Last updated: 2025-02-03</p>
+            
+            <div class="cv-buttons">
+                <a href="files/Aiwei-Liu-CV-EN.pdf" target="_blank" class="btn-download">
+                    <i class="far fa-file-pdf"></i>
+                    <div>
+                        <div style="font-weight: 700;">English CV</div>
+                        <div style="font-size: 0.85rem; color: #666;">Download PDF</div>
+                    </div>
+                </a>
+                <a href="files/Aiwei-Liu-CV-CN.pdf" target="_blank" class="btn-download">
+                    <i class="far fa-file-pdf"></i>
+                    <div>
+                        <div style="font-weight: 700;">中文简历</div>
+                        <div style="font-size: 0.85rem; color: #666;">下载 PDF 版本</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="service" class="section fade-in-up">
+            <h2 class="section-title"><span>🎓</span> Services</h2>
+            
+            <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700;">Program Committee / Reviewer</h3>
+            <ul style="list-style: none; margin-bottom: 30px;">
+                <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px; font-size: 0.9rem;"></i> <span><strong>Journals:</strong> TKDE, TIP</span></li>
+                <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px; font-size: 0.9rem;"></i> <span><strong>Conferences:</strong> ICML, ICLR, ACL, EMNLP, NAACL, EACL, WWW, MM</span></li>
+            </ul>
+
+            <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700;">Workshop Organization</h3>
+            <ul style="list-style: none; margin-bottom: 30px;">
+                <li style="display: flex; align-items: center;"><i class="fas fa-users" style="color: var(--primary-color); margin-right: 10px; font-size: 0.9rem;"></i> <span>Co-organizer of <a href="https://aaai2025-llm-misinformation.github.io/">AAAI 2025 Workshop on Preventing and Detecting LLM Generated Misinformation (PDLM)</a></span></li>
+            </ul>
+
+            <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700;">Tutorial</h3>
+            <ul style="list-style: none;">
+                <li style="display: flex; align-items: center;"><i class="fas fa-chalkboard-teacher" style="color: var(--primary-color); margin-right: 10px; font-size: 0.9rem;"></i> <span>Lead presenter for "Preventing and Detecting Misinformation Generated by Large Language Models" tutorial at SIGIR 2024</span></li>
+            </ul>
+        </section>
+
+        <footer style="text-align: center; margin-top: 60px; margin-bottom: 40px; color: #999; font-size: 0.9rem;">
+            <p>&copy; 2025 Aiwei Liu. All rights reserved.</p>
+        </footer>
+
+    </main>
+</div>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Active link highlighting on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Intersection Observer for Scroll Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
