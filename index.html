@@ -3,65 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiwei Liu (刘瑷玮) | Researcher</title>
-    <meta name="description" content="Personal Homepage of Aiwei Liu, Researcher at WeChat AI.">
-    
-    <!-- Google Fonts: DM Serif Display (Elegant Headings) & Inter (Clean Body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Aiwei Liu (刘瑷玮) | LLM Pretraining Researcher</title>
+    <meta name="description" content="Personal homepage of Aiwei Liu, LLM Pretraining researcher in the WeLM Team at WeChat AI, Tencent.">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            /* Warm Academic Palette — 2025/2026 */
-            --accent: #1A6B5A;          /* Deep teal — sophisticated, unique */
-            --accent-hover: #15574A;
-            --accent-subtle: rgba(26, 107, 90, 0.07);
-            --accent-glow: rgba(26, 107, 90, 0.18);
+            /* Restrained academic palette */
+            --accent: #0B3A63;
+            --accent-hover: #062A48;
+            --accent-subtle: #EEF3F8;
+            --signal: #111827;
 
-            /* Warm neutrals */
-            --bg: #F0EDE8;              /* Warm off-white (Cloud Dancer inspired) */
+            --bg: #FFFFFF;
             --surface: #FFFFFF;
             --surface-raised: #FFFFFF;
-            --surface-sunken: #E8E4DF;
+            --surface-sunken: #F4F6F8;
 
             /* Text hierarchy */
-            --text-1: #1A1A1A;          /* Primary — near-black */
-            --text-2: #555555;          /* Secondary */
-            --text-3: #8A8A8A;          /* Tertiary / muted */
+            --text-1: #020617;
+            --text-2: #1E293B;
+            --text-3: #334155;
 
-            /* Borders & Shadows — warm tones */
-            --border: #D9D4CE;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
-            --shadow-lg: 0 8px 40px rgba(0,0,0,0.08);
-            --shadow-accent: 0 4px 14px rgba(26, 107, 90, 0.2);
+            --border: #B8C2CF;
+            --border-strong: #64748B;
+            --shadow-sm: none;
+            --shadow-md: none;
+            --shadow-lg: none;
+            --shadow-accent: none;
 
-            --radius: 14px;
-            --radius-sm: 10px;
-            --radius-xs: 6px;
-            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 8px;
+            --radius-sm: 6px;
+            --radius-xs: 4px;
+            --transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: var(--bg);
             color: var(--text-1);
             line-height: 1.7;
             font-size: 16px;
-            -webkit-font-smoothing: antialiased;
+            font-weight: 500;
+            -webkit-font-smoothing: auto;
+            text-rendering: optimizeLegibility;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'DM Serif Display', Georgia, serif;
+            font-family: inherit;
             color: var(--text-1);
-            font-weight: 400;    /* DM Serif Display looks best at 400 */
+            font-weight: 700;
         }
 
         a {
@@ -70,7 +66,16 @@
             transition: var(--transition);
         }
 
-        a:not(.social-btn):not(.nav-link):not(.btn-download):not(.paper-links a):hover {
+        strong, b {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        a:not(.social-btn):not(.nav-link):not(.focus-item) {
+            font-weight: 700;
+        }
+
+        a:not(.social-btn):not(.nav-link):not(.paper-links a):not(.focus-item):hover {
             color: var(--accent-hover);
             text-decoration: underline;
             text-underline-offset: 3px;
@@ -78,12 +83,12 @@
 
         /* ========== LAYOUT ========== */
         .container {
-            max-width: 1400px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 50px 40px;
+            padding: 46px 40px;
             display: grid;
             grid-template-columns: 300px 1fr;
-            gap: 50px;
+            gap: 52px;
         }
 
         .fade-in-up { opacity: 1; }
@@ -94,38 +99,30 @@
             position: sticky;
             top: 40px;
             height: fit-content;
-            background: var(--surface);
-            padding: 40px 28px 32px;
-            border-radius: var(--radius);
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
             border: none;
-            box-shadow: var(--shadow-md);
-            text-align: center;
+            box-shadow: none;
+            text-align: left;
             z-index: 10;
         }
 
         .profile-img-container {
             position: relative;
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 24px;
+            width: 132px;
+            height: 132px;
+            margin: 0 0 24px;
         }
 
-        .profile-img-container::before {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            border-radius: 50%;
-            background: linear-gradient(145deg, var(--accent), #3a9d8f);
-            z-index: 1;
-            opacity: 0.9;
-        }
+        .profile-img-container::before { display: none; }
 
         .profile-img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
+            border-radius: var(--radius);
             object-fit: cover;
-            border: 3px solid var(--surface);
+            border: 1px solid var(--border-strong);
             position: relative;
             z-index: 2;
         }
@@ -133,20 +130,20 @@
         .profile-img-container::after { display: none; }
 
         .profile-name {
-            font-family: 'DM Serif Display', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 400;
+            font-family: inherit;
+            font-size: 1.42rem;
+            font-weight: 800;
             margin-bottom: 2px;
             color: var(--text-1);
-            letter-spacing: -0.01em;
+            letter-spacing: 0;
         }
 
         .profile-name-cn {
             font-size: 1rem;
-            font-weight: 400;
+            font-weight: 500;
             color: var(--text-3);
             margin-bottom: 16px;
-            font-family: 'Inter', sans-serif;
+            font-family: inherit;
         }
 
         .profile-bio {
@@ -158,16 +155,16 @@
 
         .social-links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 8px;
             margin-top: 18px;
         }
 
         .social-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: var(--accent-subtle);
+            width: 30px;
+            height: 30px;
+            border-radius: 0;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -178,19 +175,18 @@
         }
 
         .social-btn:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-accent);
+            background: transparent;
+            color: var(--accent-hover);
         }
 
         .contact-info {
             margin-top: 20px;
             text-align: left;
             font-size: 0.82rem;
-            background: var(--bg);
-            border-radius: var(--radius-sm);
-            padding: 14px 16px;
+            background: transparent;
+            border-top: 1px solid var(--border-strong);
+            border-radius: 0;
+            padding: 14px 0 0;
         }
 
         .contact-item {
@@ -215,64 +211,70 @@
         /* ========== NAVIGATION ========== */
         .nav-bar {
             display: flex;
-            gap: 2px;
+            gap: 18px;
             margin-bottom: 4px;
             flex-wrap: wrap;
             position: sticky;
             top: 20px;
-            background: rgba(240, 237, 232, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             z-index: 100;
-            padding: 6px 8px;
-            border-radius: 50px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(255,255,255,0.5);
+            padding: 0 0 10px;
+            border-radius: 0;
+            box-shadow: none;
+            border-bottom: 1px solid var(--border-strong);
             width: fit-content;
         }
 
         .nav-link {
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            color: var(--text-2);
-            padding: 7px 18px;
-            border-radius: 50px;
+            font-family: inherit;
+            font-weight: 600;
+            color: var(--text-1);
+            padding: 0;
+            border-radius: 0;
             transition: var(--transition);
             font-size: 0.85rem;
-            letter-spacing: 0.01em;
+            letter-spacing: 0;
         }
 
         .nav-link:hover {
             color: var(--accent);
-            background: var(--accent-subtle);
+            background: transparent;
         }
 
         .nav-link.active {
-            background: var(--accent);
-            color: white;
-            box-shadow: var(--shadow-accent);
+            background: transparent;
+            color: var(--accent);
+            box-shadow: none;
+            font-weight: 700;
         }
 
         /* ========== SECTIONS ========== */
         .section {
-            background: var(--surface);
-            padding: 44px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            border: none;
+            background: transparent;
+            padding: 44px 0;
+            border-radius: 0;
+            box-shadow: none;
+            border-top: 1px solid var(--border-strong);
             scroll-margin-top: 100px;
         }
 
+        .main-content .section:first-of-type {
+            border-top: none;
+            padding-top: 24px;
+        }
+
         .section-title {
-            font-family: 'DM Serif Display', Georgia, serif;
+            font-family: inherit;
             font-size: 1.65rem;
-            font-weight: 400;
-            margin-bottom: 28px;
+            font-weight: 800;
+            margin-bottom: 24px;
             padding-bottom: 0;
             border-bottom: none;
             color: var(--text-1);
             display: block;
-            letter-spacing: -0.01em;
+            letter-spacing: 0;
         }
 
         .section-title::before { display: none; }
@@ -280,25 +282,140 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 36px;
+            width: 34px;
             height: 3px;
             background: var(--accent);
             border-radius: 2px;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .section-title span { display: none; }
 
         .intro-text p {
             margin-bottom: 1rem;
-            color: var(--text-2);
+            color: var(--text-1);
             font-size: 0.95rem;
             line-height: 1.8;
         }
 
-        .intro-text strong {
+        .scholar-metrics {
+            display: grid;
+            grid-template-columns: minmax(180px, 1.1fr) repeat(3, minmax(90px, 0.7fr));
+            gap: 14px;
+            align-items: stretch;
+            margin: 22px 0 24px;
+            padding: 14px 0;
+            border-top: 1px solid var(--border-strong);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .scholar-source {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3px;
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .scholar-source span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .scholar-source small,
+        .metric-label {
+            color: var(--text-3);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .metric-item {
+            border-left: 1px solid var(--border);
+            padding-left: 14px;
+        }
+
+        .metric-value {
+            display: block;
+            color: var(--accent);
+            font-size: 1.3rem;
+            line-height: 1.15;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .metric-label {
+            display: block;
+            margin-top: 4px;
+        }
+
+        .research-focus {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .focus-item {
+            padding: 16px 18px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        a.focus-item {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.focus-item:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .focus-item:hover {
+            border-color: var(--border-strong);
+        }
+
+        .focus-kicker {
+            display: inline-block;
+            margin-bottom: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .focus-item h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            letter-spacing: 0;
+        }
+
+        .focus-item p {
+            margin: 0;
             color: var(--text-1);
-            font-weight: 600;
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        .focus-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .intro-text strong {
+            color: var(--accent);
+            font-weight: 700;
         }
 
         /* ========== NEWS ========== */
@@ -332,15 +449,15 @@
         }
 
         .me-highlight {
-            color: var(--text-1);
-            font-weight: 600;
+            color: var(--accent);
+            font-weight: 700;
             text-decoration: underline;
             text-decoration-color: var(--accent);
             text-underline-offset: 3px;
         }
 
         .news-date {
-            font-family: 'Inter', sans-serif;
+            font-family: inherit;
             font-weight: 600;
             color: var(--accent);
             min-width: 72px;
@@ -350,38 +467,91 @@
 
         .news-content {
             font-size: 0.92rem;
-            color: var(--text-2);
+            color: var(--text-1);
             line-height: 1.6;
         }
 
-        /* ========== PAPER CARDS (HIGHLIGHTS) ========== */
+        /* ========== SELECTED WORK ========== */
+        .section-lede {
+            max-width: 760px;
+            margin: -12px 0 24px;
+            color: var(--text-2);
+            font-size: 0.94rem;
+            line-height: 1.7;
+        }
+
         .paper-cards-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
         }
 
         .pub-list-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0 20px;
+            grid-template-columns: 1fr;
+            gap: 10px;
         }
 
         .paper-card {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            padding: 18px;
+            gap: 12px;
+            padding: 16px;
             border-radius: var(--radius);
-            background: var(--bg);
-            border: none;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--border-strong);
             transition: var(--transition);
         }
 
-        .paper-card:hover {
+        .paper-card.featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: minmax(360px, 1.15fr) minmax(0, 0.85fr);
+            gap: 22px;
+            padding: 18px;
             background: var(--surface);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
+            border-color: var(--border-strong);
+            border-left-color: var(--accent);
+            border-left-width: 4px;
+        }
+
+        .paper-card.featured .paper-img {
+            min-height: 250px;
+            height: 100%;
+        }
+
+        .paper-card.featured .paper-img img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .paper-card.featured .paper-title {
+            font-size: 1.35rem;
+            line-height: 1.28;
+        }
+
+        .paper-card.compact .paper-img {
+            aspect-ratio: 16 / 8.4;
+        }
+
+        .paper-card.blog-card .paper-img {
+            aspect-ratio: 16 / 9;
+        }
+
+        .paper-card.compact .paper-img img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .paper-card:hover {
+            border-color: var(--border-strong);
+            box-shadow: none;
+        }
+
+        .paper-card.featured:hover {
+            border-color: var(--border-strong);
+            border-left-color: var(--accent);
         }
 
         .paper-img {
@@ -389,7 +559,8 @@
             flex-shrink: 0;
             border-radius: var(--radius-sm);
             overflow: hidden;
-            background: var(--surface-sunken);
+            background: #FFFFFF;
+            border: 1px solid var(--border);
         }
 
         .paper-img img {
@@ -405,16 +576,27 @@
             justify-content: center;
         }
 
+        .paper-kicker {
+            display: inline-flex;
+            width: fit-content;
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
         .paper-title {
-            font-family: 'DM Serif Display', Georgia, serif;
+            font-family: inherit;
             font-size: 1.05rem;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: 8px;
             line-height: 1.35;
             color: var(--text-1);
         }
 
-        .paper-card:hover .paper-title { color: var(--accent); }
+        .paper-card:hover .paper-title { color: var(--text-1); }
 
         .paper-authors {
             font-size: 0.85rem;
@@ -426,13 +608,13 @@
         .paper-authors u, .paper-authors strong {
             color: var(--accent);
             text-decoration-color: var(--accent);
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .paper-venue {
             font-size: 0.82rem;
             color: var(--accent);
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 10px;
             display: flex;
             align-items: center;
@@ -441,13 +623,14 @@
         }
 
         .badge {
-            background: var(--accent);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 50px;
+            background: #FFFFFF;
+            color: var(--text-1);
+            padding: 2px 7px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xs);
             font-size: 0.68rem;
-            font-weight: 600;
-            letter-spacing: 0.03em;
+            font-weight: 700;
+            letter-spacing: 0;
             text-transform: uppercase;
         }
 
@@ -455,49 +638,80 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            padding: 5px 13px;
-            margin-right: 5px;
+            padding: 0;
+            margin-right: 12px;
             margin-bottom: 4px;
-            background: var(--surface);
-            color: var(--text-2);
-            border-radius: 50px;
+            background: transparent;
+            color: var(--accent);
+            border-radius: 0;
             font-size: 0.78rem;
-            font-weight: 500;
+            font-weight: 700;
             border: none;
-            box-shadow: var(--shadow-sm);
+            box-shadow: none;
             text-decoration: none;
             transition: var(--transition);
         }
 
         .paper-links a:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-accent);
+            background: transparent;
+            color: var(--accent-hover);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            box-shadow: none;
         }
 
         .paper-links a i { font-size: 0.82rem; }
 
         /* ========== PUBLICATION LIST ========== */
+        .pub-section-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            margin: 34px 0 14px;
+            color: var(--text-1);
+            font-size: 1.08rem;
+            font-weight: 800;
+            letter-spacing: 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pub-section-title:first-of-type {
+            margin-top: 18px;
+        }
+
+        .pub-section-title span {
+            flex-shrink: 0;
+            color: var(--text-3);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
         .pub-list-item {
-            margin-bottom: 10px;
-            padding: 16px 18px;
-            border-left: 3px solid transparent;
+            margin-bottom: 0;
+            padding: 15px 18px;
             border-radius: var(--radius-xs);
             transition: var(--transition);
-            background: var(--bg);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left-color: var(--border-strong);
+            border-left-width: 3px;
         }
 
         .pub-list-item:hover {
             border-left-color: var(--accent);
-            background: var(--surface);
-            box-shadow: var(--shadow-sm);
+            border-color: var(--border-strong);
+            background: var(--surface-sunken);
+            box-shadow: none;
         }
 
         .pub-list-title {
-            font-family: 'DM Serif Display', Georgia, serif;
-            font-weight: 400;
-            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.98rem;
             color: var(--text-1);
             margin-bottom: 5px;
             line-height: 1.35;
@@ -512,7 +726,12 @@
         .pub-list-venue {
             font-size: 0.82rem;
             color: var(--accent);
-            font-weight: 600;
+            font-weight: 700;
+        }
+
+        .pub-list-venue a {
+            margin-left: 6px;
+            font-weight: 700;
         }
 
         /* ========== EDUCATION & EXPERIENCE ========== */
@@ -524,13 +743,13 @@
             padding: 16px 18px;
             border-radius: var(--radius-sm);
             transition: var(--transition);
-            background: var(--bg);
-            border: none;
+            background: var(--surface);
+            border: 1px solid var(--border);
         }
 
         .edu-item:hover {
             background: var(--surface);
-            box-shadow: var(--shadow-sm);
+            box-shadow: none;
         }
 
         .edu-logo {
@@ -540,42 +759,9 @@
             padding: 6px;
             background: var(--surface);
             border-radius: var(--radius-xs);
-            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            box-shadow: none;
             flex-shrink: 0;
-        }
-
-        /* ========== CV BUTTONS ========== */
-        .cv-buttons {
-            display: flex;
-            gap: 16px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn-download {
-            flex: 1;
-            min-width: 200px;
-            padding: 18px 20px;
-            background: var(--bg);
-            border: none;
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            color: var(--text-1);
-            transition: var(--transition);
-        }
-
-        .btn-download:hover {
-            background: var(--accent-subtle);
-            box-shadow: var(--shadow-sm);
-            transform: translateY(-1px);
-        }
-
-        .btn-download i {
-            font-size: 1.6rem;
-            color: var(--accent);
         }
 
         /* ========== RESPONSIVE ========== */
@@ -599,12 +785,29 @@
                 grid-template-columns: 1fr;
             }
 
+            .paper-card.featured {
+                grid-template-columns: 1fr;
+            }
+
+            .paper-card.featured .paper-img {
+                min-height: 0;
+                aspect-ratio: 16 / 8.4;
+            }
+
+            .scholar-metrics {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .scholar-source {
+                grid-column: 1 / -1;
+            }
+
             .nav-bar {
                 width: 100%;
                 justify-content: center;
             }
 
-            .section { padding: 30px; }
+            .section { padding: 30px 0; }
         }
 
         @media (max-width: 600px) {
@@ -622,8 +825,24 @@
                 height: 120px;
             }
 
-            .section { padding: 24px 20px; }
+            .section { padding: 24px 0; }
             .section-title { font-size: 1.35rem; }
+
+            .research-focus {
+                grid-template-columns: 1fr;
+            }
+
+            .scholar-metrics {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .metric-item {
+                border-left: none;
+                border-top: 1px solid var(--border);
+                padding: 10px 0 0;
+            }
+
         }
 
         @media (min-width: 1600px) {
@@ -648,10 +867,10 @@
         <h2 class="profile-name-cn">刘瑷玮</h2>
         
         <p class="profile-bio">
-            Researcher at WeChat AI, Tencent<br>
-            Ph.D. from Tsinghua University
+            Researcher, WeLM Team<br>
+            WeChat AI, Tencent
         </p>
-        <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 20px; letter-spacing: 0.02em;">LLM Pretraining · Alignment · Watermarking</p>
+        <p style="font-size: 0.8rem; color: var(--text-2); margin-bottom: 20px; letter-spacing: 0;">LLM Pretraining · WeLM · Latent Computation</p>
 
         <div class="social-links">
             <a href="mailto:liuaiwei20@gmail.com" class="social-btn" title="Email"><i class="fa fa-envelope"></i></a>
@@ -675,7 +894,7 @@
             </div>
         </div>
         
-        <div style="margin-top: 25px;">
+        <div style="display: none;">
             <a href="https://clustrmaps.com/site/1bz29" title="Visit tracker">
                 <img src="//clustrmaps.com/map_v2.png?d=DX15I5ozLq5Q-wR0ekcNB17qazZ99Mm2sOgYD9FXvrM&cl=ffffff&w=220&t=tt" style="max-width: 100%; border-radius: var(--radius-sm); opacity: 0.85;" />
             </a>
@@ -689,17 +908,36 @@
         <nav class="nav-bar fade-in-up" style="animation-delay: 0.1s;">
             <a href="#about" class="nav-link active">About</a>
             <a href="#news" class="nav-link">News</a>
-            <a href="#highlights" class="nav-link">Highlights</a>
+            <a href="#highlights" class="nav-link">Selected Work</a>
             <a href="#publications" class="nav-link">Publications</a>
-            <a href="#cv" class="nav-link">CV</a>
-            <a href="#service" class="nav-link">Services</a>
         </nav>
 
         <!-- About Section -->
         <section id="about" class="section fade-in-up" style="animation-delay: 0.2s;">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Research Profile</h2>
             <div class="intro-text">
-                <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am currently a researcher at WeChat AI, Tencent, working on Large Language Foundation Model.</p>
+                <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am currently a researcher in the <a href="https://welm.weixin.qq.com/">WeLM Team at WeChat AI, Tencent</a>, working on the pretraining of <strong>WeLM</strong>.</p>
+
+                <p>My current research focuses on <strong>LLM pretraining</strong>, with interests in foundation model training, model architecture, efficient decoding, sparse MoE, and practical scaling under real-world resource constraints. Before joining the WeLM Team, my Ph.D. research focused on <strong>LLM Alignment</strong> and <strong>Trustworthy LLMs</strong>.</p>
+
+                <div class="scholar-metrics" data-scholar-metrics>
+                    <a class="scholar-source" href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en" target="_blank" rel="noopener">
+                        <span><i class="fa-solid fa-graduation-cap"></i> Google Scholar</span>
+                        <small data-scholar-updated>Updated periodically</small>
+                    </a>
+                    <div class="metric-item">
+                        <span class="metric-value" data-scholar-citations>--</span>
+                        <span class="metric-label">Citations</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value" data-scholar-hindex>--</span>
+                        <span class="metric-label">h-index</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value" data-scholar-i10index>--</span>
+                        <span class="metric-label">i10-index</span>
+                    </div>
+                </div>
   
                 <p>I received my Ph.D. degree from the <a href="https://www.thss.tsinghua.edu.cn/">School of Software</a> in <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a> in June 2025, where I was advised by Prof. <a href="https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm">Lijie Wen</a>. Before that, I received my B.Eng. degree from the <a href="https://software.nju.edu.cn/">Software Institute</a> in <a href="https://www.nju.edu.cn/">Nanjing University</a> in 2020.</p>
 
@@ -709,24 +947,38 @@
 
                 <p>Additionally, I was serving as a Visiting Scholar at <a href="https://misc-lab.cse.cuhk.edu.hk/people/">CUHK MISC Lab</a>, working under the supervision of Prof. <a href="https://www.cse.cuhk.edu.hk/irwin.king/home">Irwin King</a> (ACM Fellow, IEEE Fellow).</p>
                 
-                <p style="background: var(--accent-subtle); padding: 20px; border-left: 3px solid var(--accent); border-radius: var(--radius-xs); margin-top: 25px; color: var(--text-2);"><strong style="color: var(--text-1);">Open to Collaboration:</strong> If you're interested in research collaboration on LLM watermarking, LLM alignment, LLM pretraining or other LLM topics, please feel free to contact me.</p>
+                <p style="padding: 16px 0 0; border-top: 1px solid var(--border); margin-top: 24px; color: var(--text-1);"><strong>Open to Collaboration:</strong> If you're interested in research collaboration on LLM pretraining, WeLM-related research, efficient decoding, sparse MoE, LLM Alignment, or Trustworthy LLMs, please feel free to contact me.</p>
+            </div>
+
+            <div class="research-focus">
+                <a class="focus-item" href="https://welm.weixin.qq.com/" target="_blank" rel="noopener">
+                    <span class="focus-kicker">Current Focus</span>
+                    <h3>WeLM Team at WeChat AI, Tencent</h3>
+                    <p>I work on WeLM foundation model pretraining, focusing on training recipes, architecture and efficiency choices, and model capabilities that matter in practical large-scale systems.</p>
+                    <span class="focus-link">Visit WeLM <i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <div class="focus-item">
+                    <span class="focus-kicker">Earlier Work</span>
+                    <h3>LLM Alignment &amp; Trustworthy LLMs</h3>
+                    <p>My Ph.D. work focused on LLM Alignment and Trustworthy LLMs.</p>
+                </div>
             </div>
 
             <h3 style="margin-top: 40px; margin-bottom: 20px; font-size: 1.2rem; font-weight: 600; color: var(--text-1);">Education</h3>
             <div class="edu-item">
                 <img src="images/tsinghua.svg" alt="Tsinghua" class="edu-logo">
                 <div>
-                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--text-1);">Tsinghua University, China</div>
-                    <div style="color: var(--text-2); font-weight: 500;">Ph.D. in Software Engineering</div>
-                    <div style="font-size: 0.85rem; color: var(--text-3);">Sept. 2020 – June 2025</div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Tsinghua University, China</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Ph.D. in Software Engineering</div>
+                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2020 – June 2025</div>
                 </div>
             </div>
             <div class="edu-item">
                 <img src="images/nanjing.png" alt="Nanjing" class="edu-logo">
                 <div>
-                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--text-1);">Nanjing University, China</div>
-                    <div style="color: var(--text-2); font-weight: 500;">B.E. in Software Engineering</div>
-                    <div style="font-size: 0.85rem; color: var(--text-3);">Sept. 2016 – June 2020</div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Nanjing University, China</div>
+                    <div style="color: var(--text-1); font-weight: 500;">B.E. in Software Engineering</div>
+                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2016 – June 2020</div>
                 </div>
             </div>
 
@@ -734,30 +986,30 @@
             <div class="edu-item">
                 <img src="images/tencent.png" alt="Tencent" class="edu-logo">
                 <div>
-                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--text-1);">WeChat AI, Tencent</div>
-                    <div style="color: var(--text-2); font-weight: 500;">Researcher</div>
-                    <div style="font-size: 0.85rem; color: var(--text-3);">July 2025 – Present</div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">WeLM Team, WeChat AI, Tencent</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Researcher</div>
+                    <div style="font-size: 0.85rem; color: var(--text-2);">July 2025 – Present</div>
                 </div>
             </div>
             <div class="edu-item">
                 <img src="images/apple.png" alt="Apple" class="edu-logo">
                 <div>
-                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--text-1);">Apple AIML Group</div>
-                    <div style="color: var(--text-2); font-weight: 500;">Research Intern</div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Apple AIML Group</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Research Intern</div>
                 </div>
             </div>
             <div class="edu-item">
                 <img src="images/cuhk.png" alt="CUHK" class="edu-logo">
                 <div>
-                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--text-1);">CUHK MISC Lab</div>
-                    <div style="color: var(--text-2); font-weight: 500;">Visiting Scholar · Advisor: Prof. Irwin King</div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">CUHK MISC Lab</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Irwin King</div>
                 </div>
             </div>
             <div class="edu-item">
                 <img src="images/uic.png" alt="UIC" class="edu-logo">
                 <div>
-                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--text-1);">UIC BDSC Lab</div>
-                    <div style="color: var(--text-2); font-weight: 500;">Visiting Scholar · Advisor: Prof. Philip S. Yu</div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">UIC BDSC Lab</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Philip S. Yu</div>
                 </div>
             </div>
         </section>
@@ -767,7 +1019,7 @@
             <h2 class="section-title">News</h2>
             <div class="news-list">
                 <div class="news-item"><div class="news-date">2026.01</div><div class="news-content">Three papers accepted by <a href="https://iclr.cc/Conferences/2026">ICLR 2026</a>.</div></div>
-                <div class="news-item"><div class="news-date">2025.12</div><div class="news-content">Released <a href="https://github.com/Tencent/WeDLM">WeDLM</a> - The fastest diffusion language model, capable of outperforming vLLM-optimized autoregressive baselines. <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 14px; vertical-align: middle; margin-left: 5px;"></div></div>
+                <div class="news-item"><div class="news-date">2025.12</div><div class="news-content">Released <a href="https://github.com/Tencent/WeDLM">WeDLM</a>, a diffusion language model designed for fast inference with standard causal attention. <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 14px; vertical-align: middle; margin-left: 5px;"></div></div>
                 <div class="news-item"><div class="news-date">2025.08</div><div class="news-content">Two papers are accepted by <a href="https://2025.emnlp.org/">EMNLP 2025</a>.</div></div>
                 <div class="news-item"><div class="news-date">2025.06</div><div class="news-content">Honored to be awarded the <a href="images/beijing-outstanding.JPG">Outstanding Graduates of Beijing</a>.</div></div>
                 <div class="news-item"><div class="news-date">2025.05</div><div class="news-content">Invited as a reviewer for EMNLP 2025 and NeurIPS 2025.</div></div>
@@ -775,104 +1027,79 @@
                 <div class="news-item"><div class="news-date">2025.01</div><div class="news-content">Two papers accepted by NAACL 2025, three papers accepted by ICLR 2025.</div></div>
                 <div class="news-item"><div class="news-date">2024.10</div><div class="news-content"><a href="https://arxiv.org/pdf/2405.10051">MarkLLM</a> is accepted by EMNLP 2024 Demo Track.</div></div>
                 <div class="news-item"><div class="news-date">2024.08</div><div class="news-content">"A Survey of Text Watermarking in the Era of LLMs" accepted by <a href="https://dl.acm.org/journal/csur">ACM Computing Surveys</a>.</div></div>
-                <div class="news-item"><div class="news-date">2024.05</div><div class="news-content">Three papers accepted by ACL 2024 (Alignment & Watermarking).</div></div>
+                <div class="news-item"><div class="news-date">2024.05</div><div class="news-content">Three papers accepted by ACL 2024 (Trustworthy LLMs and Alignment).</div></div>
                 <div class="news-item"><div class="news-date">2024.04</div><div class="news-content">Tutorial "Preventing and Detecting Misinformation Generated by LLMs" accepted by SIGIR 2024.</div></div>
             </div>
         </section>
 
-        <!-- Research Highlights -->
+        <!-- Selected Work -->
         <section id="highlights" class="section fade-in-up">
-            <h2 class="section-title">Research Highlights</h2>
+            <h2 class="section-title">Selected Work</h2>
+            <p class="section-lede">Representative work on WeLM pretraining, latent computation, sparse MoE, and earlier work on LLM Alignment and Trustworthy LLMs.</p>
 
-    <div class="paper-cards-grid">
-    <!-- WeDLM -->
-    <div class="paper-card fade-in-up">
-        <div class="paper-img">
-            <img src="images/wedlm.png" alt="WeDLM" loading="lazy">
-        </div>
-        <div class="paper-info">
-            <div class="paper-title">WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference</div>
-            <div class="paper-authors">
-                <strong class="me-highlight">Aiwei Liu</strong>, Minghua He, Shaoxun Zeng, Linhao Zhang, Chuhan Wu, Wei Jia, Yuan Liu, Yang Yu, Xiao Zhou, Jie Zhou
-            </div>
-            <div class="paper-venue">
-                Preprint <span class="badge">Fastest DLM</span> <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 16px; margin-left: 5px; vertical-align: middle;">
-            </div>
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2512.22737"><i class="far fa-file-pdf"></i> Paper</a>
-                <a href="https://github.com/Tencent/WeDLM"><i class="fab fa-github"></i> Code</a>
-                <a href="https://wedlm.github.io"><i class="fas fa-globe"></i> Project</a>
-                <a href="https://huggingface.co/collections/Tencent/wedlm"><i class="fas fa-cube"></i> Models</a>
-            </div>
-        </div>
-    </div>
-            
-    <!-- Paper 1 -->
-    <div class="paper-card fade-in-up">
-        <div class="paper-img">
-            <img src="images/mark-diffusion.png" alt="MarkDiffusion" loading="lazy">
-        </div>
-        <div class="paper-info">
-            <div class="paper-title">MarkDiffusion: An Open-Source Toolkit for Generative Watermarking of Latent Diffusion Models</div>
-            <div class="paper-authors">
-                Leyi Pan, Sheng Guan, Zheyu Fu, Luyang Si, Zian Wang, Xuming Hu, Irwin King, Philip S. Yu, 
-                <!-- 您的名字 + 通讯作者图标 -->
-                <strong class="me-highlight">Aiwei Liu</strong><i class="fas fa-envelope corresponding-icon" title="Corresponding Author"></i>, 
-                Lijie Wen
-            </div>
-            <div class="paper-venue">
-                Preprint <img src="https://img.shields.io/github/stars/THU-BPM/MarkDiffusion?style=social" alt="stars" style="height: 16px; margin-left: 5px; vertical-align: middle;">
-            </div>
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2509.10569"><i class="far fa-file-pdf"></i> Paper</a>
-                <a href="https://github.com/THU-BPM/MarkDiffusion"><i class="fab fa-github"></i> Code</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Paper 2 -->
-    <div class="paper-card fade-in-up">
-        <div class="paper-img">
-            <img src="images/watermark-distillation.png" alt="Watermark Distillation" loading="lazy">
-        </div>
-        <div class="paper-info">
-            <div class="paper-title">Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?</div>
-            <div class="paper-authors">
-                Leyi Pan, 
-                <!-- 您的名字 + 通讯作者图标 -->
-                <strong class="me-highlight">Aiwei Liu</strong><i class="fas fa-envelope corresponding-icon" title="Corresponding Author"></i>, 
-                Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu
-            </div>
-            <div class="paper-venue">Proceedings of ACL 2025</div>
-            <div class="paper-links">
-                <a href="https://arxiv.org/pdf/2502.11598"><i class="far fa-file-pdf"></i> Paper</a>
-                <a href="https://github.com/THU-BPM/Watermark-Radioactivity-Attack"><i class="fab fa-github"></i> Code</a>
-            </div>
-        </div>
-    </div>
-            <!-- Paper 3 -->
-            <div class="paper-card fade-in-up">
+            <div class="paper-cards-grid">
+            <!-- WeDLM -->
+            <div class="paper-card featured fade-in-up">
                 <div class="paper-img">
-                    <img src="images/water-probe.png" alt="Watermark Probe" loading="lazy">
+                    <img src="images/wedlm.png" alt="WeDLM" loading="lazy">
                 </div>
                 <div class="paper-info">
-                    <div class="paper-title">Can Watermarked LLMs be Identified by Users via Crafted Prompts?</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Sheng Guan, Yiming Liu, Leyi Pan, Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu</div>
-                    <div class="paper-venue">Proceedings of ICLR 2025 <span class="badge">Spotlight, top 5%</span></div>
+                    <span class="paper-kicker">Current Direction · LLM Pretraining</span>
+                    <div class="paper-title">WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference</div>
+                    <div class="paper-authors">
+                        <strong class="me-highlight">Aiwei Liu</strong>, Minghua He, Shaoxun Zeng, Linhao Zhang, Chuhan Wu, Wei Jia, Yuan Liu, Yang Yu, Xiao Zhou, Jie Zhou
+                    </div>
+                    <div class="paper-venue">
+                        ICML 2026 Oral <span class="badge">0.7% acceptance rate</span> <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 16px; margin-left: 5px; vertical-align: middle;">
+                    </div>
                     <div class="paper-links">
-                        <a href="https://arxiv.org/pdf/2410.03168"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/Watermarked_LLM_Identification"><i class="fab fa-github"></i> Code</a>
-                        <a href="files/water-probe-poster.pdf"><i class="far fa-image"></i> Poster</a>
+                        <a href="https://arxiv.org/abs/2512.22737"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/Tencent/WeDLM"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://wedlm.github.io"><i class="fas fa-globe"></i> Project</a>
+                        <a href="https://huggingface.co/collections/Tencent/wedlm"><i class="fas fa-cube"></i> Models</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Paper 4 -->
-            <div class="paper-card fade-in-up">
+            <!-- Hidden Decoding -->
+            <div class="paper-card compact blog-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/hidden-decoding.png" alt="Hidden Decoding" loading="lazy">
+                </div>
+                <div class="paper-info">
+                    <span class="paper-kicker">WeLM Blog · Latent Computation</span>
+                    <div class="paper-title">Hidden Decoding</div>
+                    <div class="paper-authors">Research contribution on hidden-state computation and latent reasoning behavior for WeLM-style language models.</div>
+                    <div class="paper-venue">WeLM Blog</div>
+                    <div class="paper-links">
+                        <a href="https://welm.weixin.qq.com/posts/hidden_decoding/"><i class="fas fa-globe"></i> Blog</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sparse MoE -->
+            <div class="paper-card compact blog-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/welm-architecture.png" alt="WeLM sparse MoE architecture" loading="lazy">
+                </div>
+                <div class="paper-info">
+                    <span class="paper-kicker">WeLM Blog · Sparse MoE</span>
+                    <div class="paper-title">Building Effective Sparse MoE Models with Moderate Resources</div>
+                    <div class="paper-authors">Research contribution on practical sparse MoE modeling under moderate compute and resource constraints.</div>
+                    <div class="paper-venue">WeLM Blog</div>
+                    <div class="paper-links">
+                        <a href="https://welm.weixin.qq.com/posts/building-effective-sparse-moe-models-with-moderate-resources/"><i class="fas fa-globe"></i> Blog</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIS-DPO -->
+            <div class="paper-card compact fade-in-up">
                 <div class="paper-img">
                     <img src="images/tis-dpo.png" alt="TIS-DPO" loading="lazy">
                 </div>
                 <div class="paper-info">
+                    <span class="paper-kicker">Earlier Work · Alignment</span>
                     <div class="paper-title">TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights</div>
                     <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Simon Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</div>
                     <div class="paper-venue">Proceedings of ICLR 2025</div>
@@ -883,12 +1110,13 @@
                 </div>
             </div>
 
-            <!-- Paper 5 -->
-            <div class="paper-card fade-in-up">
+            <!-- MarkLLM -->
+            <div class="paper-card compact fade-in-up">
                 <div class="paper-img">
                     <img src="images/markllm.png" alt="MarkLLM" loading="lazy">
                 </div>
                 <div class="paper-info">
+                    <span class="paper-kicker">Earlier Work · Toolkit</span>
                     <div class="paper-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
                     <div class="paper-authors">Leyi Pan, <strong style="text-decoration: underline;">Aiwei Liu*</strong>(Project Lead), Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</div>
                     <div class="paper-venue">Proceedings of EMNLP 2024 Demo <img src="https://img.shields.io/github/stars/THU-BPM/MarkLLM?style=social" alt="stars" style="height: 16px; margin-left: 5px;"></div>
@@ -900,147 +1128,26 @@
                 </div>
             </div>
 
-            <!-- Paper 6 Survey -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/survey.png" alt="Survey" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">A Survey of Text Watermarking in the Era of Large Language Models</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Leyi Pan, Yijian Lu, Jingjing Li, Xuming Hu, Xi Zhang, Lijie Wen, Irwin King, Hui Xiong, Philip S. Yu</div>
-                    <div class="paper-venue">ACM Computing Surveys <span class="badge">IF: 23.8</span></div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/pdf/2312.07913.pdf"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://survey-text-watermark.github.io/"><i class="fas fa-globe"></i> Home</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paper 7 SIGIR Tutorial -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/tutorial-sigir.png" alt="SIGIR tutorial" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">Preventing and Detecting Misinformation Generated by Large Language Models</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Qiang Sheng, Xuming Hu</div>
-                    <div class="paper-venue">Proceedings of SIGIR 2024 Tutorial</div>
-                    <div class="paper-links">
-                        <a href="https://dl.acm.org/doi/10.1145/3626772.3661377"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://sigir24-llm-misinformation.github.io/"><i class="fas fa-globe"></i> Home</a>
-                        <a href="https://sigir24-llm-misinformation.github.io/slides/SIGIR%202024%20Tutorial-all-version5.pdf/"><i class="far fa-file-powerpoint"></i> Slides</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paper 8 DLMA -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/dlma.png" alt="DLMA" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Xiang Kong, Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen</div>
-                    <div class="paper-venue">Proceedings of ACL 2024</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/pdf/2402.11907.pdf"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/Direct_LLM_Alignment"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paper 9 SIR -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/SIR.png" alt="SIR Watermark" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">A Semantic Invariant Robust Watermark for Large Language Models</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shiao Meng, Lijie Wen</div>
-                    <div class="paper-venue">Proceedings of ICLR 2024</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/pdf/2310.06356.pdf"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/Robust_Watermark"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paper 10 UPV -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/UPV.png" alt="UPV Watermark" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">An Unforgeable Publicly Verifiable Watermark for Large Language Models</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shuang Li, Lijie Wen, Irwin King, Philip S. Yu</div>
-                    <div class="paper-venue">Proceedings of ICLR 2024</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/pdf/2307.16230.pdf"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/unforgeable_watermark"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paper 11 CG-SQL -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/cg-sql.png" alt="CG SQL" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang, Lijie Wen</div>
-                    <div class="paper-venue">Findings of ACL 2023</div>
-                    <div class="paper-links">
-                        <a href="https://aclanthology.org/2023.findings-acl.43.pdf"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/CD-Text2SQL-CG"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paper 12 CWBA -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/cwba.png" alt="CWBA" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Honghai Yu, Xuming Hu, Shu'ang Li, Li Lin, Fukun Ma, Yawen Yang, Lijie Wen</div>
-                    <div class="paper-venue">Proceedings of EMNLP 2022</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/abs/2210.17004"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/CWBA"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paper 13 SQL -->
-            <div class="paper-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/sql.png" alt="SQL" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <div class="paper-title">Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Xuming Hu, Li Lin, Lijie Wen</div>
-                    <div class="paper-venue">Proceedings of SIGKDD 2022</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/pdf/2207.08814"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/ISESL-SQL"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
             </div><!-- end paper-cards-grid -->
 
             <div style="text-align: center; margin-top: 30px;">
-                <a href="#publications" style="font-weight: 500; font-size: 0.9rem; display: inline-block; padding: 10px 28px; border-radius: 50px; background: var(--accent); color: white; box-shadow: var(--shadow-accent);">View Full Publication List &rarr;</a>
+                <a href="#publications" style="font-weight: 600; font-size: 0.9rem;">View Full Publication List &rarr;</a>
             </div>
         </section>
 
         <!-- Full Publications -->
         <section id="publications" class="section fade-in-up">
             <h2 class="section-title">Publications</h2>
+            <p class="section-lede">Full publication list in reverse chronological order.</p>
             
-            <h3 style="margin: 20px 0 18px; color: var(--text-1); font-size: 1.15rem; font-weight: 500;">Conference Papers</h3>
+            <h3 class="pub-section-title">Conference Papers <span>35 papers</span></h3>
             <div class="pub-list-grid">
+
+            <div class="pub-list-item">
+                <div class="pub-list-title">WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference</div>
+                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Minghua He, Shaoxun Zeng, Linhao Zhang, Chuhan Wu, Wei Jia, Yuan Liu, Yang Yu, Xiao Zhou, Jie Zhou</div>
+                <div class="pub-list-venue">Proceedings of ICML 2026 Oral (0.7% acceptance rate) <a href="https://arxiv.org/abs/2512.22737">[Paper]</a> <a href="https://github.com/Tencent/WeDLM">[Code]</a> <a href="https://wedlm.github.io">[Project]</a> <a href="https://huggingface.co/collections/Tencent/wedlm">[Models]</a></div>
+            </div>
 
             <div class="pub-list-item">
                 <div class="pub-list-title">StableToken: A Noise-Robust Semantic Speech Tokenizer for Resilient SpeechLLMs</div>
@@ -1247,7 +1354,7 @@
             </div>
 
             </div><!-- end conference pub-list-grid -->
-            <h3 style="margin: 30px 0 18px; color: var(--text-1); font-size: 1.15rem; font-weight: 500;">Journal Papers</h3>
+            <h3 class="pub-section-title">Journal Papers <span>3 papers</span></h3>
             <div class="pub-list-grid">
             <div class="pub-list-item">
                 <div class="pub-list-title">Reading Broadly to Open Your Mind: Improving Open Relation Extraction With Search Documents Under Self-Supervisions</div>
@@ -1268,7 +1375,7 @@
             </div>
 
             </div><!-- end journal pub-list-grid -->
-            <h3 style="margin: 30px 0 18px; color: var(--text-1); font-size: 1.15rem; font-weight: 500;">Preprints</h3>
+            <h3 class="pub-section-title">Preprints <span>7 papers</span></h3>
             <div class="pub-list-grid">
 
             <div class="pub-list-item">
@@ -1315,50 +1422,6 @@
             </div><!-- end preprints pub-list-grid -->
         </section>
 
-        <!-- CV Section -->
-        <section id="cv" class="section fade-in-up">
-            <h2 class="section-title">Curriculum Vitae</h2>
-            <p style="margin-bottom: 20px; color: var(--text-2);">Last updated: 2025-02-03</p>
-            
-            <div class="cv-buttons">
-                <a href="files/Aiwei-Liu-CV-EN.pdf" target="_blank" class="btn-download">
-                    <i class="far fa-file-pdf"></i>
-                    <div>
-                        <div style="font-weight: 700;">English CV</div>
-                        <div style="font-size: 0.85rem; color: var(--text-3);">Download PDF</div>
-                    </div>
-                </a>
-                <a href="files/Aiwei-Liu-CV-CN.pdf" target="_blank" class="btn-download">
-                    <i class="far fa-file-pdf"></i>
-                    <div>
-                        <div style="font-weight: 700;">中文简历</div>
-                        <div style="font-size: 0.85rem; color: var(--text-3);">下载 PDF 版本</div>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="service" class="section fade-in-up">
-            <h2 class="section-title">Academic Services</h2>
-            
-            <h3 style="font-size: 1rem; margin-bottom: 15px; color: var(--text-1); font-weight: 600;">Program Committee / Reviewer</h3>
-            <ul style="list-style: none; margin-bottom: 25px; color: var(--text-2); font-size: 0.95rem;">
-                <li style="margin-bottom: 8px; padding-left: 15px; border-left: 2px solid var(--accent);"><strong>Journals:</strong> TKDE, TIP</li>
-                <li style="margin-bottom: 8px; padding-left: 15px; border-left: 2px solid var(--accent);"><strong>Conferences:</strong> ICML, ICLR, ACL, EMNLP, NAACL, EACL, WWW, MM</li>
-            </ul>
-
-            <h3 style="font-size: 1rem; margin-bottom: 15px; color: var(--text-1); font-weight: 600;">Workshop Organization</h3>
-            <ul style="list-style: none; margin-bottom: 25px; color: var(--text-2); font-size: 0.95rem;">
-                <li style="padding-left: 15px; border-left: 2px solid var(--accent);">Co-organizer of <a href="https://aaai2025-llm-misinformation.github.io/">AAAI 2025 Workshop on Preventing and Detecting LLM Generated Misinformation (PDLM)</a></li>
-            </ul>
-
-            <h3 style="font-size: 1rem; margin-bottom: 15px; color: var(--text-1); font-weight: 600;">Tutorial</h3>
-            <ul style="list-style: none; color: var(--text-2); font-size: 0.95rem;">
-                <li style="padding-left: 15px; border-left: 2px solid var(--accent);">Lead presenter for "Preventing and Detecting Misinformation Generated by Large Language Models" tutorial at SIGIR 2024</li>
-            </ul>
-        </section>
-
         <footer style="text-align: center; margin-top: 40px; margin-bottom: 20px; color: var(--text-3); font-size: 0.82rem; padding: 20px 0;">
             <p>&copy; 2026 Aiwei Liu</p>
         </footer>
@@ -1367,6 +1430,42 @@
 </div>
 
 <script>
+    async function loadScholarStats() {
+        const root = document.querySelector('[data-scholar-metrics]');
+        if (!root) return;
+
+        const formatMetric = value => {
+            if (typeof value !== 'number' || !Number.isFinite(value)) return '--';
+            return new Intl.NumberFormat('en-US').format(value);
+        };
+
+        try {
+            const response = await fetch('data/scholar-stats.json', { cache: 'no-store' });
+            if (!response.ok) throw new Error('Scholar stats unavailable');
+            const stats = await response.json();
+
+            document.querySelector('[data-scholar-citations]').textContent = formatMetric(stats.citations);
+            document.querySelector('[data-scholar-hindex]').textContent = formatMetric(stats.hIndex);
+            document.querySelector('[data-scholar-i10index]').textContent = formatMetric(stats.i10Index);
+
+            const updated = document.querySelector('[data-scholar-updated]');
+            if (stats.updatedAt) {
+                const date = new Date(stats.updatedAt);
+                updated.textContent = `Updated ${date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                })}`;
+            } else {
+                updated.textContent = 'Google Scholar profile';
+            }
+        } catch (error) {
+            root.dataset.state = 'unavailable';
+        }
+    }
+
+    loadScholarStats();
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

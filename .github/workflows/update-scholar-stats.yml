@@ -1,0 +1,41 @@
+name: Update Google Scholar Stats
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 2 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-scholar-stats:
+    runs-on: ubuntu-latest
+    env:
+      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Skip without SerpAPI key
+        if: ${{ env.SERPAPI_KEY == '' }}
+        run: echo "SERPAPI_KEY is not configured; skipping scholar stats update."
+
+      - name: Update stats
+        if: ${{ env.SERPAPI_KEY != '' }}
+        env:
+          SERPAPI_KEY: ${{ env.SERPAPI_KEY }}
+        run: node scripts/update-scholar-stats.mjs
+
+      - name: Commit updated stats
+        if: ${{ env.SERPAPI_KEY != '' }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Update Google Scholar stats'
+          file_pattern: data/scholar-stats.json
