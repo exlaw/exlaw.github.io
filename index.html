@@ -73,11 +73,16 @@
 
         a:not(.social-btn):not(.nav-link):not(.focus-item) {
             font-weight: 700;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(11, 58, 99, 0.45);
         }
 
         a:not(.social-btn):not(.nav-link):not(.paper-links a):not(.focus-item):hover {
             color: var(--accent-hover);
             text-decoration: underline;
+            text-decoration-color: var(--accent-hover);
             text-underline-offset: 3px;
         }
 
@@ -646,7 +651,10 @@
             font-weight: 700;
             border: none;
             box-shadow: none;
-            text-decoration: none;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(11, 58, 99, 0.45);
             transition: var(--transition);
         }
 
@@ -654,6 +662,7 @@
             background: transparent;
             color: var(--accent-hover);
             text-decoration: underline;
+            text-decoration-color: var(--accent-hover);
             text-underline-offset: 3px;
             box-shadow: none;
         }
@@ -867,7 +876,7 @@
             Researcher, WeLM Team<br>
             WeChat AI, Tencent
         </p>
-        <p style="font-size: 0.8rem; color: var(--text-2); margin-bottom: 20px; letter-spacing: 0;">LLM Pretraining · WeLM · Efficient Decoding</p>
+        <p style="font-size: 0.8rem; color: var(--text-2); margin-bottom: 20px; letter-spacing: 0;">LLM Pretraining · Efficient Decoding · Sparse MoE</p>
 
         <div class="social-links">
             <a href="mailto:liuaiwei20@gmail.com" class="social-btn" title="Email"><i class="fa fa-envelope"></i></a>
