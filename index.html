@@ -876,7 +876,7 @@
             Researcher, WeLM Team<br>
             WeChat AI, Tencent
         </p>
-        <p style="font-size: 0.8rem; color: var(--text-2); margin-bottom: 20px; letter-spacing: 0;">LLM Pretraining · Efficient Decoding · Sparse MoE</p>
+        <p style="font-size: 0.8rem; color: var(--text-2); margin-bottom: 20px; letter-spacing: 0;">LLM Pretraining · Efficient Decoding</p>
 
         <div class="social-links">
             <a href="mailto:liuaiwei20@gmail.com" class="social-btn" title="Email"><i class="fa fa-envelope"></i></a>
@@ -924,7 +924,7 @@
             <div class="intro-text">
                 <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am currently a researcher in the <a href="https://welm.weixin.qq.com/">WeLM Team at WeChat AI, Tencent</a>, working on the pretraining of <strong>WeLM</strong>.</p>
 
-                <p>My current research focuses on <strong>LLM pretraining</strong>, with interests in foundation model training, model architecture, efficient decoding, sparse MoE, and practical scaling under real-world resource constraints. Before joining the WeLM Team, my Ph.D. research focused on <strong>LLM Alignment</strong> and <strong>Trustworthy LLMs</strong>.</p>
+                <p>My current research focuses on <strong>LLM pretraining</strong>, with interests in foundation model training, model architecture, efficient decoding, and practical scaling under real-world resource constraints. Before joining the WeLM Team, my Ph.D. research focused on <strong>LLM Alignment</strong> and <strong>Trustworthy LLMs</strong>.</p>
 
                 <div class="scholar-metrics" data-scholar-metrics>
                     <a class="scholar-source" href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en" target="_blank" rel="noopener">
@@ -953,7 +953,7 @@
 
                 <p>Additionally, I was serving as a Visiting Scholar at <a href="https://misc-lab.cse.cuhk.edu.hk/people/">CUHK MISC Lab</a>, working under the supervision of Prof. <a href="https://www.cse.cuhk.edu.hk/irwin.king/home">Irwin King</a> (ACM Fellow, IEEE Fellow).</p>
                 
-                <p style="padding: 16px 0 0; border-top: 1px solid var(--border); margin-top: 24px; color: var(--text-1);"><strong>Open to Collaboration:</strong> If you're interested in research collaboration on LLM pretraining, WeLM-related research, efficient decoding, sparse MoE, LLM Alignment, or Trustworthy LLMs, please feel free to contact me.</p>
+                <p style="padding: 16px 0 0; border-top: 1px solid var(--border); margin-top: 24px; color: var(--text-1);"><strong>Open to Collaboration:</strong> If you're interested in research collaboration on LLM pretraining, WeLM-related research, efficient decoding, LLM Alignment, or Trustworthy LLMs, please feel free to contact me.</p>
             </div>
 
             <div class="research-focus">
@@ -1024,6 +1024,7 @@
         <section id="news" class="section fade-in-up">
             <h2 class="section-title">News</h2>
             <div class="news-list">
+                <div class="news-item"><div class="news-date">2026.07</div><div class="news-content">Published the WeLM Blog post <a href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/">Hidden Decoding at Scale</a>; the paper is available <a href="files/hidden-decoding-at-scale.pdf">here</a>.</div></div>
                 <div class="news-item"><div class="news-date">2026.05</div><div class="news-content"><a href="https://arxiv.org/abs/2512.22737">WeDLM</a> accepted as an <strong>ICML 2026 Oral</strong> paper (0.7% acceptance rate).</div></div>
                 <div class="news-item"><div class="news-date">2026.03</div><div class="news-content">Published the WeLM Blog post <a href="https://welm.weixin.qq.com/posts/hidden_decoding/">Hidden Decoding</a>.</div></div>
                 <div class="news-item"><div class="news-date">2026.01</div><div class="news-content">Three papers accepted by <a href="https://iclr.cc/Conferences/2026">ICLR 2026</a>.</div></div>
@@ -1043,7 +1044,7 @@
         <!-- Selected Work -->
         <section id="highlights" class="section fade-in-up">
             <h2 class="section-title">Selected Work</h2>
-            <p class="section-lede">Representative work on WeLM pretraining, efficient decoding, sparse MoE, and earlier work on LLM Alignment and Trustworthy LLMs.</p>
+            <p class="section-lede">Representative work on WeLM pretraining, efficient decoding, and earlier work on LLM Alignment and Trustworthy LLMs.</p>
 
             <div class="paper-cards-grid">
             <!-- WeDLM -->
@@ -1072,31 +1073,16 @@
             <!-- Hidden Decoding -->
             <div class="paper-card compact blog-card fade-in-up">
                 <div class="paper-img">
-                    <img src="images/hidden-decoding.png" alt="Hidden Decoding" loading="lazy">
+                    <img src="images/hidden-decoding.png" alt="Hidden Decoding at Scale" loading="lazy">
                 </div>
                 <div class="paper-info">
-                    <span class="paper-kicker">WeLM Blog · Efficient Decoding</span>
-                    <div class="paper-title">Hidden Decoding</div>
-                    <div class="paper-authors">Research contribution on hidden decoding and efficient inference behavior for WeLM-style language models.</div>
+                    <span class="paper-kicker">WeLM Blog · Efficient Decoding at Scale</span>
+                    <div class="paper-title">Hidden Decoding at Scale</div>
+                    <div class="paper-authors">Research contribution on scaling hidden decoding for efficient WeLM-style language model inference.</div>
                     <div class="paper-venue">WeLM Blog</div>
                     <div class="paper-links">
-                        <a href="https://welm.weixin.qq.com/posts/hidden_decoding/"><i class="fas fa-globe"></i> Blog</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sparse MoE -->
-            <div class="paper-card compact blog-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/welm-architecture.png" alt="WeLM sparse MoE architecture" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <span class="paper-kicker">WeLM Blog · Sparse MoE</span>
-                    <div class="paper-title">Building Effective Sparse MoE Models with Moderate Resources</div>
-                    <div class="paper-authors">Research contribution on practical sparse MoE modeling under moderate compute and resource constraints.</div>
-                    <div class="paper-venue">WeLM Blog</div>
-                    <div class="paper-links">
-                        <a href="https://welm.weixin.qq.com/posts/building-effective-sparse-moe-models-with-moderate-resources/"><i class="fas fa-globe"></i> Blog</a>
+                        <a href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/"><i class="fas fa-globe"></i> Blog</a>
+                        <a href="files/hidden-decoding-at-scale.pdf"><i class="far fa-file-pdf"></i> Paper</a>
                     </div>
                 </div>
             </div>
