@@ -184,6 +184,12 @@
             color: var(--accent-hover);
         }
 
+        .social-brand-icon {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
         .contact-info {
             margin-top: 20px;
             text-align: left;
@@ -625,6 +631,26 @@
             gap: 8px;
         }
 
+        .paper-tldr {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 2px solid var(--border);
+            color: var(--text-2);
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+        .paper-tldr-label {
+            color: var(--accent);
+            font-weight: 800;
+            margin-right: 4px;
+        }
+
+        .blog-card .paper-tldr {
+            border-left-color: var(--accent);
+            color: var(--text-1);
+        }
+
         .badge {
             background: #FFFFFF;
             color: var(--text-1);
@@ -883,6 +909,7 @@
             <a href="https://github.com/exlaw" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en" class="social-btn" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
             <a href="https://x.com/Aiwei_Liu_99" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.xiaohongshu.com/user/profile/65ab9a3d000000000e026e07" class="social-btn" title="Xiaohongshu" aria-label="Xiaohongshu"><img class="social-brand-icon" src="https://cdn.simpleicons.org/xiaohongshu/0B3A63" alt=""></a>
         </div>
 
         <div class="contact-info">
@@ -970,61 +997,13 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 40px; margin-bottom: 20px; font-size: 1.2rem; font-weight: 600; color: var(--text-1);">Education</h3>
-            <div class="edu-item">
-                <img src="images/tsinghua.svg" alt="Tsinghua" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Tsinghua University, China</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Ph.D. in Software Engineering</div>
-                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2020 – June 2025</div>
-                </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/nanjing.png" alt="Nanjing" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Nanjing University, China</div>
-                    <div style="color: var(--text-1); font-weight: 500;">B.E. in Software Engineering</div>
-                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2016 – June 2020</div>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px; margin-bottom: 20px; font-size: 1.2rem; font-weight: 600; color: var(--text-1);">Work Experience</h3>
-            <div class="edu-item">
-                <img src="images/tencent.png" alt="Tencent" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">WeLM Team, WeChat AI, Tencent</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Researcher</div>
-                    <div style="font-size: 0.85rem; color: var(--text-2);">July 2025 – Present</div>
-                </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/apple.png" alt="Apple" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Apple AIML Group</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Research Intern</div>
-                </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/cuhk.png" alt="CUHK" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">CUHK MISC Lab</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Irwin King</div>
-                </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/uic.png" alt="UIC" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">UIC BDSC Lab</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Philip S. Yu</div>
-                </div>
-            </div>
         </section>
 
         <!-- News Section -->
         <section id="news" class="section fade-in-up">
             <h2 class="section-title">News</h2>
             <div class="news-list">
-                <div class="news-item"><div class="news-date">2026.07</div><div class="news-content">Published the WeLM Blog post <a href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/">Hidden Decoding at Scale</a>; the paper is available <a href="files/hidden-decoding-at-scale.pdf">here</a>.</div></div>
+                <div class="news-item"><div class="news-date">2026.07</div><div class="news-content">Released <a href="https://arxiv.org/abs/2607.08186">Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</a> alongside the <a href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/">WeLM Blog post</a>.</div></div>
                 <div class="news-item"><div class="news-date">2026.05</div><div class="news-content"><a href="https://arxiv.org/abs/2512.22737">WeDLM</a> accepted as an <strong>ICML 2026 Oral</strong> paper (0.7% acceptance rate).</div></div>
                 <div class="news-item"><div class="news-date">2026.03</div><div class="news-content">Published the WeLM Blog post <a href="https://welm.weixin.qq.com/posts/hidden_decoding/">Hidden Decoding</a>.</div></div>
                 <div class="news-item"><div class="news-date">2026.01</div><div class="news-content">Three papers accepted by <a href="https://iclr.cc/Conferences/2026">ICLR 2026</a>.</div></div>
@@ -1044,7 +1023,6 @@
         <!-- Selected Work -->
         <section id="highlights" class="section fade-in-up">
             <h2 class="section-title">Selected Work</h2>
-            <p class="section-lede">Representative work on WeLM pretraining, efficient decoding, and earlier work on LLM Alignment and Trustworthy LLMs.</p>
 
             <div class="paper-cards-grid">
             <!-- WeDLM -->
@@ -1061,6 +1039,7 @@
                     <div class="paper-venue">
                         ICML 2026 Oral <span class="badge">0.7% acceptance rate</span> <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 16px; margin-left: 5px; vertical-align: middle;">
                     </div>
+                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>Delivers nearly 3× faster reasoning and up to 10× faster low-entropy generation than optimized vLLM baselines.</div>
                     <div class="paper-links">
                         <a href="https://arxiv.org/abs/2512.22737"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://github.com/Tencent/WeDLM"><i class="fab fa-github"></i> Code</a>
@@ -1076,13 +1055,30 @@
                     <img src="images/hidden-decoding.png" alt="Hidden Decoding at Scale" loading="lazy">
                 </div>
                 <div class="paper-info">
-                    <span class="paper-kicker">WeLM Blog · Efficient Decoding at Scale</span>
-                    <div class="paper-title">Hidden Decoding at Scale</div>
-                    <div class="paper-authors">Research contribution on scaling hidden decoding for efficient WeLM-style language model inference.</div>
-                    <div class="paper-venue">WeLM Blog</div>
+                    <span class="paper-kicker">Current Direction · Efficient Decoding at Scale</span>
+                    <div class="paper-title">Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</div>
+                    <div class="paper-authors"><strong class="me-highlight">Aiwei Liu</strong>, Cheng Shi, Chuhan Wu, Ci Lei, Di Lu, Donald He, Fan Zhang, Fanhao Kong, Feifei Zhang, Guan Wang, et al.</div>
+                    <div class="paper-venue">arXiv:2607.08186, 2026</div>
+                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>The first sequence-length scaling method demonstrated at 100B+ MoE scale, improving 80B and 617B baselines across all 9 benchmarks.</div>
                     <div class="paper-links">
+                        <a href="https://arxiv.org/abs/2607.08186"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/"><i class="fas fa-globe"></i> Blog</a>
-                        <a href="files/hidden-decoding-at-scale.pdf"><i class="far fa-file-pdf"></i> Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sparse MoE -->
+            <div class="paper-card compact blog-card fade-in-up">
+                <div class="paper-img">
+                    <img src="images/welm-architecture.png" alt="WeLM sparse MoE architecture" loading="lazy">
+                </div>
+                <div class="paper-info">
+                    <span class="paper-kicker">WeLM Blog · Sparse MoE</span>
+                    <div class="paper-title">WeLM-80B: Building Effective Sparse MoE Models with Moderate Resources</div>
+                    <div class="paper-venue">WeLM Blog</div>
+                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>Trains a competitive 80B-A3B sparse MoE on fewer than 14T tokens, with strong reasoning, multilingual, and 128K-context performance.</div>
+                    <div class="paper-links">
+                        <a href="https://welm.weixin.qq.com/posts/building-effective-sparse-moe-models-with-moderate-resources/"><i class="fas fa-globe"></i> Blog</a>
                     </div>
                 </div>
             </div>
@@ -1097,6 +1093,7 @@
                     <div class="paper-title">TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights</div>
                     <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Simon Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</div>
                     <div class="paper-venue">Proceedings of ICLR 2025</div>
+                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>Reweights DPO at the token level, reaching a 79.3% head-to-head win rate over vanilla DPO in alignment experiments.</div>
                     <div class="paper-links">
                         <a href="https://arxiv.org/abs/2410.04350"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://github.com/exlaw/TIS-DPO"><i class="fab fa-github"></i> Code</a>
@@ -1114,6 +1111,7 @@
                     <div class="paper-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
                     <div class="paper-authors">Leyi Pan, <strong style="text-decoration: underline;">Aiwei Liu*</strong>(Project Lead), Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</div>
                     <div class="paper-venue">Proceedings of EMNLP 2024 Demo <img src="https://img.shields.io/github/stars/THU-BPM/MarkLLM?style=social" alt="stars" style="height: 16px; margin-left: 5px;"></div>
+                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>A 1K+ star toolkit unifying 20 watermarking methods with 12 evaluation tools and automated pipelines.</div>
                     <div class="paper-links">
                         <a href="https://arxiv.org/pdf/2405.10051"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://github.com/THU-BPM/MarkLLM"><i class="fab fa-github"></i> Code</a>
@@ -1414,6 +1412,61 @@
                 <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2501.01945">[Paper]</a> <a href="https://github.com/YuanchenBei/Awesome-Cold-Start-Recommendation">[Code]</a></div>
             </div>
             </div><!-- end preprints pub-list-grid -->
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section fade-in-up">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <img src="images/tsinghua.svg" alt="Tsinghua" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Tsinghua University, China</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Ph.D. in Software Engineering</div>
+                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2020 – June 2025</div>
+                </div>
+            </div>
+            <div class="edu-item">
+                <img src="images/nanjing.png" alt="Nanjing" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Nanjing University, China</div>
+                    <div style="color: var(--text-1); font-weight: 500;">B.E. in Software Engineering</div>
+                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2016 – June 2020</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="section fade-in-up">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="edu-item">
+                <img src="images/tencent.png" alt="Tencent" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">WeLM Team, WeChat AI, Tencent</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Researcher</div>
+                    <div style="font-size: 0.85rem; color: var(--text-2);">July 2025 – Present</div>
+                </div>
+            </div>
+            <div class="edu-item">
+                <img src="images/apple.png" alt="Apple" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Apple AIML Group</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Research Intern</div>
+                </div>
+            </div>
+            <div class="edu-item">
+                <img src="images/cuhk.png" alt="CUHK" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">CUHK MISC Lab</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Irwin King</div>
+                </div>
+            </div>
+            <div class="edu-item">
+                <img src="images/uic.png" alt="UIC" class="edu-logo">
+                <div>
+                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">UIC BDSC Lab</div>
+                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Philip S. Yu</div>
+                </div>
+            </div>
         </section>
 
         <footer style="text-align: center; margin-top: 40px; margin-bottom: 20px; color: var(--text-3); font-size: 0.82rem; padding: 20px 0;">
