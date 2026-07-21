@@ -5,9 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aiwei Liu (刘瑷玮) | LLM Pretraining Researcher</title>
     <meta name="description" content="Personal homepage of Aiwei Liu, an LLM pretraining researcher working on foundation model training, model architecture, and large-scale systems at WeChat AI, Tencent.">
-    
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Aiwei Liu (刘瑷玮) | LLM Pretraining Researcher">
+    <meta property="og:description" content="LLM pretraining researcher at WeChat AI, Tencent. Working on foundation model training, model architecture, and large-scale systems.">
+    <meta property="og:image" content="https://exlaw.github.io/images/self_photo.webp">
+    <meta property="og:url" content="https://exlaw.github.io/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Aiwei Liu (刘瑷玮) | LLM Pretraining Researcher">
+    <meta name="twitter:description" content="LLM pretraining researcher at WeChat AI, Tencent.">
+    <meta name="twitter:image" content="https://exlaw.github.io/images/self_photo.webp">
+    <meta name="twitter:site" content="@Aiwei_Liu_99">
+
+    <!-- Canonical & Favicon -->
+    <link rel="canonical" href="https://exlaw.github.io/">
+    <link rel="icon" type="image/webp" href="images/self_photo.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aiwei Liu",
+        "alternateName": "刘瑷玮",
+        "jobTitle": "LLM Pretraining Researcher",
+        "affiliation": "WeChat AI, Tencent",
+        "almaMater": "Tsinghua University",
+        "email": "liuaiwei20@gmail.com",
+        "url": "https://exlaw.github.io/",
+        "image": "https://exlaw.github.io/images/self_photo.webp",
+        "sameAs": [
+            "https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en",
+            "https://github.com/exlaw",
+            "https://x.com/Aiwei_Liu_99"
+        ]
+    }
+    </script>
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
 
     <style>
         :root {
@@ -883,6 +920,45 @@
                 gap: 60px;
             }
         }
+
+        /* ========== PRINT ========== */
+        @media print {
+            .sidebar {
+                position: relative;
+                top: 0;
+                text-align: center;
+                align-items: center;
+            }
+            .container {
+                display: block;
+                padding: 20px;
+                max-width: 100%;
+            }
+            .nav-bar,
+            .social-links,
+            .contact-info,
+            footer {
+                display: none;
+            }
+            .section {
+                border-top: 1px solid #ccc;
+                padding: 20px 0;
+                page-break-inside: avoid;
+            }
+            .paper-card,
+            .pub-list-item,
+            .edu-item {
+                page-break-inside: avoid;
+            }
+            a {
+                text-decoration: none;
+                color: var(--text-1);
+            }
+            .news-list {
+                max-height: none;
+                overflow: visible;
+            }
+        }
     </style>
 </head>
 <body>
@@ -892,7 +968,7 @@
     <aside class="sidebar fade-in-up">
         <!-- Profile Image -->
         <div class="profile-img-container">
-            <img src="images/self_photo.png" onerror="this.src='https://ui-avatars.com/api/?name=Aiwei+Liu&background=2563eb&color=fff&size=200'" alt="Aiwei Liu" class="profile-img">
+            <img src="images/self_photo.webp" onerror="this.src='https://ui-avatars.com/api/?name=Aiwei+Liu&background=2563eb&color=fff&size=200'" alt="Aiwei Liu" class="profile-img">
         </div>
         
         <h1 class="profile-name">Aiwei Liu</h1>
@@ -939,6 +1015,8 @@
             <a href="#news" class="nav-link">News</a>
             <a href="#highlights" class="nav-link">Selected Work</a>
             <a href="#publications" class="nav-link">Publications</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#experience" class="nav-link">Experience</a>
         </nav>
 
         <!-- About Section -->
@@ -1007,7 +1085,7 @@
                 <div class="news-item"><div class="news-date">2026.01</div><div class="news-content">Three papers accepted by <a href="https://iclr.cc/Conferences/2026">ICLR 2026</a>.</div></div>
                 <div class="news-item"><div class="news-date">2025.12</div><div class="news-content">Released <a href="https://github.com/Tencent/WeDLM">WeDLM</a>, a diffusion language model designed for fast inference with standard causal attention. <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 14px; vertical-align: middle; margin-left: 5px;"></div></div>
                 <div class="news-item"><div class="news-date">2025.08</div><div class="news-content">Two papers are accepted by <a href="https://2025.emnlp.org/">EMNLP 2025</a>.</div></div>
-                <div class="news-item"><div class="news-date">2025.06</div><div class="news-content">Honored to be awarded the <a href="images/beijing-outstanding.JPG">Outstanding Graduates of Beijing</a>.</div></div>
+                <div class="news-item"><div class="news-date">2025.06</div><div class="news-content">Honored to be awarded the <a href="images/beijing-outstanding.webp">Outstanding Graduates of Beijing</a>.</div></div>
                 <div class="news-item"><div class="news-date">2025.05</div><div class="news-content">Invited as a reviewer for EMNLP 2025 and NeurIPS 2025.</div></div>
                 <div class="news-item"><div class="news-date">2025.05</div><div class="news-content">One paper accepted by ACL 2025, two papers accepted by ACL 2025 Findings.</div></div>
                 <div class="news-item"><div class="news-date">2025.01</div><div class="news-content">Two papers accepted by NAACL 2025, three papers accepted by ICLR 2025.</div></div>
@@ -1026,7 +1104,7 @@
             <!-- WeDLM -->
             <div class="paper-card featured fade-in-up">
                 <div class="paper-img">
-                    <img src="images/wedlm.png" alt="WeDLM" loading="lazy">
+                    <img src="images/wedlm.webp" alt="WeDLM" loading="lazy">
                 </div>
                 <div class="paper-info">
                     <span class="paper-kicker">Current Direction · LLM Pretraining</span>
@@ -1050,7 +1128,7 @@
             <!-- Hidden Decoding -->
             <div class="paper-card compact blog-card fade-in-up">
                 <div class="paper-img">
-                    <img src="images/hidden-decoding.png" alt="Hidden Decoding at Scale" loading="lazy">
+                    <img src="images/hidden-decoding.webp" alt="Hidden Decoding at Scale" loading="lazy">
                 </div>
                 <div class="paper-info">
                     <span class="paper-kicker">Current Work · Test-Time Scaling</span>
@@ -1068,7 +1146,7 @@
             <!-- Sparse MoE -->
             <div class="paper-card compact blog-card fade-in-up">
                 <div class="paper-img">
-                    <img src="images/welm-architecture.png" alt="WeLM sparse MoE architecture" loading="lazy">
+                    <img src="images/welm-architecture.webp" alt="WeLM sparse MoE architecture" loading="lazy">
                 </div>
                 <div class="paper-info">
                     <span class="paper-kicker">WeLM Blog · Sparse MoE</span>
@@ -1084,7 +1162,7 @@
             <!-- TIS-DPO -->
             <div class="paper-card compact fade-in-up">
                 <div class="paper-img">
-                    <img src="images/tis-dpo.png" alt="TIS-DPO" loading="lazy">
+                    <img src="images/tis-dpo.webp" alt="TIS-DPO" loading="lazy">
                 </div>
                 <div class="paper-info">
                     <span class="paper-kicker">Earlier Work · Alignment</span>
@@ -1102,7 +1180,7 @@
             <!-- MarkLLM -->
             <div class="paper-card compact fade-in-up">
                 <div class="paper-img">
-                    <img src="images/markllm.png" alt="MarkLLM" loading="lazy">
+                    <img src="images/markllm.webp" alt="MarkLLM" loading="lazy">
                 </div>
                 <div class="paper-info">
                     <span class="paper-kicker">Earlier Work · Toolkit</span>
@@ -1442,7 +1520,7 @@
                 </div>
             </div>
             <div class="edu-item">
-                <img src="images/nanjing.png" alt="Nanjing" class="edu-logo">
+                <img src="images/nanjing.webp" alt="Nanjing" class="edu-logo">
                 <div>
                     <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Nanjing University, China</div>
                     <div style="color: var(--text-1); font-weight: 500;">B.E. in Software Engineering</div>
@@ -1455,7 +1533,7 @@
         <section id="experience" class="section fade-in-up">
             <h2 class="section-title">Work Experience</h2>
             <div class="edu-item">
-                <img src="images/tencent.png" alt="Tencent" class="edu-logo">
+                <img src="images/tencent.webp" alt="Tencent" class="edu-logo">
                 <div>
                     <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">WeLM Team, WeChat AI, Tencent</div>
                     <div style="color: var(--text-1); font-weight: 500;">Researcher</div>
@@ -1463,21 +1541,21 @@
                 </div>
             </div>
             <div class="edu-item">
-                <img src="images/apple.png" alt="Apple" class="edu-logo">
+                <img src="images/apple.webp" alt="Apple" class="edu-logo">
                 <div>
                     <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Apple AIML Group</div>
                     <div style="color: var(--text-1); font-weight: 500;">Research Intern</div>
                 </div>
             </div>
             <div class="edu-item">
-                <img src="images/cuhk.png" alt="CUHK" class="edu-logo">
+                <img src="images/cuhk.webp" alt="CUHK" class="edu-logo">
                 <div>
                     <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">CUHK MISC Lab</div>
                     <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Irwin King</div>
                 </div>
             </div>
             <div class="edu-item">
-                <img src="images/uic.png" alt="UIC" class="edu-logo">
+                <img src="images/uic.webp" alt="UIC" class="edu-logo">
                 <div>
                     <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">UIC BDSC Lab</div>
                     <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Philip S. Yu</div>
