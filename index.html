@@ -1,1645 +1,903 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiwei Liu (刘瑷玮) | LLM Pretraining Researcher</title>
-    <meta name="description" content="Personal homepage of Aiwei Liu, an LLM pretraining researcher working on foundation model training, model architecture, and large-scale systems at WeChat AI, Tencent.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Aiwei Liu (刘瑷玮) | Foundation Model Architecture & Pretraining
+    </title>
+    <meta
+      name="description"
+      content="Aiwei Liu at WeChat AI, Tencent. WeLM architecture and pretraining core team; core contributor to WeLM-80B and WeLM-600B; first contributor to WeDLM. Specializing in LLM architecture and pretraining infrastructure."
+    />
 
     <!-- Open Graph / Twitter Card -->
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Aiwei Liu (刘瑷玮) | LLM Pretraining Researcher">
-    <meta property="og:description" content="LLM pretraining researcher at WeChat AI, Tencent. Working on foundation model training, model architecture, and large-scale systems.">
-    <meta property="og:image" content="https://exlaw.github.io/images/self_photo.webp">
-    <meta property="og:url" content="https://exlaw.github.io/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Aiwei Liu (刘瑷玮) | LLM Pretraining Researcher">
-    <meta name="twitter:description" content="LLM pretraining researcher at WeChat AI, Tencent.">
-    <meta name="twitter:image" content="https://exlaw.github.io/images/self_photo.webp">
-    <meta name="twitter:site" content="@Aiwei_Liu_99">
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:title"
+      content="Aiwei Liu (刘瑷玮) | Foundation Model Architecture & Pretraining"
+    />
+    <meta
+      property="og:description"
+      content="WeLM architecture and pretraining core team. Core contributor to WeLM-80B and WeLM-600B; first contributor to WeDLM."
+    />
+    <meta
+      property="og:image"
+      content="https://exlaw.github.io/images/self_photo.webp"
+    />
+    <meta property="og:url" content="https://exlaw.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Aiwei Liu (刘瑷玮) | Foundation Model Architecture & Pretraining"
+    />
+    <meta
+      name="twitter:description"
+      content="Foundation model architecture and pretraining infrastructure at WeChat AI, Tencent."
+    />
+    <meta
+      name="twitter:image"
+      content="https://exlaw.github.io/images/self_photo.webp"
+    />
+    <meta name="twitter:site" content="@Aiwei_Liu_99" />
 
     <!-- Canonical & Favicon -->
-    <link rel="canonical" href="https://exlaw.github.io/">
-    <link rel="icon" type="image/webp" href="images/self_photo.webp">
+    <link rel="canonical" href="https://exlaw.github.io/" />
+    <link rel="icon" type="image/webp" href="images/self_photo.webp" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+      {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Aiwei Liu",
         "alternateName": "刘瑷玮",
-        "jobTitle": "LLM Pretraining Researcher",
+        "jobTitle": "Foundation Model Architecture & Pretraining",
         "affiliation": "WeChat AI, Tencent",
         "almaMater": "Tsinghua University",
         "email": "liuaiwei20@gmail.com",
         "url": "https://exlaw.github.io/",
         "image": "https://exlaw.github.io/images/self_photo.webp",
         "sameAs": [
-            "https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en",
-            "https://github.com/exlaw",
-            "https://x.com/Aiwei_Liu_99"
+          "https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en",
+          "https://github.com/exlaw",
+          "https://x.com/Aiwei_Liu_99"
         ]
-    }
+      }
     </script>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
-
-    <style>
-        :root {
-            /* Restrained academic palette */
-            --accent: #0B3A63;
-            --accent-hover: #062A48;
-            --accent-subtle: #EEF3F8;
-            --signal: #111827;
-
-            --bg: #FFFFFF;
-            --surface: #FFFFFF;
-            --surface-raised: #FFFFFF;
-            --surface-sunken: #F4F6F8;
-
-            /* Text hierarchy */
-            --text-1: #020617;
-            --text-2: #1E293B;
-            --text-3: #334155;
-
-            --border: #B8C2CF;
-            --border-strong: #64748B;
-            --shadow-sm: none;
-            --shadow-md: none;
-            --shadow-lg: none;
-            --shadow-accent: none;
-
-            --radius: 8px;
-            --radius-sm: 6px;
-            --radius-xs: 4px;
-            --transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--bg);
-            color: var(--text-1);
-            line-height: 1.7;
-            font-size: 16px;
-            font-weight: 500;
-            -webkit-font-smoothing: auto;
-            text-rendering: optimizeLegibility;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: inherit;
-            color: var(--text-1);
-            font-weight: 700;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        strong, b {
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        a:not(.social-btn):not(.nav-link):not(.focus-item) {
-            font-weight: 700;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-            text-decoration-color: rgba(11, 58, 99, 0.45);
-        }
-
-        a:not(.social-btn):not(.nav-link):not(.paper-links a):not(.focus-item):hover {
-            color: var(--accent-hover);
-            text-decoration: underline;
-            text-decoration-color: var(--accent-hover);
-            text-underline-offset: 3px;
-        }
-
-        /* ========== LAYOUT ========== */
-        .container {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 46px 40px;
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 52px;
-        }
-
-        .fade-in-up { opacity: 1; }
-        .fade-in-up.visible { opacity: 1; }
-
-        /* ========== SIDEBAR ========== */
-        .sidebar {
-            position: sticky;
-            top: 40px;
-            height: fit-content;
-            background: transparent;
-            padding: 0;
-            border-radius: 0;
-            border: none;
-            box-shadow: none;
-            text-align: left;
-            z-index: 10;
-        }
-
-        .profile-img-container {
-            position: relative;
-            width: 210px;
-            height: 266px;
-            margin: 0 0 24px;
-        }
-
-        .profile-img-container::before { display: none; }
-
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            border-radius: var(--radius);
-            object-fit: cover;
-            border: 1px solid var(--border-strong);
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-img-container::after { display: none; }
-
-        .profile-name {
-            font-family: inherit;
-            font-size: 1.42rem;
-            font-weight: 800;
-            margin-bottom: 2px;
-            color: var(--text-1);
-            letter-spacing: 0;
-        }
-
-        .profile-name-cn {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--text-3);
-            margin-bottom: 16px;
-            font-family: inherit;
-        }
-
-        .profile-bio {
-            font-size: 0.9rem;
-            color: var(--text-2);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: flex-start;
-            gap: 8px;
-            margin-top: 18px;
-        }
-
-        .social-btn {
-            width: 30px;
-            height: 30px;
-            border-radius: 0;
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-            font-size: 1rem;
-            transition: var(--transition);
-            border: none;
-        }
-
-        .social-btn:hover {
-            background: transparent;
-            color: var(--accent-hover);
-        }
-
-        .social-brand-icon {
-            width: 24px;
-            height: 24px;
-            display: block;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-            text-align: left;
-            font-size: 0.82rem;
-            background: transparent;
-            border-top: 1px solid var(--border-strong);
-            border-radius: 0;
-            padding: 14px 0 0;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            color: var(--text-2);
-            padding: 4px 0;
-        }
-
-        .contact-item:last-child { margin-bottom: 0; }
-        .contact-item:hover { color: var(--accent); }
-        .contact-item i { width: 20px; color: var(--text-3); font-size: 0.85rem; }
-
-        /* ========== MAIN CONTENT ========== */
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-
-        /* ========== NAVIGATION ========== */
-        .nav-bar {
-            display: flex;
-            gap: 18px;
-            margin-bottom: 4px;
-            flex-wrap: wrap;
-            position: static;
-            background: transparent;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-            padding: 0 0 8px;
-            border-radius: 0;
-            box-shadow: none;
-            border-bottom: 1px solid var(--border-strong);
-            width: fit-content;
-        }
-
-        .nav-link {
-            font-family: inherit;
-            font-weight: 600;
-            color: var(--text-1);
-            padding: 0;
-            border-radius: 0;
-            transition: var(--transition);
-            font-size: 0.85rem;
-            letter-spacing: 0;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-            background: transparent;
-        }
-
-        .nav-link.active {
-            background: transparent;
-            color: var(--accent);
-            box-shadow: none;
-            font-weight: 700;
-        }
-
-        /* ========== SECTIONS ========== */
-        .section {
-            background: transparent;
-            padding: 44px 0;
-            border-radius: 0;
-            box-shadow: none;
-            border-top: 1px solid var(--border-strong);
-            scroll-margin-top: 24px;
-        }
-
-        .main-content .section:first-of-type {
-            border-top: none;
-            padding-top: 24px;
-        }
-
-        .section-title {
-            font-family: inherit;
-            font-size: 1.65rem;
-            font-weight: 800;
-            margin-bottom: 24px;
-            padding-bottom: 0;
-            border-bottom: none;
-            color: var(--text-1);
-            display: block;
-            letter-spacing: 0;
-        }
-
-        .section-title::before { display: none; }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 34px;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 2px;
-            margin-top: 8px;
-        }
-
-        .section-title span { display: none; }
-
-        .intro-text p {
-            margin-bottom: 1rem;
-            color: var(--text-1);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        .scholar-metrics {
-            display: grid;
-            grid-template-columns: minmax(180px, 1.1fr) repeat(3, minmax(90px, 0.7fr));
-            gap: 14px;
-            align-items: stretch;
-            margin: 22px 0 24px;
-            padding: 14px 0;
-            border-top: 1px solid var(--border-strong);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .scholar-source {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 3px;
-            color: var(--accent);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .scholar-source span {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .scholar-source small,
-        .metric-label {
-            color: var(--text-3);
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .metric-item {
-            border-left: 1px solid var(--border);
-            padding-left: 14px;
-        }
-
-        .metric-value {
-            display: block;
-            color: var(--accent);
-            font-size: 1.3rem;
-            line-height: 1.15;
-            font-weight: 800;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .metric-label {
-            display: block;
-            margin-top: 4px;
-        }
-
-        .research-focus {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
-            margin-top: 28px;
-        }
-
-        .focus-item {
-            padding: 16px 18px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            transition: var(--transition);
-        }
-
-        a.focus-item {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        a.focus-item:hover {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .focus-item:hover {
-            border-color: var(--border-strong);
-        }
-
-        .focus-kicker {
-            display: inline-block;
-            margin-bottom: 8px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            text-transform: uppercase;
-            color: var(--accent);
-        }
-
-        .focus-item h3 {
-            font-size: 1rem;
-            margin-bottom: 8px;
-            letter-spacing: 0;
-        }
-
-        .focus-item p {
-            margin: 0;
-            color: var(--text-1);
-            font-size: 0.9rem;
-            line-height: 1.65;
-        }
-
-        .focus-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 12px;
-            color: var(--accent);
-            font-size: 0.82rem;
-            font-weight: 700;
-        }
-
-        .intro-text strong {
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        /* ========== NEWS ========== */
-        .news-list {
-            max-height: 50vh;
-            overflow-y: auto;
-            padding-right: 8px;
-        }
-
-        .news-list::-webkit-scrollbar { width: 3px; }
-        .news-list::-webkit-scrollbar-track { background: transparent; }
-        .news-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
-        .news-item {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 2px;
-            padding: 10px 14px;
-            border-radius: var(--radius-sm);
-            transition: var(--transition);
-        }
-
-        .news-item:hover { background: var(--accent-subtle); }
-
-        .corresponding-icon {
-            font-size: 0.75em;
-            vertical-align: super;
-            margin-left: 4px;
-            color: var(--text-3);
-            cursor: help;
-        }
-
-        .me-highlight {
-            color: var(--accent);
-            font-weight: 700;
-            text-decoration: underline;
-            text-decoration-color: var(--accent);
-            text-underline-offset: 3px;
-        }
-
-        .news-date {
-            font-family: inherit;
-            font-weight: 600;
-            color: var(--accent);
-            min-width: 72px;
-            font-size: 0.85rem;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .news-content {
-            font-size: 0.92rem;
-            color: var(--text-1);
-            line-height: 1.6;
-        }
-
-        /* ========== SELECTED WORK ========== */
-        .section-lede {
-            max-width: 760px;
-            margin: -12px 0 24px;
-            color: var(--text-2);
-            font-size: 0.94rem;
-            line-height: 1.7;
-        }
-
-        .paper-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 16px;
-        }
-
-        .pub-list-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-
-        .paper-card {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 16px;
-            border-radius: var(--radius);
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-left: 3px solid var(--border-strong);
-            transition: var(--transition);
-        }
-
-        .paper-card.featured {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: minmax(360px, 1.15fr) minmax(0, 0.85fr);
-            gap: 22px;
-            padding: 18px;
-            background: var(--surface);
-            border-color: var(--border-strong);
-            border-left-color: var(--accent);
-            border-left-width: 4px;
-        }
-
-        .paper-card.featured .paper-img {
-            min-height: 250px;
-            height: 100%;
-        }
-
-        .paper-card.featured .paper-img img {
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .paper-card.featured .paper-title {
-            font-size: 1.35rem;
-            line-height: 1.28;
-        }
-
-        .paper-card.compact .paper-img {
-            aspect-ratio: 16 / 8.4;
-        }
-
-        .paper-card.blog-card .paper-img {
-            aspect-ratio: 16 / 9;
-        }
-
-        .paper-card.compact .paper-img img {
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .paper-card:hover {
-            border-color: var(--border-strong);
-            box-shadow: none;
-        }
-
-        .paper-card.featured:hover {
-            border-color: var(--border-strong);
-            border-left-color: var(--accent);
-        }
-
-        .paper-img {
-            width: 100%;
-            flex-shrink: 0;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            background: #FFFFFF;
-            border: 1px solid var(--border);
-        }
-
-        .paper-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .paper-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .paper-kicker {
-            display: inline-flex;
-            width: fit-content;
-            margin-bottom: 8px;
-            color: var(--accent);
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 0;
-            text-transform: uppercase;
-        }
-
-        .paper-title {
-            font-family: inherit;
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            line-height: 1.35;
-            color: var(--text-1);
-        }
-
-        .paper-card:hover .paper-title { color: var(--text-1); }
-
-        .paper-authors {
-            font-size: 0.85rem;
-            color: var(--text-2);
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-
-        .paper-authors u, .paper-authors strong {
-            color: var(--accent);
-            text-decoration-color: var(--accent);
-            font-weight: 700;
-        }
-
-        .paper-venue {
-            font-size: 0.82rem;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .paper-tldr {
-            margin-bottom: 12px;
-            padding-left: 10px;
-            border-left: 2px solid var(--border);
-            color: var(--text-2);
-            font-size: 0.82rem;
-            line-height: 1.5;
-        }
-
-        .paper-tldr-label {
-            color: var(--accent);
-            font-weight: 800;
-            margin-right: 4px;
-        }
-
-        .blog-card .paper-tldr {
-            border-left-color: var(--accent);
-            color: var(--text-1);
-        }
-
-        .badge {
-            background: #FFFFFF;
-            color: var(--text-1);
-            padding: 2px 7px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xs);
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            text-transform: uppercase;
-        }
-
-        .paper-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 0;
-            margin-right: 12px;
-            margin-bottom: 4px;
-            background: transparent;
-            color: var(--accent);
-            border-radius: 0;
-            font-size: 0.78rem;
-            font-weight: 700;
-            border: none;
-            box-shadow: none;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-            text-decoration-color: rgba(11, 58, 99, 0.45);
-            transition: var(--transition);
-        }
-
-        .paper-links a:hover {
-            background: transparent;
-            color: var(--accent-hover);
-            text-decoration: underline;
-            text-decoration-color: var(--accent-hover);
-            text-underline-offset: 3px;
-            box-shadow: none;
-        }
-
-        .paper-links a i { font-size: 0.82rem; }
-
-        /* ========== PUBLICATION LIST ========== */
-        .pub-section-title {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            gap: 16px;
-            margin: 34px 0 14px;
-            color: var(--text-1);
-            font-size: 1.08rem;
-            font-weight: 800;
-            letter-spacing: 0;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .pub-section-title:first-of-type {
-            margin-top: 18px;
-        }
-
-        .pub-section-title span {
-            flex-shrink: 0;
-            color: var(--text-3);
-            font-size: 0.76rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            text-transform: uppercase;
-        }
-
-        .pub-list-item {
-            margin-bottom: 0;
-            padding: 15px 18px;
-            border-radius: var(--radius-xs);
-            transition: var(--transition);
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-left-color: var(--border-strong);
-            border-left-width: 3px;
-        }
-
-        .pub-list-item:hover {
-            border-left-color: var(--accent);
-            border-color: var(--border-strong);
-            background: var(--surface-sunken);
-            box-shadow: none;
-        }
-
-        .pub-list-title {
-            font-family: inherit;
-            font-weight: 700;
-            font-size: 0.98rem;
-            color: var(--text-1);
-            margin-bottom: 5px;
-            line-height: 1.35;
-        }
-
-        .pub-list-authors {
-            font-size: 0.85rem;
-            color: var(--text-2);
-            margin-bottom: 5px;
-        }
-
-        .pub-list-venue {
-            font-size: 0.82rem;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .pub-list-venue a {
-            margin-left: 6px;
-            font-weight: 700;
-        }
-
-        /* ========== EDUCATION & EXPERIENCE ========== */
-        .edu-item {
-            display: flex;
-            gap: 18px;
-            margin-bottom: 10px;
-            align-items: center;
-            padding: 16px 18px;
-            border-radius: var(--radius-sm);
-            transition: var(--transition);
-            background: var(--surface);
-            border: 1px solid var(--border);
-        }
-
-        .edu-item:hover {
-            background: var(--surface);
-            box-shadow: none;
-        }
-
-        .edu-logo {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            padding: 6px;
-            background: var(--surface);
-            border-radius: var(--radius-xs);
-            border: 1px solid var(--border);
-            box-shadow: none;
-            flex-shrink: 0;
-        }
-
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 30px 20px;
-            }
-
-            .sidebar {
-                position: relative;
-                top: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .paper-cards-grid,
-            .pub-list-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .paper-card.featured {
-                grid-template-columns: 1fr;
-            }
-
-            .paper-card.featured .paper-img {
-                min-height: 0;
-                aspect-ratio: 16 / 8.4;
-            }
-
-            .scholar-metrics {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-
-            .scholar-source {
-                grid-column: 1 / -1;
-            }
-
-            .nav-bar {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .section { padding: 30px 0; }
-        }
-
-        @media (max-width: 600px) {
-            .nav-bar {
-                overflow-x: auto;
-                white-space: nowrap;
-                justify-content: flex-start;
-                border-radius: 0;
-                padding: 0 0 8px;
-            }
-
-            .profile-img-container {
-                width: 150px;
-                height: 190px;
-            }
-
-            .section { padding: 24px 0; }
-            .section-title { font-size: 1.35rem; }
-
-            .research-focus {
-                grid-template-columns: 1fr;
-            }
-
-            .scholar-metrics {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .metric-item {
-                border-left: none;
-                border-top: 1px solid var(--border);
-                padding: 10px 0 0;
-            }
-
-        }
-
-        @media (min-width: 1600px) {
-            .container {
-                max-width: 1560px;
-                gap: 60px;
-            }
-        }
-
-        /* ========== PRINT ========== */
-        @media print {
-            .sidebar {
-                position: relative;
-                top: 0;
-                text-align: center;
-                align-items: center;
-            }
-            .container {
-                display: block;
-                padding: 20px;
-                max-width: 100%;
-            }
-            .nav-bar,
-            .social-links,
-            .contact-info,
-            footer {
-                display: none;
-            }
-            .section {
-                border-top: 1px solid #ccc;
-                padding: 20px 0;
-                page-break-inside: avoid;
-            }
-            .paper-card,
-            .pub-list-item,
-            .edu-item {
-                page-break-inside: avoid;
-            }
-            a {
-                text-decoration: none;
-                color: var(--text-1);
-            }
-            .news-list {
-                max-height: none;
-                overflow: visible;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <!-- Left Sidebar -->
-    <aside class="sidebar fade-in-up">
-        <!-- Profile Image -->
-        <div class="profile-img-container">
-            <img src="images/self_photo.webp" onerror="this.src='https://ui-avatars.com/api/?name=Aiwei+Liu&background=2563eb&color=fff&size=200'" alt="Aiwei Liu" class="profile-img">
-        </div>
-        
-        <h1 class="profile-name">Aiwei Liu</h1>
-        <h2 class="profile-name-cn">刘瑷玮</h2>
-        
-        <p class="profile-bio">
-            LLM Pretraining Researcher<br>
-            WeChat AI, Tencent
-        </p>
-        <p style="font-size: 0.8rem; color: var(--text-2); margin-bottom: 20px; letter-spacing: 0;">LLM Pretraining · Model Architecture</p>
-
-        <div class="social-links">
-            <a href="mailto:liuaiwei20@gmail.com" class="social-btn" title="Email"><i class="fa fa-envelope"></i></a>
-            <a href="https://github.com/exlaw" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en" class="social-btn" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-            <a href="https://x.com/Aiwei_Liu_99" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.xiaohongshu.com/user/profile/65ab9a3d000000000e026e07" class="social-btn" title="Xiaohongshu" aria-label="Xiaohongshu"><img class="social-brand-icon" src="https://cdn.simpleicons.org/xiaohongshu/0B3A63" alt=""></a>
-        </div>
-
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class="fa fa-envelope"></i>
-                <span>liuaiwei20@gmail.com</span>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-weixin"></i>
-                <span>u839134412</span>
-            </div>
-        </div>
-        
-        <div style="display: none;">
-            <a href="https://clustrmaps.com/site/1bz29" title="Visit tracker">
-                <img src="//clustrmaps.com/map_v2.png?d=DX15I5ozLq5Q-wR0ekcNB17qazZ99Mm2sOgYD9FXvrM&cl=ffffff&w=220&t=tt" style="max-width: 100%; border-radius: var(--radius-sm); opacity: 0.85;" />
-            </a>
-        </div>
-    </aside>
-
-    <!-- Main Content Area -->
-    <main class="main-content">
-        
-        <!-- Navigation -->
-        <nav class="nav-bar fade-in-up" style="animation-delay: 0.1s;">
-            <a href="#about" class="nav-link active">About</a>
-            <a href="#news" class="nav-link">News</a>
-            <a href="#highlights" class="nav-link">Selected Work</a>
-            <a href="#publications" class="nav-link">Publications</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#experience" class="nav-link">Experience</a>
+    <meta name="theme-color" content="#080d14" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#about">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="#about" aria-label="Aiwei Liu home"
+          ><span class="monogram">AL<span>.</span></span
+          ><span>AIWEI LIU</span></a
+        >
+        <nav class="nav-bar" aria-label="Main navigation">
+          <a class="nav-link active" href="#about" aria-current="location"
+            >About</a
+          >
+          <a class="nav-link" href="#news">News</a>
+          <a class="nav-link" href="#models">Models</a>
+          <a class="nav-link" href="#publications">Publications</a>
+          <a class="nav-link" href="#experience">Experience</a>
         </nav>
-
-        <!-- About Section -->
-        <section id="about" class="section fade-in-up" style="animation-delay: 0.2s;">
-            <h2 class="section-title">Research Profile</h2>
-            <div class="intro-text">
-                <p>Hi! My name is <strong>Aiwei Liu (刘瑷玮)</strong>. I am currently an <strong>LLM pretraining researcher</strong> at WeChat AI, Tencent, working on the pretraining of <a href="https://welm.weixin.qq.com/">WeLM</a> foundation models.</p>
-
-                <p>My current research focuses on <strong>LLM pretraining</strong>, with particular interests in training recipes, <strong>LLM architecture</strong>, scalable training, and capability development for large-scale foundation models. In particular, I study model architectures that jointly optimize overall model quality and inference-time efficiency. Before joining WeChat AI, my Ph.D. research focused on <strong>LLM Alignment</strong> and <strong>Trustworthy LLMs</strong>.</p>
-
-                <div class="scholar-metrics" data-scholar-metrics>
-                    <a class="scholar-source" href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en" target="_blank" rel="noopener">
-                        <span><i class="fa-solid fa-graduation-cap"></i> Google Scholar</span>
-                        <small data-scholar-updated>Updated periodically</small>
-                    </a>
-                    <div class="metric-item">
-                        <span class="metric-value" data-scholar-citations>--</span>
-                        <span class="metric-label">Citations</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-value" data-scholar-hindex>--</span>
-                        <span class="metric-label">h-index</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-value" data-scholar-i10index>--</span>
-                        <span class="metric-label">i10-index</span>
-                    </div>
-                </div>
-  
-                <p>I received my Ph.D. degree from the <a href="https://www.thss.tsinghua.edu.cn/">School of Software</a> in <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a> in June 2025, where I was advised by Prof. <a href="https://www.thss.tsinghua.edu.cn/faculty/wenlijie.htm">Lijie Wen</a>. Before that, I received my B.Eng. degree from the <a href="https://software.nju.edu.cn/">Software Institute</a> in <a href="https://www.nju.edu.cn/">Nanjing University</a> in 2020.</p>
-
-                <p>Previously, I was fortunate to serve as a Visiting Scholar at the <a href="https://bdsc-uic.github.io/people.html">UIC BDSC Lab</a>, working under the supervision of Prof. <a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a> (ACM Fellow, IEEE Fellow).</p>
-
-                <p>I was also a research intern at <a href="https://machinelearning.apple.com/">Apple's AIML Group</a>, where I worked under the supervision of Dr. <a href="https://openreview.net/profile?id=~Meng_Cao2">Meng Cao</a>.</p>
-
-                <p>Additionally, I was serving as a Visiting Scholar at <a href="https://misc-lab.cse.cuhk.edu.hk/people/">CUHK MISC Lab</a>, working under the supervision of Prof. <a href="https://www.cse.cuhk.edu.hk/irwin.king/home">Irwin King</a> (ACM Fellow, IEEE Fellow).</p>
-                
-                <p style="padding: 16px 0 0; border-top: 1px solid var(--border); margin-top: 24px; color: var(--text-1);"><strong>Open to Collaboration:</strong> If you're interested in research collaboration on LLM pretraining, model architecture, large-scale training, LLM Alignment, or Trustworthy LLMs, please feel free to contact me.</p>
+        <a class="header-contact" href="mailto:liuaiwei20@gmail.com"
+          >Let’s connect <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main class="container">
+      <section id="about" class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> FOUNDATION
+            MODELS · WECHAT AI, TENCENT
+          </div>
+          <div class="identity">
+            <img
+              src="images/self_photo.webp"
+              width="58"
+              height="66"
+              alt="Portrait of Aiwei Liu"
+            />
+            <div>
+              <h1>Aiwei Liu <span lang="zh">刘瑷玮</span></h1>
+              <p>Model Architecture &amp; Pretraining Infrastructure</p>
             </div>
-
-            <div class="research-focus">
-                <div class="focus-item">
-                    <span class="focus-kicker">Current Focus</span>
-                    <h3>LLM Pretraining &amp; Architecture</h3>
-                    <p>I study training recipes, model architecture, scalable training systems, and capability development for large-scale foundation models.</p>
-                </div>
-                <div class="focus-item">
-                    <span class="focus-kicker">Earlier Work</span>
-                    <h3>LLM Alignment &amp; Trustworthy LLMs</h3>
-                    <p>My Ph.D. work focused on LLM Alignment and Trustworthy LLMs.</p>
-                </div>
+          </div>
+          <h2 class="hero-title">
+            Model architecture.<br /><span>Pretraining at scale.</span>
+          </h2>
+          <p class="hero-description">
+            I build large-scale foundation models at
+            <strong>WeChat AI, Tencent</strong>. As a core member of the
+            <strong>WeLM pretraining team</strong>, I define WeLM’s model
+            architecture and develop pretraining infrastructure. I am a
+            <strong>core contributor to WeLM-80B and WeLM-600B</strong>, and the
+            <strong>first contributor to WeDLM</strong>.
+          </p>
+          <p class="academic-bio">
+            I received my <strong>Ph.D. from Tsinghua University</strong> in
+            2025. My research has received
+            <a
+              href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&amp;hl=en"
+              ><strong>3,000+ Google Scholar citations</strong></a
+            >. I have authored
+            <strong>20+ first-author or corresponding-author papers</strong>,
+            including <strong>oral and spotlight presentations</strong> at
+            leading machine learning conferences such as
+            <strong>ICML and ICLR</strong>.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#models"
+              >Contributions &amp; results <span aria-hidden="true">↓</span></a
+            ><a
+              class="button button-secondary"
+              href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&amp;hl=en"
+              >Google Scholar <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="social-links" aria-label="Social profiles">
+            <a href="https://github.com/exlaw">GitHub ↗</a
+            ><a href="https://x.com/Aiwei_Liu_99">X / Twitter ↗</a
+            ><a href="mailto:liuaiwei20@gmail.com">Email ↗</a
+            ><a
+              href="https://www.xiaohongshu.com/user/profile/65ab9a3d000000000e026e07"
+              >小红书 ↗</a
+            >
+          </div>
+        </div>
+        <aside class="hero-overview" aria-label="Key contributions and results">
+          <div class="overview-heading">
+            <span class="status-dot" aria-hidden="true"></span> CONTRIBUTIONS AT
+            A GLANCE
+          </div>
+          <div class="overview-row">
+            <span class="overview-index">01</span>
+            <div>
+              <h3>WeLM-80B &amp; WeLM-600B</h3>
+              <p class="overview-role">
+                Core contributor · WeLM pretraining team
+              </p>
+              <p>
+                Responsible for WeLM architecture design, with expertise in
+                large-scale pretraining infrastructure.
+              </p>
             </div>
-
-        </section>
-
-        <!-- News Section -->
-        <section id="news" class="section fade-in-up">
-            <h2 class="section-title">News</h2>
-            <div class="news-list">
-                <div class="news-item"><div class="news-date">2026.07</div><div class="news-content"><a href="https://arxiv.org/abs/2509.10569">MarkDiffusion</a> accepted by the <strong>Journal of Machine Learning Research (JMLR)</strong>.</div></div>
-                <div class="news-item"><div class="news-date">2026.07</div><div class="news-content"><a href="https://arxiv.org/abs/2508.07173">Omni-SafetyBench</a> accepted to the <strong>ACM Multimedia 2026 Main Track</strong>.</div></div>
-                <div class="news-item"><div class="news-date">2026.07</div><div class="news-content"><a href="https://arxiv.org/abs/2604.00375">Locally Confident, Globally Stuck</a> accepted by <strong>COLM 2026</strong>.</div></div>
-                <div class="news-item"><div class="news-date">2026.07</div><div class="news-content">Released <a href="https://arxiv.org/abs/2607.08186">Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</a> alongside the <a href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/">WeLM Blog post</a>.</div></div>
-                <div class="news-item"><div class="news-date">2026.05</div><div class="news-content"><a href="https://arxiv.org/abs/2512.22737">WeDLM</a> accepted as an <strong>ICML 2026 Oral</strong> paper (0.7% acceptance rate).</div></div>
-                <div class="news-item"><div class="news-date">2026.03</div><div class="news-content">Published the WeLM Blog post <a href="https://welm.weixin.qq.com/posts/hidden_decoding/">Hidden Decoding</a>.</div></div>
-                <div class="news-item"><div class="news-date">2026.01</div><div class="news-content">Three papers accepted by <a href="https://iclr.cc/Conferences/2026">ICLR 2026</a>.</div></div>
-                <div class="news-item"><div class="news-date">2025.12</div><div class="news-content">Released <a href="https://github.com/Tencent/WeDLM">WeDLM</a>, a diffusion language model designed for fast inference with standard causal attention. <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 14px; vertical-align: middle; margin-left: 5px;"></div></div>
-                <div class="news-item"><div class="news-date">2025.08</div><div class="news-content">Two papers are accepted by <a href="https://2025.emnlp.org/">EMNLP 2025</a>.</div></div>
-                <div class="news-item"><div class="news-date">2025.06</div><div class="news-content">Honored to be awarded the <a href="images/beijing-outstanding.webp">Outstanding Graduates of Beijing</a>.</div></div>
-                <div class="news-item"><div class="news-date">2025.05</div><div class="news-content">Invited as a reviewer for EMNLP 2025 and NeurIPS 2025.</div></div>
-                <div class="news-item"><div class="news-date">2025.05</div><div class="news-content">One paper accepted by ACL 2025, two papers accepted by ACL 2025 Findings.</div></div>
-                <div class="news-item"><div class="news-date">2025.01</div><div class="news-content">Two papers accepted by NAACL 2025, three papers accepted by ICLR 2025.</div></div>
-                <div class="news-item"><div class="news-date">2024.10</div><div class="news-content"><a href="https://arxiv.org/pdf/2405.10051">MarkLLM</a> is accepted by EMNLP 2024 Demo Track.</div></div>
-                <div class="news-item"><div class="news-date">2024.08</div><div class="news-content">"A Survey of Text Watermarking in the Era of LLMs" accepted by <a href="https://dl.acm.org/journal/csur">ACM Computing Surveys</a>.</div></div>
-                <div class="news-item"><div class="news-date">2024.05</div><div class="news-content">Three papers accepted by ACL 2024 (Trustworthy LLMs and Alignment).</div></div>
-                <div class="news-item"><div class="news-date">2024.04</div><div class="news-content">Tutorial "Preventing and Detecting Misinformation Generated by LLMs" accepted by SIGIR 2024.</div></div>
+          </div>
+          <div class="overview-row">
+            <span class="overview-index">02</span>
+            <div>
+              <h3>WeDLM</h3>
+              <p class="overview-role">
+                First contributor · First author · ICML 2026 Oral
+              </p>
+              <p>
+                Diffusion language modeling with standard causal attention for
+                fast parallel generation.
+              </p>
             </div>
-        </section>
+          </div>
+          <div class="overview-result">
+            <strong>Nearly 3×</strong>
+            <p>
+              faster reasoning with WeDLM<br /><span
+                >Reported against optimized vLLM baselines</span
+              >
+            </p>
+          </div>
+        </aside>
+      </section>
 
-        <!-- Selected Work -->
-        <section id="highlights" class="section fade-in-up">
-            <h2 class="section-title">Selected Work</h2>
-
-            <div class="paper-cards-grid">
-            <!-- WeDLM -->
-            <div class="paper-card featured fade-in-up">
-                <div class="paper-img">
-                    <img src="images/wedlm.webp" alt="WeDLM" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <span class="paper-kicker">Current Direction · LLM Pretraining</span>
-                    <div class="paper-title">WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference</div>
-                    <div class="paper-authors">
-                        <strong class="me-highlight">Aiwei Liu</strong>, Minghua He, Shaoxun Zeng, Linhao Zhang, Chuhan Wu, Wei Jia, Yuan Liu, Yang Yu, Xiao Zhou, Jie Zhou
-                    </div>
-                    <div class="paper-venue">
-                        ICML 2026 Oral <span class="badge">0.7% acceptance rate</span> <img src="https://img.shields.io/github/stars/Tencent/WeDLM?style=social" alt="stars" style="height: 16px; margin-left: 5px; vertical-align: middle;">
-                    </div>
-                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>Delivers nearly 3× faster reasoning and up to 10× faster low-entropy generation than optimized vLLM baselines.</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/abs/2512.22737"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/Tencent/WeDLM"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://wedlm.github.io"><i class="fas fa-globe"></i> Project</a>
-                        <a href="https://huggingface.co/collections/Tencent/wedlm"><i class="fas fa-cube"></i> Models</a>
-                    </div>
-                </div>
+      <section id="news" class="section" aria-labelledby="news-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">RECENT MILESTONES</p>
+            <h2 id="news-title">News.</h2>
+          </div>
+          <span class="section-aside">New roles · Releases · Publications</span>
+        </div>
+        <div class="news-list">
+          <article class="news-item">
+            <time datetime="2026-07">2026.07</time>
+            <div>
+              <span class="news-tag">JOURNAL</span>
+              <p>
+                <a href="https://arxiv.org/abs/2509.10569">MarkDiffusion</a>
+                accepted by the
+                <strong>Journal of Machine Learning Research (JMLR)</strong>.
+              </p>
             </div>
-
-            <!-- Hidden Decoding -->
-            <div class="paper-card compact blog-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/hidden-decoding.webp" alt="Hidden Decoding at Scale" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <span class="paper-kicker">Current Work · Test-Time Scaling</span>
-                    <div class="paper-title">Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</div>
-                    <div class="paper-authors"><strong class="me-highlight">Aiwei Liu</strong>, Cheng Shi, Chuhan Wu, Ci Lei, Di Lu, Donald He, Fan Zhang, Fanhao Kong, Feifei Zhang, Guan Wang, et al.</div>
-                    <div class="paper-venue">arXiv:2607.08186, 2026</div>
-                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>The first sequence-length scaling method demonstrated at 100B+ MoE scale, improving 80B and 617B baselines across all 9 benchmarks.</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/abs/2607.08186"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/"><i class="fas fa-globe"></i> Blog</a>
-                    </div>
-                </div>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-07">2026.07</time>
+            <div>
+              <span class="news-tag">ACCEPTANCE</span>
+              <p>
+                <a href="https://arxiv.org/abs/2604.00375"
+                  >Locally Confident, Globally Stuck</a
+                >
+                accepted to <strong>COLM 2026</strong>.
+              </p>
             </div>
-
-            <!-- Sparse MoE -->
-            <div class="paper-card compact blog-card fade-in-up">
-                <div class="paper-img">
-                    <img src="images/welm-architecture.webp" alt="WeLM sparse MoE architecture" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <span class="paper-kicker">WeLM Blog · Sparse MoE</span>
-                    <div class="paper-title">WeLM-80B: Building Effective Sparse MoE Models with Moderate Resources</div>
-                    <div class="paper-venue">WeLM Blog</div>
-                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>Trains a competitive 80B-A3B sparse MoE on fewer than 14T tokens, with strong reasoning, multilingual, and 128K-context performance.</div>
-                    <div class="paper-links">
-                        <a href="https://welm.weixin.qq.com/posts/building-effective-sparse-moe-models-with-moderate-resources/"><i class="fas fa-globe"></i> Blog</a>
-                    </div>
-                </div>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-07">2026.07</time>
+            <div>
+              <span class="news-tag">NEW RESEARCH</span>
+              <p>
+                Released
+                <a href="https://arxiv.org/abs/2607.08186"
+                  >Hidden Decoding at Scale</a
+                >
+                and its accompanying
+                <a
+                  href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/"
+                  >WeLM technical blog</a
+                >.
+              </p>
             </div>
-
-            <!-- TIS-DPO -->
-            <div class="paper-card compact fade-in-up">
-                <div class="paper-img">
-                    <img src="images/tis-dpo.webp" alt="TIS-DPO" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <span class="paper-kicker">Earlier Work · Alignment</span>
-                    <div class="paper-title">TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights</div>
-                    <div class="paper-authors"><strong style="text-decoration: underline;">Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Simon Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</div>
-                    <div class="paper-venue">Proceedings of ICLR 2025</div>
-                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>Reweights DPO at the token level, reaching a 79.3% head-to-head win rate over vanilla DPO in alignment experiments.</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/abs/2410.04350"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/exlaw/TIS-DPO"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-05">2026.05</time>
+            <div>
+              <span class="news-tag violet">ICML ORAL</span>
+              <p>
+                <a href="https://arxiv.org/abs/2512.22737">WeDLM</a> accepted as
+                an <strong>ICML 2026 Oral</strong> paper.
+              </p>
             </div>
-
-            <!-- MarkLLM -->
-            <div class="paper-card compact fade-in-up">
-                <div class="paper-img">
-                    <img src="images/markllm.webp" alt="MarkLLM" loading="lazy">
-                </div>
-                <div class="paper-info">
-                    <span class="paper-kicker">Earlier Work · Toolkit</span>
-                    <div class="paper-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
-                    <div class="paper-authors">Leyi Pan, <strong style="text-decoration: underline;">Aiwei Liu*</strong>(Project Lead), Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</div>
-                    <div class="paper-venue">Proceedings of EMNLP 2024 Demo <img src="https://img.shields.io/github/stars/THU-BPM/MarkLLM?style=social" alt="stars" style="height: 16px; margin-left: 5px;"></div>
-                    <div class="paper-tldr"><span class="paper-tldr-label">TL;DR</span>A 1K+ star toolkit unifying 20 watermarking methods with 12 evaluation tools and automated pipelines.</div>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/pdf/2405.10051"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/THU-BPM/MarkLLM"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://mp.weixin.qq.com/s/lx9ZNeHae4mo1J6_sFubfg">机器之心</a>
-                    </div>
-                </div>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-01">2026.01</time>
+            <div>
+              <span class="news-tag">ACCEPTANCE</span>
+              <p>
+                <strong>Three papers</strong> accepted to
+                <strong>ICLR 2026</strong>.
+              </p>
             </div>
-
-            </div><!-- end paper-cards-grid -->
-
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="#publications" style="font-weight: 600; font-size: 0.9rem;">View Full Publication List &rarr;</a>
+          </article>
+          <article class="news-item">
+            <time datetime="2025-12">2025.12</time>
+            <div>
+              <span class="news-tag">MODEL RELEASE</span>
+              <p>
+                Released <a href="https://github.com/Tencent/WeDLM">WeDLM</a>,
+                with open-source code and
+                <a href="https://huggingface.co/collections/Tencent/wedlm"
+                  >model checkpoints</a
+                >.
+              </p>
             </div>
-        </section>
-
-        <!-- Full Publications -->
-        <section id="publications" class="section fade-in-up">
-            <h2 class="section-title">Publications</h2>
-            <p class="section-lede">Full publication list in reverse chronological order. This page may not always be fully up to date; please refer to my <a href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a> for the latest record.</p>
-            
-            <h3 class="pub-section-title">Conference Papers <span>38 papers</span></h3>
-            <div class="pub-list-grid">
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Omni-SafetyBench: A Benchmark for Safety Evaluation of Audio-Visual Large Language Models</div>
-                <div class="pub-list-authors">Leyi Pan, Zheyu Fu, Yunpeng Zhai, Shuchang Tao, Sheng Guan, Shiyu Huang, Lingzhe Zhang, Zhaoyang Liu, Bolin Ding, Felix Henry, <strong>Aiwei Liu</strong>, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of ACM Multimedia 2026 Main Track <a href="https://arxiv.org/abs/2508.07173">[Paper]</a></div>
+          </article>
+          <article class="news-item">
+            <time datetime="2025-07">2025.07</time>
+            <div>
+              <span class="news-tag">JOINED</span>
+              <p>
+                Joined the <strong>WeLM team at WeChat AI, Tencent</strong> as a
+                researcher.
+              </p>
             </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Locally Confident, Globally Stuck: The Quality-Exploration Dilemma in Diffusion Language Models</div>
-                <div class="pub-list-authors">Liancheng Fang, <strong>Aiwei Liu</strong>, Henry Peng Zou, Yankai Chen, Enze Ma, Leyi Pan, Chunyu Miao, Wei-Chieh Huang, Xue Liu, Philip S. Yu</div>
-                <div class="pub-list-venue">Proceedings of COLM 2026 <a href="https://arxiv.org/abs/2604.00375">[Paper]</a></div>
+          </article>
+          <article class="news-item">
+            <time datetime="2025-06">2025.06</time>
+            <div>
+              <span class="news-tag">GRADUATION</span>
+              <p>
+                Received my <strong>Ph.D. from Tsinghua University</strong> and
+                the
+                <a href="images/beijing-outstanding.webp"
+                  >Outstanding Graduate of Beijing</a
+                >
+                distinction.
+              </p>
             </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">WeDLM: Reconciling Diffusion Language Models with Standard Causal Attention for Fast Inference</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Minghua He, Shaoxun Zeng, Linhao Zhang, Chuhan Wu, Wei Jia, Yuan Liu, Yang Yu, Xiao Zhou, Jie Zhou</div>
-                <div class="pub-list-venue">Proceedings of ICML 2026 Oral (0.7% acceptance rate) <a href="https://arxiv.org/abs/2512.22737">[Paper]</a> <a href="https://github.com/Tencent/WeDLM">[Code]</a> <a href="https://wedlm.github.io">[Project]</a> <a href="https://huggingface.co/collections/Tencent/wedlm">[Models]</a></div>
+          </article>
+        </div>
+      </section>
+      <section id="models" class="section" aria-labelledby="models-title">
+        <div id="highlights" class="section-heading">
+          <div>
+            <p class="eyebrow">FOUNDATION MODELS &amp; RESEARCH</p>
+            <h2 id="models-title">Ideas into models.</h2>
+          </div>
+          <span class="section-aside"
+            >Architecture · Pretraining · Generation</span
+          >
+        </div>
+        <div class="project-list">
+          <article class="featured-paper welm-feature">
+            <div class="featured-copy">
+              <div class="paper-kicker">
+                FOUNDATION MODEL ARCHITECTURE &amp; PRETRAINING
+              </div>
+              <h3>WeLM foundation models</h3>
+              <p class="contribution">
+                <span></span> Core contributor · WeLM-80B &amp; WeLM-600B
+              </p>
+              <p class="paper-summary">
+                As a core member of the WeLM pretraining team, I am responsible
+                for <strong>defining WeLM’s model architecture</strong> and work
+                on <strong>large-scale pretraining infrastructure</strong>,
+                connecting model design, training systems, and inference
+                efficiency.
+              </p>
+              <div class="paper-links">
+                <a
+                  href="https://welm.weixin.qq.com/posts/building-effective-sparse-moe-models-with-moderate-resources/"
+                  >WeLM-80B technical report ↗</a
+                ><a href="https://welm.weixin.qq.com/">WeLM research ↗</a>
+              </div>
             </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">d-TreeRPO: Towards More Reliable Policy Optimization for Diffusion Language Models</div>
-                <div class="pub-list-authors">Leyi Pan, Shuchang Tao, Yunpeng Zhai, Zheyu Fu, Liancheng Fang, Minghua He, Lingzhe Zhang, Zhaoyang Liu, Bolin Ding, <strong>Aiwei Liu</strong>, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of ACL 2026 Main <a href="https://arxiv.org/abs/2512.09675">[Paper]</a></div>
+            <div class="featured-image">
+              <div class="figure-label">WeLM / SPARSE MoE ARCHITECTURE</div>
+              <img
+                src="images/welm-architecture.webp"
+                alt="WeLM sparse mixture-of-experts architecture"
+                loading="lazy"
+              />
             </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">StableToken: A Noise-Robust Semantic Speech Tokenizer for Resilient SpeechLLMs</div>
-                <div class="pub-list-authors">Yuhan Song, Linhao Zhang, Chuhan Wu, <strong>Aiwei Liu</strong>, Wei Jia, Houfeng Wang, Xiao Zhou</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2026 <a href="https://arxiv.org/abs/2509.22220">[Paper]</a></div>
+            <div class="model-scale-grid">
+              <div class="model-scale">
+                <h4>WeLM<span>-80B</span></h4>
+                <p class="scale-role">CORE CONTRIBUTOR</p>
+                <dl class="research-details">
+                  <div>
+                    <dt>Architecture</dt>
+                    <dd>
+                      <strong
+                        >80B total parameters · 3B active parameters</strong
+                      >
+                      in a sparse mixture-of-experts model.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Training &amp; capabilities</dt>
+                    <dd>
+                      <strong
+                        >Fewer than 14T training tokens · 128K context</strong
+                      >, with strong reasoning and multilingual performance.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="model-scale">
+                <h4>WeLM<span>-600B</span></h4>
+                <p class="scale-role">CORE CONTRIBUTOR</p>
+                <dl class="research-details">
+                  <div>
+                    <dt>Model architecture</dt>
+                    <dd>
+                      Define WeLM’s model structure with a focus on
+                      <strong>model quality and inference efficiency</strong>.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Pretraining infrastructure</dt>
+                    <dd>
+                      Develop large-scale training systems and infrastructure
+                      for foundation model pretraining at the
+                      <strong>600B scale</strong>.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">PMark: Towards Robust and Distortion-free Semantic-level Watermarking with Channel Constraints</div>
-                <div class="pub-list-authors">Jiahao Huo, Shuliang Liu, Bin Wang, Junyan Zhang, Yibo Yan, <strong>Aiwei Liu</strong>, Xuming Hu, Mingxun Zhou</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2026 <a href="https://arxiv.org/abs/2509.21057">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">MUSE: Model-Agnostic Tabular Watermarking via Multi-Sample Selection</div>
-                <div class="pub-list-authors">Liancheng Fang, <strong>Aiwei Liu</strong>, Henry Peng Zou, Yankai Chen, Hengrui Zhang, Zhongfen Deng, Philip S. Yu</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2026 <a href="https://arxiv.org/abs/2505.24267">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?</div>
-                <div class="pub-list-authors">Leyi Pan, <strong>Aiwei Liu</strong>, Shiyu Huang, Yijian Lu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</div>
-                <div class="pub-list-venue">Proceedings of ACL 2025 <a href="https://arxiv.org/abs/2502.11598">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Exploring Response Uncertainty in MLLMs: An Empirical Evaluation Under Misleading Scenarios</div>
-                <div class="pub-list-authors">Yunkai Dang, Mengxi Gao, Yibo Yan, Xin Zou, Yanggan Gu, <strong>Aiwei Liu</strong>, Xuming Hu</div>
-                <div class="pub-list-venue">Proceedings of EMNLP 2025 <a href="https://arxiv.org/abs/2411.02708">[Paper]</a> <a href="https://github.com/Yunkai696/MUB">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">VLA-Mark: A cross modal watermark for large vision-language alignment model</div>
-                <div class="pub-list-authors">Shuliang Liu, Qi Zheng, Jesse Jiaxi Xu, Yibo Yan, He Geng, <strong>Aiwei Liu</strong>, Peijie Jiang, Jia Liu, Yik-Cheung Tam, Xuming Hu</div>
-                <div class="pub-list-venue">Proceedings of EMNLP 2025 <a href="https://arxiv.org/pdf/2507.14067">[Paper]</a> <a href="https://github.com/shiningwhite-cmd/VLA-mark">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">TabGen-ICL: Residual-Aware In-Context Example Selection for Tabular Data Generation</div>
-                <div class="pub-list-authors">Liancheng Fang, <strong>Aiwei Liu</strong>, Hengrui Zhang, Henry Peng Zou, Weizhi Zhang, Philip S. Yu</div>
-                <div class="pub-list-venue">Findings of ACL 2025 <a href="https://arxiv.org/pdf/2502.16414">[Paper]</a> <a href="https://github.com/fangliancheng/TabGEN-ICL">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">A Survey on Proactive Defense Strategies Against Misinformation in LLMs</div>
-                <div class="pub-list-authors">Shuliang Liu, Hongyi Liu, <strong>Aiwei Liu</strong>, Duan Bingchen, Zheng Qi, Yibo Yan, He Geng, Peijie Jiang, Jia Liu, Xuming Hu</div>
-                <div class="pub-list-venue">Findings of ACL 2025 <a href="https://aclanthology.org/2025.findings-acl.933/">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Mitigating Modality Prior-induced Hallucinations in Multimodal Large Language Models via Deciphering Attention Causality</div>
-                <div class="pub-list-authors">Guanyu Zhou, Yibo Yan, Xin Zou, Kun Wang, <strong>Aiwei Liu</strong>, Xuming Hu</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2025 <a href="https://arxiv.org/abs/2410.04780">[Paper]</a> <a href="https://github.com/The-Martyr/CausalMM">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">TIS-DPO: Token-level Importance Sampling for Direct Preference Optimization With Estimated Weights</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Yanchao Sun, Xiang Kong, Simon Wang, Jiulong Shan, Albin Madappally Jose, Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2025 <a href="https://arxiv.org/abs/2410.04350">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Can Watermarked LLMs be Identified by Users via Crafted Prompts?</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Sheng Guan, Yiming Liu, Leyi Pan, Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2025 <a href="https://arxiv.org/abs/2410.03168">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">WaterSeeker: Efficient Detection of Watermarked Segments in Large Documents</div>
-                <div class="pub-list-authors">Leyi Pan, <strong>Aiwei Liu</strong>, Yijian Lu, Zitian Gao, Yichen Di, Lijie Wen, Irwin King, Philip S. Yu</div>
-                <div class="pub-list-venue">Findings of NAACL 2025 <a href="https://arxiv.org/abs/2409.05112">[Paper]</a> <a href="https://github.com/THU-BPM/WaterSeeker">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Entropy-Based Decoding for Retrieval-Augmented Large Language Models</div>
-                <div class="pub-list-authors">Zexuan Qiu, Zijing Ou, Bin Wu, Jingjing Li, <strong>Aiwei Liu</strong>, Irwin King</div>
-                <div class="pub-list-venue">Proceedings of NAACL 2025 <a href="https://arxiv.org/abs/2406.17519">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">ChatCite: LLM Agent with Human Workflow Guidance for Comparative Literature Summary</div>
-                <div class="pub-list-authors">Yutong Li, Lu Chen, <strong>Aiwei Liu</strong>, Kai Yu, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of COLING 2024 <a href="https://arxiv.org/abs/2403.02574">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities</div>
-                <div class="pub-list-authors">Zhonghao Li, Xuming Hu, <strong>Aiwei Liu</strong>, Kening Zheng, Sirui Huang, Hui Xiong</div>
-                <div class="pub-list-venue">Findings of EMNLP 2024 <a href="https://arxiv.org/abs/2406.11357">[Paper]</a> <a href="https://github.com/allen-li1231/refiner-rag">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">MarkLLM: An Open-Source Toolkit for LLM Watermarking</div>
-                <div class="pub-list-authors">Leyi Pan, <strong>Aiwei Liu</strong>, Zhiwei He, Zitian Gao, Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu, Lijie Wen, Irwin King, Philip S. Yu</div>
-                <div class="pub-list-venue">Proceedings of EMNLP 2024 Demo <a href="https://arxiv.org/abs/2405.10051">[Paper]</a> <a href="https://github.com/THU-BPM/MarkLLM">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Preventing and Detecting Misinformation Generated by Large Language Models</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Qiang Sheng, Xuming Hu</div>
-                <div class="pub-list-venue">SIGIR 2024 Tutorial <a href="https://dl.acm.org/doi/10.1145/3626772.3661377">[Paper]</a> <a href="https://sigir24-llm-misinformation.github.io/">[Website]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">On the Robustness of Document-Level Relation Extraction Models to Entity Name Variations</div>
-                <div class="pub-list-authors">Shiao Meng, Xuming Hu, <strong>Aiwei Liu</strong>, Fukun Ma, Yawen Yang, Shuang Li, Lijie Wen</div>
-                <div class="pub-list-venue">Findings of ACL 2024 <a href="https://arxiv.org/abs/2406.07444">[Paper]</a> <a href="https://github.com/THU-BPM/Env-DocRE">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">An Entropy-based Text Watermarking Detection Method</div>
-                <div class="pub-list-authors">Yijian Lu, <strong>Aiwei Liu</strong>, Dianzhi Yu, Jingjing Li, Irwin King</div>
-                <div class="pub-list-venue">Proceedings of ACL 2024 <a href="https://arxiv.org/pdf/2403.13485.pdf">[Paper]</a> <a href="https://github.com/luyijian3/EWD">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models</div>
-                <div class="pub-list-authors">Zhiwei He, Binglin Zhou, Hongkun Hao, <strong>Aiwei Liu</strong>, Xing Wang, Zhaopeng Tu, Zhuosheng Zhang, Rui Wang</div>
-                <div class="pub-list-venue">Proceedings of ACL 2024 <a href="https://arxiv.org/pdf/2402.14007.pdf">[Paper]</a> <a href="https://github.com/zwhe99/X-SIR">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Direct Large Language Model Alignment Through Self-Rewarding Contrastive Prompt Distillation</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Xiang Kong, Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of ACL 2024 <a href="https://arxiv.org/pdf/2402.11907.pdf">[Paper]</a> <a href="https://github.com/exlaw/DLMA">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">A Semantic Invariant Robust Watermark for Large Language Models</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shiao Meng, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2024 <a href="https://arxiv.org/pdf/2310.06356.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/Robust_Watermark">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">An Unforgeable Publicly Verifiable Watermark for Large Language Models</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shu'ang Li, Lijie Wen, Irwin King, Philip S. Yu</div>
-                <div class="pub-list-venue">Proceedings of ICLR 2024 <a href="https://arxiv.org/pdf/2307.16230.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/private_watermark">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">RAPL: A Relation-Aware Prototype Learning Approach for Few-Shot Document-Level Relation Extraction</div>
-                <div class="pub-list-authors">Shiao Meng, Xuming Hu, <strong>Aiwei Liu</strong>, Shuang Li, Fukun Ma, Yawen Yang, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of EMNLP 2023 <a href="https://aclanthology.org/2023.emnlp-main.316.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/RAPL">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Prompt me up: Unleashing the power of alignments for multimodal entity and relation extraction</div>
-                <div class="pub-list-authors">Xuming Hu, Junzhe Chen, <strong>Aiwei Liu</strong>, Shiao Meng, Lijie Wen, Philip S Yu</div>
-                <div class="pub-list-venue">Proceedings of MM 2023 <a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3611899">[Paper]</a> <a href="https://github.com/THU-BPM/PROMU">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">EnTDA: Entity-to-Text based Data Augmentation with Semantic Coherence and Entity Preserving for various NER Tasks</div>
-                <div class="pub-list-authors">Xuming Hu, Yong Jiang, <strong>Aiwei Liu</strong>, Zhongqiang Huang, Pengjun Xie, Fei Huang, Lijie Wen and Philip S. Yu</div>
-                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://aclanthology.org/2023.findings-acl.578.pdf">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">GDA: Generative Data Augmentation Techniques for Relation Extraction Tasks</div>
-                <div class="pub-list-authors">Xuming Hu, <strong>Aiwei Liu</strong>, Zeqi Tan, Xin Zhang, Chenwei Zhang, Irwin King, Philip S. Yu</div>
-                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://arxiv.org/abs/2305.16663">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Wei Liu, Xuming Hu, Shuang Li, Fukun Ma, Yawen Yang and Lijie Wen</div>
-                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://aclanthology.org/2023.findings-acl.43.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/CD-Text2SQL-CG">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Enhancing Cross-lingual Natural Language Inference by Soft Prompting with Multilingual Verbalizer</div>
-                <div class="pub-list-authors">Shuang Li, Xuming Hu, <strong>Aiwei Liu</strong>, Yawen Yang, Fukun Ma, Philip S. Yu and Lijie Wen</div>
-                <div class="pub-list-venue">Findings of ACL 2023 <a href="https://aclanthology.org/2023.findings-acl.88.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/SoftMV">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Semantics Matters: AMR-based Path Aggregation Relational Network for Aspect-based Sentiment Analysis</div>
-                <div class="pub-list-authors">Fukun Ma, Xuming Hu, <strong>Aiwei Liu</strong>, Yawen Yang, Shuang Li, Philip S. Yu and Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of ACL 2023 <a href="https://aclanthology.org/2023.acl-long.19.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/APARN">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Gaussian Prior Reinforcement Learning for Nested Named Entity Recognition</div>
-                <div class="pub-list-authors">Yawen Yang, Xuming Hu, Fukun Ma, Shu'ang Li, <strong>Aiwei Liu</strong>, Lijie Wen and Philip S. Yu</div>
-                <div class="pub-list-venue">Proceedings of ICASSP 2023 <a href="https://arxiv.org/abs/2305.07266">[Paper]</a> <a href="https://github.com/THU-BPM/GPRLNER">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning Schema Linking Graph</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Xuming Hu, Li Lin, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of SIGKDD 2022 <a href="https://dl.acm.org/doi/pdf/10.1145/3534678.3539294">[Paper]</a> <a href="https://github.com/THU-BPM/ISESL-SQL">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Character-level White-Box Adversarial Attacks against Transformers via Attachable Subwords Substitution</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Honghai Yu, Xuming Hu, Shu'ang Li, Li Lin, Fukun Ma, Yawen Yang, Lijie Wen</div>
-                <div class="pub-list-venue">Proceedings of EMNLP 2022 <a href="https://aclanthology.org/2022.emnlp-main.522/">[Paper]</a> <a href="https://github.com/THU-BPM/CWBA">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">CHEF: A Pilot Chinese Dataset for Evidence-Based Fact-Checking</div>
-                <div class="pub-list-authors">Xuming Hu, Zhijiang Guo, Guanyu Wu, <strong>Aiwei Liu</strong>, Lijie Wen, Philip S. Yu</div>
-                <div class="pub-list-venue">Proceedings of NAACL 2022 <a href="https://aclanthology.org/2022.naacl-main.246.pdf">[Paper]</a> <a href="https://github.com/thu-bpm/chef">[Code]</a></div>
-            </div>
-
-            </div><!-- end conference pub-list-grid -->
-            <h3 class="pub-section-title">Journal Papers <span>4 papers</span></h3>
-            <div class="pub-list-grid">
-            <div class="pub-list-item">
-                <div class="pub-list-title">MarkDiffusion: An Open-Source Toolkit for Generative Watermarking of Latent Diffusion Models</div>
-                <div class="pub-list-authors">Leyi Pan, Sheng Guan, Zheyu Fu, Luyang Si, Huan Wang, Zian Wang, Hanqian Li, Xuming Hu, Irwin King, Philip S. Yu, <strong>Aiwei Liu</strong>, Lijie Wen</div>
-                <div class="pub-list-venue">Journal of Machine Learning Research (JMLR) <a href="https://arxiv.org/abs/2509.10569">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Reading Broadly to Open Your Mind: Improving Open Relation Extraction With Search Documents Under Self-Supervisions</div>
-                <div class="pub-list-authors">Xuming Hu, Zhaochen Hong, Chenwei Zhang, <strong>Aiwei Liu</strong>, Shiao Meng, Lijie Wen, Irwin King, Philip S. Yu</div>
-                <div class="pub-list-venue">TKDE <a href="https://ieeexplore.ieee.org/abstract/document/10255305">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">A Multi-level Supervised Contrastive Learning Framework for Low-Resource Natural Language Inference</div>
-                <div class="pub-list-authors">Shu'ang Li, Xuming Hu, Li Lin, <strong>Aiwei Liu</strong>, Lijie Wen, Philip S Yu</div>
-                <div class="pub-list-venue">TASLP 2023 <a href="https://arxiv.org/pdf/2205.15550.pdf">[Paper]</a> <a href="https://github.com/THU-BPM/MultiSCL">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">A Survey of AIOps for Failure Management in the Era of Large Language Models</div>
-                <div class="pub-list-authors">Lingzhe Zhang, Tong Jia, Mengxi Jia, Yifan Wu, <strong>Aiwei Liu</strong>, Yong Yang, Zhonghai Wu, Xuming Hu, Philip S. Yu, Ying Li</div>
-                <div class="pub-list-venue">ACM Computing Surveys <a href="https://arxiv.org/abs/2406.11213">[Paper]</a></div>
-            </div>
-
-            </div><!-- end journal pub-list-grid -->
-            <h3 class="pub-section-title">Preprints <span>6 papers</span></h3>
-            <div class="pub-list-grid">
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">A Survey on Parallel Text Generation: From Parallel Decoding to Diffusion Language Models</div>
-                <div class="pub-list-authors">Lingzhe Zhang, Liancheng Fang, Chiming Duan, Minghua He, Leyi Pan, Pei Xiao, Shiyu Huang, Yunpeng Zhai, Xuming Hu, Philip S. Yu, <strong>Aiwei Liu</strong></div>
-                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2508.08712">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">A Comprehensive Evaluation of ChatGPT's Zero-Shot Text-to-SQL Capability</div>
-                <div class="pub-list-authors"><strong>Aiwei Liu</strong>, Xuming Hu, Lijie Wen, Philip S. Yu</div>
-                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2303.13547">[Paper]</a> <a href="https://github.com/THU-BPM/chatgpt-sql">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Interpretable Contrastive Monte Carlo Tree Search Reasoning</div>
-                <div class="pub-list-authors">Zitian Gao, Boye Niu, Xuzheng He, Haotian Xu, Hongzhang Liu, <strong>Aiwei Liu</strong>, Xuming Hu, Lijie Wen</div>
-                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2410.01707">[Paper]</a> <a href="https://github.com/zitian-gao/SC-MCTS">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Recent Advances of Multimodal Continual Learning: A Comprehensive Survey</div>
-                <div class="pub-list-authors">Dianzhi Yu, Xinni Zhang, Yankai Chen, <strong>Aiwei Liu</strong>, Yifei Zhang, Philip S Yu, Irwin King</div>
-                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2410.05352">[Paper]</a> <a href="https://github.com/LucyDYu/Awesome-Multimodal-Continual-Learning">[Code]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Less is More: Extreme Gradient Boost Rank-1 Adaption for Efficient Finetuning of LLMs</div>
-                <div class="pub-list-authors">Yifei Zhang, Hao Zhu, <strong>Aiwei Liu</strong>, Han Yu, Piotr Koniusz, Irwin King</div>
-                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2410.19694">[Paper]</a></div>
-            </div>
-
-            <div class="pub-list-item">
-                <div class="pub-list-title">Cold-Start Recommendation towards the Era of Large Language Models (LLMs): A Comprehensive Survey and Roadmap</div>
-                <div class="pub-list-authors">Weizhi Zhang, Yuanchen Bei, Liangwei Yang, Henry Peng Zou, Peilin Zhou, <strong>Aiwei Liu</strong>, Yinghui Li, Hao Chen, Jianling Wang, Yu Wang, Feiran Huang, Sheng Zhou, Jiajun Bu, Allen Lin, James Caverlee, Fakhri Karray, Irwin King, Philip S Yu</div>
-                <div class="pub-list-venue">Preprint <a href="https://arxiv.org/abs/2501.01945">[Paper]</a> <a href="https://github.com/YuanchenBei/Awesome-Cold-Start-Recommendation">[Code]</a></div>
-            </div>
-            </div><!-- end preprints pub-list-grid -->
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section fade-in-up">
-            <h2 class="section-title">Education</h2>
-            <div class="edu-item">
-                <img src="images/tsinghua.svg" alt="Tsinghua" class="edu-logo">
+          </article>
+          <article class="featured-paper">
+            <div class="featured-copy">
+              <div class="paper-kicker">
+                DIFFUSION LANGUAGE MODELS <span>ICML 2026 ORAL</span>
+              </div>
+              <h3>WeDLM</h3>
+              <p class="paper-subtitle">
+                Reconciling Diffusion Language Models with Standard Causal
+                Attention for Fast Inference
+              </p>
+              <p class="contribution">
+                <span></span> First contributor · First author
+              </p>
+              <p class="paper-summary">
+                WeDLM brings diffusion language modeling to standard causal
+                attention, enabling parallel generation while retaining the
+                attention structure used by efficient inference systems.
+              </p>
+              <div class="result-strip" aria-label="WeDLM reported results">
                 <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Tsinghua University, China</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Ph.D. in Software Engineering</div>
-                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2020 – June 2025</div>
+                  <strong>Nearly 3×</strong><span>Faster reasoning</span>
                 </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/nanjing.webp" alt="Nanjing" class="edu-logo">
                 <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Nanjing University, China</div>
-                    <div style="color: var(--text-1); font-weight: 500;">B.E. in Software Engineering</div>
-                    <div style="font-size: 0.85rem; color: var(--text-2);">Sept. 2016 – June 2020</div>
+                  <strong>Up to 10×</strong
+                  ><span>Faster low-entropy generation</span>
                 </div>
+              </div>
+              <p class="result-note">
+                Reported speedups against optimized vLLM baselines, depending on
+                the generation workload.
+              </p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2512.22737">Paper ↗</a
+                ><a href="https://github.com/Tencent/WeDLM">Code ↗</a
+                ><a href="https://wedlm.github.io">Project ↗</a
+                ><a href="https://huggingface.co/collections/Tencent/wedlm"
+                  >Models ↗</a
+                >
+              </div>
             </div>
-        </section>
+            <div class="featured-image">
+              <div class="figure-label">WeDLM / INFERENCE &amp; CAPABILITY</div>
+              <img
+                src="images/wedlm.webp"
+                alt="WeDLM inference speed and benchmark comparisons"
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </div>
+          </article>
+          <article class="research-card research-wide">
+            <div class="research-image">
+              <img
+                src="images/hidden-decoding.webp"
+                alt="Hidden Decoding at Scale research figure"
+                loading="lazy"
+              />
+            </div>
+            <div class="research-card-body">
+              <p class="paper-kicker">LATENT COMPUTATION · 2026</p>
+              <h3>Hidden Decoding at Scale</h3>
+              <p class="research-role">
+                First author · Foundation model capability scaling
+              </p>
+              <p>
+                A sequence-length scaling method that expands latent computation
+                for large language models, demonstrated at 100B+ MoE scale.
+              </p>
+              <dl class="research-details">
+                <div>
+                  <dt>Evaluated scale</dt>
+                  <dd><strong>80B and 617B</strong> model baselines.</dd>
+                </div>
+                <div>
+                  <dt>Key result</dt>
+                  <dd>
+                    Improvements across
+                    <strong>all nine evaluated benchmarks</strong>, extending
+                    sequence-length scaling to large MoE models.
+                  </dd>
+                </div>
+              </dl>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.08186">Paper ↗</a
+                ><a
+                  href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/"
+                  >WeLM Blog ↗</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        id="publications"
+        class="section"
+        aria-labelledby="publications-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECTED PUBLICATIONS</p>
+            <h2 id="publications-title">Research by direction.</h2>
+          </div>
+          <a
+            class="text-link"
+            href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&amp;hl=en"
+            >Full publication list ↗</a
+          >
+        </div>
+        <p class="publication-lede">
+          Representative work and first-author papers, grouped by research area.
+        </p>
+        <div class="publication-group" aria-labelledby="generation-title">
+          <h3 id="generation-title" class="publication-group-title">
+            <span>01</span>Foundation models &amp; efficient generation
+          </h3>
+          <div class="pub-list-grid">
+            <div class="pub-list-item">
+              <div class="pub-label">First author · ICML Oral</div>
+              <div class="pub-list-title">
+                WeDLM: Reconciling Diffusion Language Models with Standard
+                Causal Attention for Fast Inference
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Minghua He, Shaoxun Zeng, Linhao
+                Zhang, Chuhan Wu, Wei Jia, Yuan Liu, Yang Yu, Xiao Zhou, Jie
+                Zhou
+              </div>
+              <div class="pub-list-venue">
+                ICML 2026 Oral
+                <a href="https://arxiv.org/abs/2512.22737">[Paper]</a>
+                <a href="https://github.com/Tencent/WeDLM">[Code]</a>
+                <a href="https://wedlm.github.io">[Project]</a>
+                <a href="https://huggingface.co/collections/Tencent/wedlm"
+                  >[Models]</a
+                >
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                Hidden Decoding at Scale: Latent Computation Scaling for Large
+                Language Models
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Cheng Shi, Chuhan Wu, Ci Lei, Di Lu,
+                Donald He, Fan Zhang, Fanhao Kong, Feifei Zhang, Guan Wang, et
+                al.
+              </div>
+              <div class="pub-list-venue">
+                Preprint, 2026
+                <a href="https://arxiv.org/abs/2607.08186">[Paper]</a>
+                <a
+                  href="https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/"
+                  >[Blog]</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="publication-group" aria-labelledby="alignment-title">
+          <h3 id="alignment-title" class="publication-group-title">
+            <span>02</span>LLM alignment
+          </h3>
+          <div class="pub-list-grid">
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                TIS-DPO: Token-level Importance Sampling for Direct Preference
+                Optimization With Estimated Weights
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Yanchao Sun,
+                Xiang Kong, Simon Wang, Jiulong Shan, Albin Madappally Jose,
+                Xiaojiang Liu, Lijie Wen, Philip S. Yu, Meng Cao
+              </div>
+              <p class="publication-summary">
+                Token-level importance weighting for direct preference
+                optimization.
+              </p>
+              <div class="pub-list-venue">
+                ICLR 2025 <a href="https://arxiv.org/abs/2410.04350">[Paper]</a>
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                Direct Large Language Model Alignment Through Self-Rewarding
+                Contrastive Prompt Distillation
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Haoping Bai, Zhiyun Lu, Xiang Kong,
+                Simon Wang, Jiulong Shan, Meng Cao, Lijie Wen
+              </div>
+              <p class="publication-summary">
+                Self-rewarding contrastive prompt distillation for direct model
+                alignment.
+              </p>
+              <div class="pub-list-venue">
+                ACL 2024
+                <a href="https://arxiv.org/pdf/2402.11907.pdf">[Paper]</a>
+                <a href="https://github.com/exlaw/DLMA">[Code]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="publication-group" aria-labelledby="trustworthy-title">
+          <h3 id="trustworthy-title" class="publication-group-title">
+            <span>03</span>Trustworthy LLMs &amp; watermarking
+          </h3>
+          <div class="pub-list-grid">
+            <div class="pub-list-item">
+              <div class="pub-label">Representative work · Project lead</div>
+              <div class="pub-list-title">
+                MarkLLM: An Open-Source Toolkit for LLM Watermarking
+              </div>
+              <div class="pub-list-authors">
+                Leyi Pan, <strong>Aiwei Liu</strong>, Zhiwei He, Zitian Gao,
+                Xuandong Zhao, Yijian Lu, Binglin Zhou, Shuliang Liu, Xuming Hu,
+                Lijie Wen, Irwin King, Philip S. Yu
+              </div>
+              <p class="publication-summary">
+                An open-source toolkit unifying 20 LLM watermarking methods, 12
+                evaluation tools, and automated evaluation pipelines.
+              </p>
+              <div class="pub-list-venue">
+                EMNLP 2024 Demo
+                <a href="https://arxiv.org/abs/2405.10051">[Paper]</a>
+                <a href="https://github.com/THU-BPM/MarkLLM">[Code]</a>
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                A Semantic Invariant Robust Watermark for Large Language Models
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shiao Meng,
+                Lijie Wen
+              </div>
+              <p class="publication-summary">
+                Semantic-invariant watermarking for robust provenance of
+                LLM-generated text.
+              </p>
+              <div class="pub-list-venue">
+                ICLR 2024
+                <a href="https://arxiv.org/pdf/2310.06356.pdf">[Paper]</a>
+                <a href="https://github.com/THU-BPM/Robust_Watermark">[Code]</a>
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                An Unforgeable Publicly Verifiable Watermark for Large Language
+                Models
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Leyi Pan, Xuming Hu, Shu'ang Li,
+                Lijie Wen, Irwin King, Philip S. Yu
+              </div>
+              <p class="publication-summary">
+                Publicly verifiable watermarking for language models.
+              </p>
+              <div class="pub-list-venue">
+                ICLR 2024
+                <a href="https://arxiv.org/pdf/2307.16230.pdf">[Paper]</a>
+                <a href="https://github.com/THU-BPM/private_watermark"
+                  >[Code]</a
+                >
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                Can Watermarked LLMs be Identified by Users via Crafted Prompts?
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Sheng Guan, Yiming Liu, Leyi Pan,
+                Yifei Zhang, Liancheng Fang, Lijie Wen, Philip S. Yu, Xuming Hu
+              </div>
+              <div class="pub-list-venue">
+                ICLR 2025 <a href="https://arxiv.org/abs/2410.03168">[Paper]</a>
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">Representative work</div>
+              <div class="pub-list-title">
+                MarkDiffusion: An Open-Source Toolkit for Generative
+                Watermarking of Latent Diffusion Models
+              </div>
+              <div class="pub-list-authors">
+                Leyi Pan, Sheng Guan, Zheyu Fu, Luyang Si, Huan Wang, Zian Wang,
+                Hanqian Li, Xuming Hu, Irwin King, Philip S. Yu,
+                <strong>Aiwei Liu</strong>, Lijie Wen
+              </div>
+              <p class="publication-summary">
+                An open-source toolkit for generative watermarking of latent
+                diffusion models.
+              </p>
+              <div class="pub-list-venue">
+                Journal of Machine Learning Research (JMLR)
+                <a href="https://arxiv.org/abs/2509.10569">[Paper]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="publication-group" aria-labelledby="nlp-title">
+          <h3 id="nlp-title" class="publication-group-title">
+            <span>04</span>Earlier work: text-to-SQL &amp; NLP robustness
+          </h3>
+          <div class="pub-list-grid">
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                A Comprehensive Evaluation of ChatGPT's Zero-Shot Text-to-SQL
+                Capability
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Xuming Hu, Lijie Wen, Philip S. Yu
+              </div>
+              <div class="pub-list-venue">
+                Preprint <a href="https://arxiv.org/abs/2303.13547">[Paper]</a>
+                <a href="https://github.com/THU-BPM/chatgpt-sql">[Code]</a>
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                Exploring the Compositional Generalization in Context Dependent
+                Text-to-SQL Parsing
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Wei Liu, Xuming Hu, Shuang Li, Fukun
+                Ma, Yawen Yang and Lijie Wen
+              </div>
+              <div class="pub-list-venue">
+                Findings of ACL 2023
+                <a href="https://aclanthology.org/2023.findings-acl.43.pdf"
+                  >[Paper]</a
+                >
+                <a href="https://github.com/THU-BPM/CD-Text2SQL-CG">[Code]</a>
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                Semantic Enhanced Text-to-SQL Parsing via Iteratively Learning
+                Schema Linking Graph
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Xuming Hu, Li Lin, Lijie Wen
+              </div>
+              <div class="pub-list-venue">
+                SIGKDD 2022
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3534678.3539294"
+                  >[Paper]</a
+                >
+                <a href="https://github.com/THU-BPM/ISESL-SQL">[Code]</a>
+              </div>
+            </div>
+            <div class="pub-list-item">
+              <div class="pub-label">First author</div>
+              <div class="pub-list-title">
+                Character-level White-Box Adversarial Attacks against
+                Transformers via Attachable Subwords Substitution
+              </div>
+              <div class="pub-list-authors">
+                <strong>Aiwei Liu</strong>, Honghai Yu, Xuming Hu, Shu'ang Li,
+                Li Lin, Fukun Ma, Yawen Yang, Lijie Wen
+              </div>
+              <div class="pub-list-venue">
+                EMNLP 2022
+                <a href="https://aclanthology.org/2022.emnlp-main.522/"
+                  >[Paper]</a
+                >
+                <a href="https://github.com/THU-BPM/CWBA">[Code]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scholar-metrics" data-scholar-metrics>
+          <a
+            class="scholar-source"
+            href="https://scholar.google.com/citations?user=UCOOmcEAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>Google Scholar</span>
+            <small data-scholar-updated>Citation statistics</small>
+          </a>
+          <div class="metric-item">
+            <span class="metric-value" data-scholar-citations>--</span>
+            <span class="metric-label">Citations</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value" data-scholar-hindex>--</span>
+            <span class="metric-label">h-index</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value" data-scholar-i10index>--</span>
+            <span class="metric-label">i10-index</span>
+          </div>
+        </div>
+      </section>
+      <section
+        id="experience"
+        class="section background-section"
+        aria-labelledby="experience-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE JOURNEY</p>
+            <h2 id="experience-title">Research background.</h2>
+          </div>
+        </div>
+        <div class="background-grid">
+          <div>
+            <h3 class="small-heading">EXPERIENCE</h3>
+            <article class="experience-item current">
+              <span class="timeline-dot"></span>
+              <p class="experience-date">JUL 2025 — PRESENT</p>
+              <h4>WeChat AI, Tencent</h4>
+              <p class="experience-role">Researcher · WeLM Team</p>
+              <p>
+                Core member of the WeLM pretraining team. Responsible for model
+                architecture design; specializing in pretraining infrastructure.
+              </p>
+            </article>
+            <article class="experience-item">
+              <h4>Apple AIML</h4>
+              <p>Research Intern · Advisor: Dr. Meng Cao</p>
+            </article>
+            <article class="experience-item">
+              <h4>CUHK MISC Lab</h4>
+              <p>Visiting Scholar · Advisor: Prof. Irwin King</p>
+            </article>
+            <article class="experience-item">
+              <h4>UIC BDSC Lab</h4>
+              <p>Visiting Scholar · Advisor: Prof. Philip S. Yu</p>
+            </article>
+          </div>
+          <div id="education">
+            <h3 class="small-heading">EDUCATION</h3>
+            <article class="education-item">
+              <img
+                src="images/tsinghua.svg"
+                width="44"
+                height="44"
+                alt="Tsinghua University emblem"
+                loading="lazy"
+              />
+              <div>
+                <p class="experience-date">2020 — 2025</p>
+                <h4>Tsinghua University</h4>
+                <p>Ph.D. in Software Engineering</p>
+                <p class="education-detail">
+                  Advisor: Prof. Lijie Wen<br />Research in LLM alignment and
+                  trustworthy LLMs.
+                </p>
+              </div>
+            </article>
+            <article class="education-item">
+              <img
+                src="images/nanjing.webp"
+                width="44"
+                height="44"
+                alt="Nanjing University emblem"
+                loading="lazy"
+              />
+              <div>
+                <p class="experience-date">2016 — 2020</p>
+                <h4>Nanjing University</h4>
+                <p>B.E. in Software Engineering</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- Work Experience Section -->
-        <section id="experience" class="section fade-in-up">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="edu-item">
-                <img src="images/tencent.webp" alt="Tencent" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">WeLM Team, WeChat AI, Tencent</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Researcher</div>
-                    <div style="font-size: 0.85rem; color: var(--text-2);">July 2025 – Present</div>
-                </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/apple.webp" alt="Apple" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">Apple AIML Group</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Research Intern</div>
-                </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/cuhk.webp" alt="CUHK" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">CUHK MISC Lab</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Irwin King</div>
-                </div>
-            </div>
-            <div class="edu-item">
-                <img src="images/uic.webp" alt="UIC" class="edu-logo">
-                <div>
-                    <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent);">UIC BDSC Lab</div>
-                    <div style="color: var(--text-1); font-weight: 500;">Visiting Scholar · Advisor: Prof. Philip S. Yu</div>
-                </div>
-            </div>
-        </section>
-
-        <footer style="text-align: center; margin-top: 40px; margin-bottom: 20px; color: var(--text-3); font-size: 0.82rem; padding: 20px 0;">
-            <p>&copy; 2026 Aiwei Liu</p>
-        </footer>
-
+      <section class="contact-section" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">LET’S BUILD WHAT’S NEXT</p>
+          <h2 id="contact-title">Better models.<br />Bigger possibilities.</h2>
+          <p>
+            Open to research collaborations in foundation model architecture,<br
+              class="desktop-break"
+            />
+            large-scale pretraining, and efficient generation.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:liuaiwei20@gmail.com"
+            >Get in touch <span aria-hidden="true">↗</span></a
+          ><a class="contact-email" href="mailto:liuaiwei20@gmail.com"
+            >liuaiwei20@gmail.com</a
+          ><span class="wechat">WeChat: u839134412</span>
+        </div>
+      </section>
     </main>
-</div>
-
-<script>
-    async function loadScholarStats() {
-        const root = document.querySelector('[data-scholar-metrics]');
-        if (!root) return;
-
-        const formatMetric = value => {
-            if (typeof value !== 'number' || !Number.isFinite(value)) return '--';
-            return new Intl.NumberFormat('en-US').format(value);
-        };
-
-        try {
-            const response = await fetch('data/scholar-stats.json', { cache: 'no-store' });
-            if (!response.ok) throw new Error('Scholar stats unavailable');
-            const stats = await response.json();
-
-            document.querySelector('[data-scholar-citations]').textContent = formatMetric(stats.citations);
-            document.querySelector('[data-scholar-hindex]').textContent = formatMetric(stats.hIndex);
-            document.querySelector('[data-scholar-i10index]').textContent = formatMetric(stats.i10Index);
-
-            const updated = document.querySelector('[data-scholar-updated]');
-            if (stats.updatedAt) {
-                const date = new Date(stats.updatedAt);
-                updated.textContent = `Updated ${date.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                })}`;
-            } else {
-                updated.textContent = 'Google Scholar profile';
-            }
-        } catch (error) {
-            root.dataset.state = 'unavailable';
-        }
-    }
-
-    loadScholarStats();
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Active link highlighting on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= (sectionTop - 180)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-</script>
-
-</body>
+    <footer class="site-footer">
+      <div>
+        <span>© 2026 Aiwei Liu <span lang="zh">刘瑷玮</span></span
+        ><span>Architecture. Pretraining. Scale.</span
+        ><a href="#about">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>
