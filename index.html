@@ -66,7 +66,8 @@
       }
     </script>
 
-    <meta name="theme-color" content="#080d14" />
+    <meta name="theme-color" content="#111820" />
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="main.js" defer></script>
   </head>
@@ -87,9 +88,49 @@
           <a class="nav-link" href="#publications">Publications</a>
           <a class="nav-link" href="#experience">Experience</a>
         </nav>
-        <a class="header-contact" href="mailto:liuaiwei20@gmail.com"
-          >Let’s connect <span aria-hidden="true">↗</span></a
-        >
+        <div class="header-actions">
+          <a class="header-contact" href="mailto:liuaiwei20@gmail.com"
+            >Let’s connect <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch color theme"
+            hidden
+          >
+            <svg
+              class="theme-icon theme-icon-sun"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+              />
+            </svg>
+            <svg
+              class="theme-icon theme-icon-moon"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z" />
+            </svg>
+            <span data-theme-label>Theme</span>
+          </button>
+        </div>
       </div>
     </header>
     <main class="container">
