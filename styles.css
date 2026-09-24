@@ -571,6 +571,10 @@ img {
   color: var(--accent);
   margin-top: 16px;
 }
+.role-emphasis {
+  color: var(--accent);
+  font-weight: 750;
+}
 .paper-summary {
   font-size: 13px;
   line-height: 1.85;
