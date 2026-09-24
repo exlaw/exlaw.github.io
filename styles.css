@@ -1608,7 +1608,10 @@ p.experience-date {
   vertical-align: baseline;
   box-shadow: 0 2px 0 color-mix(in srgb, var(--badge-bg) 70%, #000), 0 3px 6px #142e6326;
 }
-.badge-paper { --badge-bg: #315fc4; }
+.badge-paper,
+.badge-conference { --badge-bg: #315fc4; }
+.badge-journal { --badge-bg: #a65b08; }
+.badge-report { --badge-bg: #b83333; }
 .badge-research { --badge-bg: #7350a1; }
 .badge-award { --badge-bg: #a95710; }
 .paper-links a.badge,
@@ -1678,6 +1681,92 @@ a.badge:focus-visible {
 }
 .contact-section h2 {
   font-size: 30px;
+}
+/* Keep supporting text readable and remove the redundant caption hierarchy. */
+.identity {
+  margin-top: 0;
+}
+.overview-row {
+  grid-template-columns: 1fr;
+}
+.overview-row:first-child {
+  padding-top: 0;
+}
+.news-item > div {
+  display: block;
+}
+.news-item time,
+.paper-links a,
+.pub-list-authors,
+.pub-list-venue,
+.publication-summary,
+.publication-lede,
+.contribution,
+.overview-row .overview-role,
+.experience-item p,
+.education-item p,
+.contact-section p:not(.eyebrow) {
+  font-size: 14px;
+}
+.pub-list-venue {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  font-family: inherit;
+}
+.pub-list-venue a {
+  margin-left: 0;
+}
+.badge,
+.paper-links a.badge,
+.pub-list-venue a.badge,
+.paper-kicker > .badge {
+  font-family: inherit;
+  font-size: 13px;
+}
+.research-details dt,
+.result-strip span,
+.result-note,
+.overview-result p span,
+.social-links,
+.contact-email,
+.wechat,
+.scholar-source small,
+.metric-label {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  text-transform: none;
+}
+.research-details dt {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.research-card-body > .research-role {
+  font-family: inherit;
+  font-size: 14px;
+}
+.small-heading {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+p.experience-date {
+  font: inherit;
+  font-size: 13px;
+}
+.featured-copy h3 {
+  margin-top: 0;
+}
+.paper-kicker + h3 {
+  margin-top: 12px;
+}
+.site-footer > div {
+  font-family: inherit;
+  font-size: 12px;
 }
 @media (max-width: 1050px) and (min-width: 761px) {
   .hero-title {
