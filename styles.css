@@ -1608,24 +1608,9 @@ p.experience-date {
   vertical-align: baseline;
   box-shadow: 0 2px 0 color-mix(in srgb, var(--badge-bg) 70%, #000), 0 3px 6px #142e6326;
 }
-.badge-paper,
-.badge-topic { --badge-bg: #315fc4; }
+.badge-paper { --badge-bg: #315fc4; }
 .badge-research { --badge-bg: #7350a1; }
-.badge-code { --badge-bg: #187b69; }
-.badge-venue { --badge-bg: #28733e; }
 .badge-award { --badge-bg: #a95710; }
-.badge-role { --badge-bg: #4c5c70; }
-.paper-links,
-.pub-list-venue,
-.pub-label,
-.overview-role,
-.contribution,
-.paper-kicker {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 8px;
-}
 .paper-links a.badge,
 .pub-list-venue a.badge {
   margin: 0;
@@ -1646,18 +1631,14 @@ a.badge:focus-visible {
   outline-offset: 4px;
 }
 .paper-kicker > .badge {
-  margin-top: 0;
+  display: inline-block;
+  margin-top: 6px;
   color: #fff;
   font-size: 10px;
 }
 .news-tag.badge {
   color: #fff;
   font-size: 9px;
-}
-.overview-role .badge,
-.pub-label .badge,
-.scale-role .badge {
-  font-size: 10px;
 }
 .pub-list-title {
   font-size: 17px;
