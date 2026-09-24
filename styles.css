@@ -21,6 +21,8 @@
   --role-text: #cfdae4;
   --contact-text: #c7d6df;
   --academic-underline: #526d72;
+  --highlight-bg: #30291f;
+  --highlight-accent: #edb76e;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 :root[data-theme="light"] {
@@ -46,6 +48,8 @@
   --role-text: #344657;
   --contact-text: #34516a;
   --academic-underline: #94a8b9;
+  --highlight-bg: #fff0d9;
+  --highlight-accent: #a65410;
 }
 
 @media (prefers-color-scheme: light) {
@@ -72,6 +76,8 @@
     --role-text: #344657;
     --contact-text: #34516a;
     --academic-underline: #94a8b9;
+    --highlight-bg: #fff0d9;
+    --highlight-accent: #a65410;
   }
 }
 
@@ -1442,6 +1448,22 @@ p.experience-date {
   }
 }
 /* Larger type and a restrained color accent, preserving the original layout. */
+.container,
+.header-inner,
+.site-footer > div {
+  max-width: 1240px;
+}
+.hero {
+  padding: 24px 0 28px;
+  gap: 32px;
+}
+.identity {
+  margin: 16px 0;
+}
+.identity img {
+  width: 58px;
+  height: 66px;
+}
 .identity h1 {
   font-size: 36px;
 }
@@ -1462,7 +1484,25 @@ p.experience-date {
 .hero-description,
 .academic-bio {
   font-size: 16px;
-  line-height: 1.85;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+.hero-actions {
+  margin-top: 16px;
+}
+.academic-bio {
+  padding: 10px 14px;
+  border-left: 3px solid var(--highlight-accent);
+  border-radius: 0 5px 5px 0;
+  background: var(--highlight-bg);
+  color: var(--text);
+}
+.academic-bio a,
+.academic-bio > strong {
+  color: var(--highlight-accent);
+}
+.academic-bio a strong {
+  color: inherit;
 }
 .nav-link,
 .header-contact,
@@ -1471,6 +1511,13 @@ p.experience-date {
 }
 .social-links {
   font-size: 12px;
+  margin-top: 14px;
+}
+.overview-heading {
+  padding-bottom: 12px;
+}
+.overview-row {
+  padding: 13px 0;
 }
 .overview-row h3 {
   font-size: 21px;
@@ -1478,6 +1525,15 @@ p.experience-date {
 .overview-row p,
 .overview-row .overview-role {
   font-size: 13px;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+.overview-result {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg));
+  border-left: 3px solid var(--accent);
+  border-radius: 0 5px 5px 0;
 }
 .overview-result > strong {
   font-size: 30px;
@@ -1492,6 +1548,18 @@ p.experience-date {
 .section-heading h2 {
   font-size: 32px;
 }
+.section {
+  padding: 28px 0;
+}
+.section-heading {
+  margin-bottom: 18px;
+}
+.section-heading .eyebrow {
+  margin-bottom: 5px;
+}
+.news-item {
+  padding: 11px 0;
+}
 .section-heading .eyebrow,
 .paper-kicker {
   color: var(--accent);
@@ -1501,6 +1569,27 @@ p.experience-date {
 .research-details dd,
 .research-card-body > p:not(.paper-kicker) {
   font-size: 15px;
+  line-height: 1.65;
+}
+.featured-paper,
+.research-card {
+  padding: 20px 0;
+}
+.paper-summary {
+  margin: 12px 0 16px;
+}
+.model-scale-grid {
+  padding-top: 18px;
+}
+.research-details > div {
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.publication-group {
+  padding: 20px 0;
+}
+.pub-list-item {
+  padding: 13px 0;
 }
 .news-item time,
 .paper-links a {
@@ -1508,9 +1597,22 @@ p.experience-date {
 }
 .news-tag {
   color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg));
 }
 .news-tag.violet {
-  color: var(--violet);
+  color: var(--highlight-accent);
+  background: var(--highlight-bg);
+  font-weight: 600;
+}
+.paper-kicker > span {
+  display: table;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: var(--highlight-bg);
+  color: var(--highlight-accent);
+  font-weight: 600;
 }
 .pub-list-title {
   font-size: 17px;
@@ -1520,6 +1622,21 @@ p.experience-date {
 .publication-lede {
   font-size: 13px;
 }
+.pub-list-authors {
+  line-height: 1.65;
+}
+.publication-lede {
+  margin-bottom: 20px;
+}
+.small-heading {
+  margin-bottom: 18px;
+}
+.experience-item {
+  padding-bottom: 18px;
+}
+.education-item {
+  margin-bottom: 22px;
+}
 .experience-item h4,
 .education-item h4 {
   font-size: 18px;
@@ -1527,6 +1644,11 @@ p.experience-date {
 .experience-item p,
 .education-item p {
   font-size: 13px;
+  line-height: 1.65;
+}
+.contact-section {
+  padding: 24px 0;
+  margin-bottom: 24px;
 }
 .contact-section h2 {
   font-size: 30px;
@@ -1544,6 +1666,16 @@ p.experience-date {
   }
 }
 @media (max-width: 760px) {
+  .hero {
+    padding: 22px 0 26px;
+    gap: 22px;
+  }
+  .section {
+    padding: 24px 0;
+  }
+  .hero-overview {
+    padding-top: 16px;
+  }
   .identity h1 {
     font-size: 32px;
   }
